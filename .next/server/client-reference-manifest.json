@@ -56,70 +56,6 @@
         "async": false
       }
     },
-    "(app-client)/./src/images/socials/facebook.svg": {
-      "*": {
-        "id": "(sc_client)/./src/images/socials/facebook.svg",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./src/images/socials/telegram.svg": {
-      "*": {
-        "id": "(sc_client)/./src/images/socials/telegram.svg",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./src/images/socials/twitter.svg": {
-      "*": {
-        "id": "(sc_client)/./src/images/socials/twitter.svg",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./src/images/socials/youtube.svg": {
-      "*": {
-        "id": "(sc_client)/./src/images/socials/youtube.svg",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./node_modules/next/dist/client/image.js": {
-      "*": {
-        "id": "(sc_client)/./node_modules/next/dist/client/image.js",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./node_modules/next/dist/client/link.js": {
-      "*": {
-        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./node_modules/next/dist/shared/lib/head.js": {
-      "*": {
-        "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./src/shared/Button/Button.tsx": {
-      "*": {
-        "id": "(sc_client)/./src/shared/Button/Button.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
     "(app-client)/./src/images/avatars/Image-1.png": {
       "*": {
         "id": "(sc_client)/./src/images/avatars/Image-1.png",
@@ -544,6 +480,62 @@
         "async": false
       }
     },
+    "(app-client)/./src/images/socials/facebook.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/socials/facebook.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/socials/telegram.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/socials/telegram.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/socials/twitter.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/socials/twitter.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/socials/youtube.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/socials/youtube.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/image.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/image.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/link.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/shared/lib/head.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./src/app/CommonClient.tsx": {
       "*": {
         "id": "(sc_client)/./src/app/CommonClient.tsx",
@@ -627,6 +619,14 @@
     "(app-client)/./src/hooks/useThemeMode.ts": {
       "*": {
         "id": "(sc_client)/./src/hooks/useThemeMode.ts",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/shared/Button/Button.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/shared/Button/Button.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -1555,94 +1555,6 @@
       ],
       "async": false
     },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/socials/facebook.svg": {
-      "id": "(app-client)/./src/images/socials/facebook.svg",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/socials/telegram.svg": {
-      "id": "(app-client)/./src/images/socials/telegram.svg",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/socials/twitter.svg": {
-      "id": "(app-client)/./src/images/socials/twitter.svg",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/socials/youtube.svg": {
-      "id": "(app-client)/./src/images/socials/youtube.svg",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/image.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/image.js",
-      "name": "*",
-      "chunks": [
-        "app/collection-2/page:static/chunks/app/collection-2/page.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/image.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/image.js",
-      "name": "*",
-      "chunks": [
-        "app/collection-2/page:static/chunks/app/collection-2/page.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/link.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
-      "name": "*",
-      "chunks": [
-        "app/collection-2/page:static/chunks/app/collection-2/page.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/link.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
-      "name": "*",
-      "chunks": [
-        "app/collection-2/page:static/chunks/app/collection-2/page.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/shared/lib/head.js": {
-      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
-      "name": "*",
-      "chunks": [
-        "app/collection-2/page:static/chunks/app/collection-2/page.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/shared/lib/head.js": {
-      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
-      "name": "*",
-      "chunks": [
-        "app/collection-2/page:static/chunks/app/collection-2/page.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/shared/Button/Button.tsx": {
-      "id": "(app-client)/./src/shared/Button/Button.tsx",
-      "name": "*",
-      "chunks": [
-        "app/collection-2/page:static/chunks/app/collection-2/page.js"
-      ],
-      "async": false
-    },
     "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/avatars/Image-1.png": {
       "id": "(app-client)/./src/images/avatars/Image-1.png",
       "name": "*",
@@ -2067,6 +1979,86 @@
       ],
       "async": false
     },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/socials/facebook.svg": {
+      "id": "(app-client)/./src/images/socials/facebook.svg",
+      "name": "*",
+      "chunks": [
+        "app/contact/page:static/chunks/app/contact/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/socials/telegram.svg": {
+      "id": "(app-client)/./src/images/socials/telegram.svg",
+      "name": "*",
+      "chunks": [
+        "app/contact/page:static/chunks/app/contact/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/socials/twitter.svg": {
+      "id": "(app-client)/./src/images/socials/twitter.svg",
+      "name": "*",
+      "chunks": [
+        "app/contact/page:static/chunks/app/contact/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/socials/youtube.svg": {
+      "id": "(app-client)/./src/images/socials/youtube.svg",
+      "name": "*",
+      "chunks": [
+        "app/contact/page:static/chunks/app/contact/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/image.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "*",
+      "chunks": [
+        "app/collection-2/page:static/chunks/app/collection-2/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/image.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "*",
+      "chunks": [
+        "app/collection-2/page:static/chunks/app/collection-2/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/collection-2/page:static/chunks/app/collection-2/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/collection-2/page:static/chunks/app/collection-2/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/shared/lib/head.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "*",
+      "chunks": [
+        "app/collection-2/page:static/chunks/app/collection-2/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/shared/lib/head.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "*",
+      "chunks": [
+        "app/collection-2/page:static/chunks/app/collection-2/page.js"
+      ],
+      "async": false
+    },
     "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/CommonClient.tsx": {
       "id": "(app-client)/./src/app/CommonClient.tsx",
       "name": "*",
@@ -2152,6 +2144,14 @@
       "name": "*",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/shared/Button/Button.tsx": {
+      "id": "(app-client)/./src/shared/Button/Button.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection-2/page:static/chunks/app/collection-2/page.js"
       ],
       "async": false
     },
@@ -2917,10 +2917,6 @@
     }
   },
   "entryCSSFiles": {
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/contact/page": {
-      "modules": [],
-      "files": []
-    },
     "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/layout": {
       "modules": [
         "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/rc-slider/assets/index.css",
@@ -2934,6 +2930,10 @@
       ]
     },
     "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/not-found": {
+      "modules": [],
+      "files": []
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/contact/page": {
       "modules": [],
       "files": []
     },
@@ -2955,7 +2955,6 @@
     },
     "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/page": {
       "modules": [
-        "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/HeaderTitle.css",
         "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/SectionStatistic.css"
       ],
       "files": [
