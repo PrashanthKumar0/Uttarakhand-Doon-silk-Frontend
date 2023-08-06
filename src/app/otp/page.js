@@ -7,8 +7,10 @@ import Input from "@/shared/Input/Input";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import Image from "next/image";
 import Link from "next/link";
-
+import axios from "axios";
 import OTPInput, { ResendOTP } from "otp-input-react";
+import { ToastContainer ,toast} from "react-toastify";
+import { useRouter } from 'next/navigation';
 const loginSocials = [
   {
     name: "Continue with Facebook",
@@ -27,12 +29,31 @@ const loginSocials = [
   },
 ];
 
-
+const router = useRouter();
 const Otp = () => {
   const [OTP, setOTP] = useState("");
+  const id = window.localStorage.getItem('id')
+const handleClick=()=>{
+  console.log(OTP)
+  axios.post(`http://localhost:8000/verifyOTP/${id}`,{otp:OTP})
+ 
+  .then((response)=>{
+    console.log(response)
+   if(response.status===200)
+   {
+    router('/')
+   }
 
+  })
+  
+  .catch((error,response)=>{
+   toast.error('Error sending email or creating user.')
+   console.log(error)
+ })
+}
   return (
     <div className={`nc-PageSignUp `} data-nc-id="PageSignUp">
+      <ToastContainer/>
       <div className="container mb-24 lg:mb-32">
         <h2 className="my-20 flex items-center text-3xl leading-[115%] md:text-5xl md:leading-[115%] font-semibold text-neutral-900 dark:text-neutral-100 justify-center">
           Enter OTP
@@ -83,7 +104,7 @@ const Otp = () => {
               </span>
               <Input type="password" className="mt-1" /> */}
             </label>
-            <ButtonPrimary type="submit">Continue</ButtonPrimary>
+            <ButtonPrimary type="submit" onClick={handleClick}>Continue</ButtonPrimary>
           </form>
 
           {/* ==== */}

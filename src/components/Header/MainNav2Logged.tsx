@@ -9,8 +9,9 @@ import CartDropdown from "./CartDropdown";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
 
-export interface MainNav2LoggedProps {}
 
+export interface MainNav2LoggedProps {}
+const token =window.localStorage.getItem('token');
 const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
   const inputRef = createRef<HTMLInputElement>();
   const [showSearchForm, setShowSearchForm] = useState(false);
@@ -95,8 +96,18 @@ const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
               {renderMagnifyingGlassIcon()}
             </button>
           )}
-          <AvatarDropdown />
-          <CartDropdown />
+           {
+          token===''||token===null?
+          <button className="btn btn-success rounded-full bg-green-600 px-6 py-2 text-white"  onClick={()=>{  router.push("/login");}}> Login</button> : <AvatarDropdown />
+
+            }
+         
+     {
+          token===''||token===null? '': <CartDropdown />
+
+            }
+  
+         
         </div>
       </div>
     );

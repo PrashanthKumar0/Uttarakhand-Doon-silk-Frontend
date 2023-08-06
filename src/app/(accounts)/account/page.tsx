@@ -1,3 +1,4 @@
+"use client"
 import Label from "@/components/Label/Label";
 import React, { FC } from "react";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
@@ -6,7 +7,7 @@ import Select from "@/shared/Select/Select";
 import Textarea from "@/shared/Textarea/Textarea";
 import { avatarImgs } from "@/contains/fakeData";
 import Image from "next/image";
-
+import withAuth from '../../../context/withAuth'
 const AccountPage = () => {
   return (
     <div className={`nc-AccountPage `}>
@@ -136,4 +137,4 @@ const AccountPage = () => {
   );
 };
 
-export default AccountPage;
+export default withAuth(AccountPage);

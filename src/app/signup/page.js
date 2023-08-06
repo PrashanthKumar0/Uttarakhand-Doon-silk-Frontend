@@ -5,23 +5,41 @@ import 'react-phone-number-input/style.css'
 import Link from "next/link";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 import Input from "@/shared/Input/Input";
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+  import { useRouter } from 'next/navigation';
 function PageSignUp(){
   const schema = Yup.object().shape({
     email: Yup.string()
       .required("Email is a required field")
       .email("Invalid email format"),
   });
-
+  const router = useRouter();
   return (
     <Formik
     validationSchema={schema}
     initialValues={{ email: "" }}
     onSubmit={(values) => {
-      // Alert the input values of the form that we filled
-      alert(JSON.stringify(values));
-    }}
+     
+      console.log(values);
+      axios.post('http://localhost:8000/signupUsers',{email:values.email})
+      .then((response)=>{
+       if(response.status===201){
+    window.localStorage.setItem('id',response.data.id)
+        console.log(localStorage.getItem('id'))
+         router.push('/otp');
+       }else{
+        toast.error(response.data.message)
+       }
+       console.log(response)})
+      .catch((error,response)=>{
+       toast.error('Error sending email or creating user.')
+       console.log(error)
+     })
+     
+     }}
   >
     {({
       values,
@@ -32,6 +50,7 @@ function PageSignUp(){
       handleSubmit,
     }) => (
     <div className={`nc-PageSignUp `} data-nc-id="PageSignUp">
+      <ToastContainer/>
       <div className="container mb-24 lg:mb-32">
         <h2 className="my-20 flex items-center text-3xl leading-[115%] md:text-5xl md:leading-[115%] font-semibold text-neutral-900 dark:text-neutral-100 justify-center">
           Signup

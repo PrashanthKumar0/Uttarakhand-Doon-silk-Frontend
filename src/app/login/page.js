@@ -7,7 +7,9 @@ import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import 'react-phone-number-input/style.css'
 import Link from "next/link";
 import axios from "axios";
-
+import { useRouter } from 'next/navigation';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 const PageLogin = () => {
 
   const schema = Yup.object().shape({
@@ -18,16 +20,26 @@ const PageLogin = () => {
       .required("password is a required field")
       
   });
- 
+  const router = useRouter();
   return (
     <Formik
     validationSchema={schema}
     initialValues={{ email: "" ,password:''}}
     onSubmit={(values) => {
-      e.preventDefault();
+     
      console.log(values);
-     axios.post('',{email:values.email,password:values.password})
-     .then((response)=>{console.log(response)}).catch((error)=>{console.log(error)})
+     axios.post('http://localhost:8000/signupUsers',{email:values.email,password:values.password})
+     .then((response)=>{
+      if(response.status===201){
+        router.push('/otp');
+      }else{
+       toast.error(response.data.message)
+      }
+      console.log(response)})
+     .catch((error,response)=>{
+      toast.error('Error sending email or creating user.')
+      console.log(error)
+    })
     
     }}
   >
@@ -40,6 +52,7 @@ const PageLogin = () => {
       handleSubmit,
     }) => (
     <div className={`nc-PageLogin`} data-nc-id="PageLogin">
+<ToastContainer/>
       <div className="container mb-24 lg:mb-32">
         <h2 className="my-20 flex items-center text-3xl leading-[115%] md:text-5xl md:leading-[115%] font-semibold text-neutral-900 dark:text-neutral-100 justify-center">
           Login

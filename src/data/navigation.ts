@@ -1,10 +1,14 @@
 import { NavItemType } from "@/shared/Navigation/NavigationItem";
 import ncNanoId from "@/utils/ncNanoId";
 
+
+
+
 export const MEGAMENU_TEMPLATES: NavItemType[] = [
+ 
   {
     id: ncNanoId(),
-    href: "/#",
+    href: "/",
     name: "Home Page",
     // children: [
     //   { id: ncNanoId(), href: "/", name: "Home  1" },
@@ -240,16 +244,7 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
     href: "/contact",
     name: "Contact Us",
   },
-  {
-            id: ncNanoId(),
-           href: "/login",
-         name: "Login",
-          },
-          {
-            id: ncNanoId(),
-           href: "/otp",
-         name: "OTP",
-          },
+             
   // {
   //   id: ncNanoId(),
   //   href: "/collection",
