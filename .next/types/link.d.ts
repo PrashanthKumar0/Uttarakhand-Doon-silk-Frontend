@@ -30,29 +30,29 @@ declare namespace __next_route_internal_types__ {
 
   type StaticRoutes = 
     | `/`
+    | `/about`
+    | `/api/hello`
+    | `/blog`
+    | `/blog-single`
+    | `/cart`
+    | `/checkout`
+    | `/collection`
+    | `/collection-2`
+    | `/contact`
+    | `/forgot-pass`
+    | `/login`
+    | `/product-detail`
+    | `/product-detail-2`
+    | `/search`
+    | `/signup`
+    | `/subscription`
+    | `/home-2`
+    | `/otp`
     | `/account`
     | `/account-billing`
     | `/account-order`
     | `/account-password`
     | `/account-savelists`
-    | `/about`
-    | `/api/hello`
-    | `/blog`
-    | `/cart`
-    | `/checkout`
-    | `/collection`
-    | `/collection-2`
-    | `/blog-single`
-    | `/contact`
-    | `/forgot-pass`
-    | `/home-2`
-    | `/login`
-    | `/otp`
-    | `/product-detail`
-    | `/product-detail-2`
-    | `/signup`
-    | `/subscription`
-    | `/search`
   type DynamicRoutes<T extends string = string> = never
 
   type RouteImpl<T> = 
