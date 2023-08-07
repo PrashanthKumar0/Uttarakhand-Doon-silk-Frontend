@@ -28,16 +28,16 @@ const PageLogin = () => {
     onSubmit={(values) => {
      
      console.log(values);
-     axios.post('http://localhost:8000/signupUsers',{email:values.email,password:values.password})
+     axios.post('http://localhost:8000/loginUser',{email:values.email,password:values.password})
      .then((response)=>{
-      if(response.status===201){
-        router.push('/otp');
+      if(response.status===200){
+       toast.success(response.data.message)
       }else{
        toast.error(response.data.message)
       }
       console.log(response)})
      .catch((error,response)=>{
-      toast.error('Error sending email or creating user.')
+      toast.error('User Not Found')
       console.log(error)
     })
     

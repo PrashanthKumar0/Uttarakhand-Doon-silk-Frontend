@@ -8,15 +8,17 @@ import * as Yup from "yup";
 import axios from "axios";
 import Input from "@/shared/Input/Input";
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
-  import { useRouter } from 'next/navigation';
+import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from 'next/navigation';
+
 function PageSignUp(){
+  const router = useRouter();
   const schema = Yup.object().shape({
     email: Yup.string()
       .required("Email is a required field")
       .email("Invalid email format"),
   });
-  const router = useRouter();
+
   return (
     <Formik
     validationSchema={schema}

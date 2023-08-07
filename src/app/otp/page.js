@@ -10,7 +10,9 @@ import Link from "next/link";
 import axios from "axios";
 import OTPInput, { ResendOTP } from "otp-input-react";
 import { ToastContainer ,toast} from "react-toastify";
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router'
+ 
+import 'react-toastify/dist/ReactToastify.css';
 const loginSocials = [
   {
     name: "Continue with Facebook",
@@ -29,19 +31,25 @@ const loginSocials = [
   },
 ];
 
-const router = useRouter();
+
 const Otp = () => {
+  const router = useRouter();
   const [OTP, setOTP] = useState("");
   const id = window.localStorage.getItem('id')
+
 const handleClick=()=>{
+
   console.log(OTP)
+  console.log(`http://localhost:8000/verifyOTP/${id}`)
   axios.post(`http://localhost:8000/verifyOTP/${id}`,{otp:OTP})
  
   .then((response)=>{
     console.log(response)
    if(response.status===200)
    {
-    router('/')
+    router.push('/password');
+   }else{
+console.log(response)
    }
 
   })

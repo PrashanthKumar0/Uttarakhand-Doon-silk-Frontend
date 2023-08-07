@@ -244,6 +244,13 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
     href: "/contact",
     name: "Contact Us",
   },
+  {
+    id: ncNanoId(),
+    href: "/password",
+    name: "password",
+  },
+ 
+  
              
   // {
   //   id: ncNanoId(),
