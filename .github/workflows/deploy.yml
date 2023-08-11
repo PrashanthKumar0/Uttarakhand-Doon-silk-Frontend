@@ -16,5 +16,5 @@ jobs:
         with:
           host: ${{ secrets.DOON_SILK_VPS_HOST }}
           username: ${{ secrets.DOON_SILK_VPS_USER }}
-          key: ${{ secrets.DOON_SILK_VPS_PRIVATE_KEY }}
+          ssh-private-key: ${{ secrets.DOON_SILK_VPS_PRIVATE_KEY }}
           script: sh ~/deploy-scripts/frontend-deploy.sh
