@@ -46,7 +46,7 @@ const SectionVideos = ({
         ) : (
           <>
             <div
-              onClick={() => setIsPlay(true)}
+              onClick={() => setIsPlay(false)}
               className="cursor-pointer absolute inset-0 flex items-center justify-center z-10"
             >
               <NcPlayIcon />

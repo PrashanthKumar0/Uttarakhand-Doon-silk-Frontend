@@ -10,7 +10,8 @@ import axios from "axios";
 import { useRouter } from 'next/navigation';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
-const Password = () => {
+
+const Password  =() => {
 const [error,setError]=useState(false)
   const schema = Yup.object().shape({
   
@@ -19,9 +20,12 @@ const [error,setError]=useState(false)
       
   });
   const router = useRouter();
-
+var userId :string|null
+  if (typeof window !== 'undefined'){
+     userId = window.localStorage.getItem('id')
+  }
  
-  const userId = window.localStorage.getItem('id')
+ 
   return (
     <Formik
     validationSchema={schema}
@@ -40,7 +44,7 @@ const [error,setError]=useState(false)
        toast.error(response.data.message)
       }
       console.log(response)})
-     .catch((error,response)=>{
+     .catch((error)=>{
       toast.error('Error sending email or creating user.')
       console.log(error)
     })

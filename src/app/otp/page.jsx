@@ -11,7 +11,12 @@ import Input from "@/shared/Input/Input";
 const Otp = () => {
   const router = useRouter();
   const [OTP, setOTP] = useState("");
-  const id =  localStorage.getItem('id')
+  var id ;
+
+  if (typeof window !== 'undefined'){
+    id = window.localStorage.getItem('id')
+  }
+
   
  
 

@@ -13,7 +13,7 @@ import SectionClientSay from "@/components/SectionClientSay/SectionClientSay";
 import SectionPromo3 from "@/components/SectionPromo3";
 import HeaderTitle from './HeaderTitle';
 import SectionHero2 from "./SectionHero2";
-import SectionVideo from "./SectionVideos"
+//import SectionVideo from "./SectionVideos"
 
 const PageAbout = ({}) => {
  
@@ -29,7 +29,7 @@ const PageAbout = ({}) => {
       </div>
      
        <div className="container py-16 lg:py-28 space-y-16 lg:space-y-28">
-       <SectionVideo/>
+       {/* <SectionVideo/> */}
         <SectionHero
           rightImg={rightImg}
           heading="👋 About Us."
