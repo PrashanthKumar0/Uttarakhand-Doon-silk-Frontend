@@ -11,15 +11,15 @@ import { useRouter } from "next/navigation";
 
 
 
+export interface MainNav2LoggedProps {}
 
-
-const MainNav2Logged = () => {
-  const inputRef = createRef();
+const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
+  const inputRef = createRef<HTMLInputElement>();
   const [showSearchForm, setShowSearchForm] = useState(false);
   const router = useRouter();
-  const [token, setToken] = useState(null);
+  const [token, setToken] = useState('');
   useEffect(()=>{ 
-    const storedToken = window.localStorage.getItem('token');
+    const storedToken:string|null = window.localStorage.getItem('token');
     console.log('token', storedToken);
     setToken(storedToken || ''); 
   },[])
