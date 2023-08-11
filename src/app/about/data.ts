@@ -1,3 +1,4 @@
+"use client"
 import Image, { StaticImageData } from "next/image";
 import { Route } from "@/routers/types";
 import imageRightPng from "@/images/hero-right.png";

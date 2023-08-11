@@ -69,7 +69,7 @@ const AccountPage = () => {
                 </span>
                 <Input
                   className="!rounded-l-none"
-                 defaultValue={data.email}
+                //  defaultValue={data.email}
 
                  disabled
                 />

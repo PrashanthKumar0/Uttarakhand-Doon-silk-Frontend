@@ -1,3 +1,4 @@
+"use client"
 import Heading from "@/components/Heading/Heading";
 import React from "react";
 import NcImage from "@/shared/NcImage/NcImage";

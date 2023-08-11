@@ -1,3 +1,4 @@
+"use client"
 import React, { FC, ReactNode } from "react";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import Image, { StaticImageData } from "next/image";
@@ -34,7 +35,7 @@ const SectionHero: FC<SectionHeroProps> = ({
         </div>
         <div className="flex-grow">
         {/* <Image className="w-full" src={rightImg} alt="" priority />  */}
-        <img decoding="async" width="500" height="300" src="https://ucrf.org.in/wp-content/uploads/2022/06/doon-silk.jpg" className="elementor-animation-grow attachment-large size-large wp-image-732 w-full" alt="" loading="lazy" srcset="https://ucrf.org.in/wp-content/uploads/2022/06/doon-silk.jpg 400w, https://ucrf.org.in/wp-content/uploads/2022/06/doon-silk-300x225.jpg 300w" sizes="(max-width: 500px) 100vw, 500px"/>
+        <img decoding="async" width="500" height="300" src="https://ucrf.org.in/wp-content/uploads/2022/06/doon-silk.jpg" className="elementor-animation-grow attachment-large size-large wp-image-732 w-full" alt="" loading="lazy" srcSet="https://ucrf.org.in/wp-content/uploads/2022/06/doon-silk.jpg 400w, https://ucrf.org.in/wp-content/uploads/2022/06/doon-silk-300x225.jpg 300w" sizes="(max-width: 500px) 100vw, 500px"/>
    
         </div>
       </div>

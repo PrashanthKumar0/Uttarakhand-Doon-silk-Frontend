@@ -19,7 +19,7 @@ const [error,setError]=useState(false)
       
   });
   const router = useRouter();
-  const userId = localStorage.getItem('id')
+  const userId = typeof localStorage !== 'undefined' ? localStorage.getItem('id') : ''
   return (
     <Formik
     validationSchema={schema}

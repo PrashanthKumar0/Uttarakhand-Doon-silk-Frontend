@@ -17,10 +17,11 @@ const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
   const inputRef = createRef<HTMLInputElement>();
   const [showSearchForm, setShowSearchForm] = useState(false);
   const router = useRouter();
-const [token, setToken]=useState(null)
+  const [token, setToken] = useState<string | null>(null);
   useEffect(()=>{ 
-    console.log('token', window.localStorage.getItem('token'))
-          setToken(window.localStorage.getItem('token')) 
+    const storedToken = window.localStorage.getItem('token');
+    console.log('token', storedToken);
+    setToken(storedToken || ''); 
   },[])
   const renderMagnifyingGlassIcon = () => {
     return (

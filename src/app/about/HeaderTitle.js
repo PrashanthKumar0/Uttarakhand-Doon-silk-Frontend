@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import './HeaderTitle.css'
 import Image from 'next/image'
