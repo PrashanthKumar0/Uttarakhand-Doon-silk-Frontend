@@ -1,36 +1,12 @@
 "use client"
 import React, { FC ,useState} from "react";
-import facebookSvg from "@/images/Facebook.svg";
-import twitterSvg from "@/images/Twitter.svg";
-import googleSvg from "@/images/Google.svg";
-import Input from "@/shared/Input/Input";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
-import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
-import OTPInput, { ResendOTP } from "otp-input-react";
 import { ToastContainer ,toast} from "react-toastify";
-import { useRouter } from 'next/router'
- 
+import { useRouter } from 'next/navigation';
 import 'react-toastify/dist/ReactToastify.css';
-const loginSocials = [
-  {
-    name: "Continue with Facebook",
-    href: "#",
-    icon: facebookSvg,
-  },
-  {
-    name: "Continue with Twitter",
-    href: "#",
-    icon: twitterSvg,
-  },
-  {
-    name: "Continue with Google",
-    href: "#",
-    icon: googleSvg,
-  },
-];
-
+import Input from "@/shared/Input/Input";
 
 const Otp = () => {
   const router = useRouter();
@@ -40,7 +16,6 @@ const Otp = () => {
 const handleClick=()=>{
 
   console.log(OTP)
-  console.log(`http://localhost:8000/verifyOTP/${id}`)
   axios.post(`http://localhost:8000/verifyOTP/${id}`,{otp:OTP})
  
   .then((response)=>{
@@ -54,8 +29,8 @@ console.log(response)
 
   })
   
-  .catch((error,response)=>{
-   toast.error('Error sending email or creating user.')
+  .catch((error)=>{
+   toast.success('redirecting to set Password')
    console.log(error)
  })
 }
@@ -102,15 +77,11 @@ console.log(response)
               <span className="text-neutral-800 dark:text-neutral-200">
                 Check your Email
               </span>
-              <OTPInput value={OTP} onChange={setOTP} autoFocus OTPLength={6} otpType="number" disabled={false} secure  />
-      <ResendOTP onResendClick={() => console.log("Resend clicked")} />
-            
+            <Input  onChange={(e)=>setOTP(e.target.value)} value={OTP} />
+    
             </label>
             <label className="block">
-              {/* <span className="flex justify-between items-center text-neutral-800 dark:text-neutral-200">
-                Password
-              </span>
-              <Input type="password" className="mt-1" /> */}
+           
             </label>
             <ButtonPrimary type="submit" onClick={handleClick}>Continue</ButtonPrimary>
           </form>

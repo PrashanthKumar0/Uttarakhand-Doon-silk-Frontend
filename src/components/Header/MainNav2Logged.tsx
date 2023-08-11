@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createRef, FC, useState } from "react";
+import React, { createRef, FC, useState ,useEffect, use} from "react";
 import Logo from "@/shared/Logo/Logo";
 import MenuBar from "@/shared/MenuBar/MenuBar";
 import AvatarDropdown from "./AvatarDropdown";
@@ -11,12 +11,17 @@ import { useRouter } from "next/navigation";
 
 
 export interface MainNav2LoggedProps {}
-const token =window.localStorage.getItem('token');
+
+
 const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
   const inputRef = createRef<HTMLInputElement>();
   const [showSearchForm, setShowSearchForm] = useState(false);
   const router = useRouter();
-
+const [token, setToken]=useState(null)
+  useEffect(()=>{ 
+    console.log('token', window.localStorage.getItem('token'))
+          setToken(window.localStorage.getItem('token')) 
+  },[])
   const renderMagnifyingGlassIcon = () => {
     return (
       <svg

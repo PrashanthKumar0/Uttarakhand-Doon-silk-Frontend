@@ -8,6 +8,10 @@ import SwitchDarkMode2 from "@/shared/SwitchDarkMode/SwitchDarkMode2";
 import Link from "next/link";
 
 export default function AvatarDropdown() {
+  const handleLogout=()=>{
+  localStorage.clear();
+    window.location.reload()
+  }
   return (
     <div className="AvatarDropdown ">
       <Popover className="relative">
@@ -53,10 +57,10 @@ export default function AvatarDropdown() {
                     <div className="flex items-center space-x-3">
                       <Avatar imgUrl={avatarImgs[7]} sizeClass="w-12 h-12" />
 
-                      <div className="flex-grow">
+                      {/* <div className="flex-grow">
                         <h4 className="font-semibold">Eden Smith</h4>
                         <p className="text-xs mt-0.5">Los Angeles, CA</p>
-                      </div>
+                      </div> */}
                     </div>
 
                     <div className="w-full border-b border-neutral-200 dark:border-neutral-700" />
@@ -319,7 +323,7 @@ export default function AvatarDropdown() {
                         </svg>
                       </div>
                       <div className="ml-4">
-                        <p className="text-sm font-medium ">{"Log out"}</p>
+                        <button className="text-sm font-medium " onClick={handleLogout}>{"Log out"}</button>
                       </div>
                     </Link>
                   </div>

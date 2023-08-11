@@ -1,5 +1,5 @@
 "use client"
-import React, { useState,FC } from "react";
+import React, { useState,FC, useEffect } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import Input from "@/shared/Input/Input";
@@ -9,7 +9,7 @@ import Link from "next/link";
 import axios from "axios";
 import { useRouter } from 'next/navigation';
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 const PageLogin = () => {
 
   const schema = Yup.object().shape({
@@ -21,6 +21,7 @@ const PageLogin = () => {
       
   });
   const router = useRouter();
+ 
   return (
     <Formik
     validationSchema={schema}
@@ -32,6 +33,9 @@ const PageLogin = () => {
      .then((response)=>{
       if(response.status===200){
        toast.success(response.data.message)
+       window.localStorage.setItem('token',response.data.token)
+       console.log(window.localStorage.getItem('token'))
+       router.push('/');
       }else{
        toast.error(response.data.message)
       }

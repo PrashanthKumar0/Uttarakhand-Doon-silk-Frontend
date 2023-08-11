@@ -234,11 +234,7 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
     type: "dropdown",
     children: OTHER_PAGE_CHILD,
   },
-  {
-    id: ncNanoId(),
-    href: "/account",
-    name: "Enquiry",
-  },
+  
   {
     id: ncNanoId(),
     href: "/contact",
@@ -246,9 +242,10 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
   },
   {
     id: ncNanoId(),
-    href: "/password",
-    name: "password",
+    href: "/tender",
+    name: "Tender",
   },
+ 
  
   
              
