@@ -6,14 +6,9 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import { FC } from "react";
 
-export interface CommonLayoutProps {
-  children?: React.ReactNode;
-}
 
-const pages: {
-  name: string;
-  link: Route;
-}[] = [
+
+const pages = [
   {
     name: "Account info",
     link: "/account",
@@ -36,7 +31,7 @@ const pages: {
   },
 ];
 
-const CommonLayout: FC<CommonLayoutProps> = ({ children }) => {
+const CommonLayout = ({ children }) => {
   const pathname = usePathname();
 
   return (

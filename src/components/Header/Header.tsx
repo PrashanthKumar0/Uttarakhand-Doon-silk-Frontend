@@ -3,7 +3,7 @@ import MainNav2 from "./MainNav2";
 
 export interface HeaderProps {}
 
-const Header: FC<HeaderProps> = () => {
+const Header = () => {
   return (
     <div className="nc-Header relative w-full z-40 ">
       <MainNav2 />

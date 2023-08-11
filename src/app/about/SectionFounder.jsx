@@ -3,14 +3,9 @@ import Heading from "@/components/Heading/Heading";
 import React from "react";
 import NcImage from "@/shared/NcImage/NcImage";
 
-export interface People {
-  id: string;
-  name: string;
-  job: string;
-  avatar: string;
-}
 
-const FOUNDER_DEMO: People[] = [
+
+const FOUNDER_DEMO = [
   {
     id: "1",
     name: `Chaudhary Ajeet Singh`,

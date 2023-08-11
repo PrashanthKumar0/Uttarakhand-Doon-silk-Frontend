@@ -3,15 +3,9 @@ import React, { FC, ReactNode } from "react";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import Image, { StaticImageData } from "next/image";
 // import FrontSwipe from './SwiperImage'
-export interface SectionHeroProps {
-  className?: string;
-  rightImg: string | StaticImageData;
-  heading: ReactNode;
-  subHeading: string;
-  btnText: string;
-}
 
-const SectionHero: FC<SectionHeroProps> = ({
+
+const SectionHero = ({
   className = "",
   rightImg,
   heading,

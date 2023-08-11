@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function CartDropdown() {
-  const renderProduct = (item: Product, index: number, close: () => void) => {
+  const renderProduct = (item, index, close) => {
     const { name, price, image } = item;
     return (
       <div key={index} className="flex py-5 last:pb-0">

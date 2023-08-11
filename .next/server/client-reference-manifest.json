@@ -56,6 +56,46 @@
         "async": false
       }
     },
+    "(app-client)/./src/images/404.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/404.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/image.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/image.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/link.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/shared/lib/head.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/shared/Button/Button.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/shared/Button/Button.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./src/images/avatars/Image-1.png": {
       "*": {
         "id": "(sc_client)/./src/images/avatars/Image-1.png",
@@ -504,33 +544,9 @@
         "async": false
       }
     },
-    "(app-client)/./node_modules/next/dist/client/image.js": {
+    "(app-client)/./src/app/CommonClient.jsx": {
       "*": {
-        "id": "(sc_client)/./node_modules/next/dist/client/image.js",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./node_modules/next/dist/client/link.js": {
-      "*": {
-        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./node_modules/next/dist/shared/lib/head.js": {
-      "*": {
-        "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./src/app/CommonClient.tsx": {
-      "*": {
-        "id": "(sc_client)/./src/app/CommonClient.tsx",
+        "id": "(sc_client)/./src/app/CommonClient.jsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -552,17 +568,17 @@
         "async": false
       }
     },
-    "(app-client)/./src/components/Header/AvatarDropdown.tsx": {
+    "(app-client)/./src/components/Header/AvatarDropdown.jsx": {
       "*": {
-        "id": "(sc_client)/./src/components/Header/AvatarDropdown.tsx",
+        "id": "(sc_client)/./src/components/Header/AvatarDropdown.jsx",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./src/components/Header/CartDropdown.tsx": {
+    "(app-client)/./src/components/Header/CartDropdown.jsx": {
       "*": {
-        "id": "(sc_client)/./src/components/Header/CartDropdown.tsx",
+        "id": "(sc_client)/./src/components/Header/CartDropdown.jsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -611,14 +627,6 @@
     "(app-client)/./src/hooks/useThemeMode.ts": {
       "*": {
         "id": "(sc_client)/./src/hooks/useThemeMode.ts",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./src/shared/Button/Button.tsx": {
-      "*": {
-        "id": "(sc_client)/./src/shared/Button/Button.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -1256,9 +1264,89 @@
         "async": false
       }
     },
-    "(app-client)/./src/images/404.png": {
+    "(app-client)/./src/images/BackgroundLine.svg": {
       "*": {
-        "id": "(sc_client)/./src/images/404.png",
+        "id": "(sc_client)/./src/images/BackgroundLine.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/hero-right1.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/hero-right1.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/promo3.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/promo3.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/about/HeaderTitle.jsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/about/HeaderTitle.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/about/SectionFounder.jsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/about/SectionFounder.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/about/SectionHero.jsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/about/SectionHero.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/about/SectionHero2.jsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/about/SectionHero2.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/about/SectionStatistic.jsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/about/SectionStatistic.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/about/SectionVideos.jsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/about/SectionVideos.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/about/data.ts": {
+      "*": {
+        "id": "(sc_client)/./src/app/about/data.ts",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/about/page.jsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/about/page.jsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -1424,6 +1512,70 @@
       "name": "*",
       "chunks": [
         "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/404.png": {
+      "id": "(app-client)/./src/images/404.png",
+      "name": "*",
+      "chunks": [
+        "app/not-found:static/chunks/app/not-found.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/image.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/image.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/shared/lib/head.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/shared/lib/head.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/shared/Button/Button.tsx": {
+      "id": "(app-client)/./src/shared/Button/Button.tsx",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -1847,7 +1999,7 @@
       "id": "(app-client)/./src/images/socials/facebook.svg",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/contact/page:static/chunks/app/contact/page.js"
       ],
       "async": false
     },
@@ -1855,7 +2007,7 @@
       "id": "(app-client)/./src/images/socials/telegram.svg",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/contact/page:static/chunks/app/contact/page.js"
       ],
       "async": false
     },
@@ -1863,7 +2015,7 @@
       "id": "(app-client)/./src/images/socials/twitter.svg",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/contact/page:static/chunks/app/contact/page.js"
       ],
       "async": false
     },
@@ -1871,60 +2023,12 @@
       "id": "(app-client)/./src/images/socials/youtube.svg",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/contact/page:static/chunks/app/contact/page.js"
       ],
       "async": false
     },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/image.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/image.js",
-      "name": "*",
-      "chunks": [
-        "app/not-found:static/chunks/app/not-found.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/image.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/image.js",
-      "name": "*",
-      "chunks": [
-        "app/not-found:static/chunks/app/not-found.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/link.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
-      "name": "*",
-      "chunks": [
-        "app/not-found:static/chunks/app/not-found.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/link.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
-      "name": "*",
-      "chunks": [
-        "app/not-found:static/chunks/app/not-found.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/shared/lib/head.js": {
-      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
-      "name": "*",
-      "chunks": [
-        "app/not-found:static/chunks/app/not-found.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/shared/lib/head.js": {
-      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
-      "name": "*",
-      "chunks": [
-        "app/not-found:static/chunks/app/not-found.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/CommonClient.tsx": {
-      "id": "(app-client)/./src/app/CommonClient.tsx",
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/CommonClient.jsx": {
+      "id": "(app-client)/./src/app/CommonClient.jsx",
       "name": "*",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
@@ -1947,16 +2051,16 @@
       ],
       "async": false
     },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/Header/AvatarDropdown.tsx": {
-      "id": "(app-client)/./src/components/Header/AvatarDropdown.tsx",
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/Header/AvatarDropdown.jsx": {
+      "id": "(app-client)/./src/components/Header/AvatarDropdown.jsx",
       "name": "*",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/Header/CartDropdown.tsx": {
-      "id": "(app-client)/./src/components/Header/CartDropdown.tsx",
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/Header/CartDropdown.jsx": {
+      "id": "(app-client)/./src/components/Header/CartDropdown.jsx",
       "name": "*",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
@@ -2008,14 +2112,6 @@
       "name": "*",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/shared/Button/Button.tsx": {
-      "id": "(app-client)/./src/shared/Button/Button.tsx",
-      "name": "*",
-      "chunks": [
-        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2079,7 +2175,7 @@
       "id": "(app-client)/./src/images/Moon.svg",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2095,7 +2191,7 @@
       "id": "(app-client)/./src/images/clientSay1.png",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2103,7 +2199,7 @@
       "id": "(app-client)/./src/images/clientSay2.png",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2111,7 +2207,7 @@
       "id": "(app-client)/./src/images/clientSay3.png",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2119,7 +2215,7 @@
       "id": "(app-client)/./src/images/clientSay4.png",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2127,7 +2223,7 @@
       "id": "(app-client)/./src/images/clientSay5.png",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2135,7 +2231,7 @@
       "id": "(app-client)/./src/images/clientSay6.png",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2143,7 +2239,7 @@
       "id": "(app-client)/./src/images/clientSayMain.png",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2327,7 +2423,7 @@
       "id": "(app-client)/./src/images/hero-right-2.png",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2335,7 +2431,7 @@
       "id": "(app-client)/./src/images/hero-right-3.png",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2343,7 +2439,7 @@
       "id": "(app-client)/./src/images/hero-right.png",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2479,7 +2575,7 @@
       "id": "(app-client)/./src/images/quotation.png",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2487,7 +2583,7 @@
       "id": "(app-client)/./src/images/quotation2.png",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2567,7 +2663,7 @@
       "id": "(app-client)/./src/components/SectionClientSay/SectionClientSay.tsx",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2631,7 +2727,7 @@
       "id": "(app-client)/./src/shared/NextPrev/Next.tsx",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
@@ -2639,7 +2735,7 @@
       "id": "(app-client)/./src/shared/NextPrev/NextPrev.tsx",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/tender/page:static/chunks/app/tender/page.js"
       ],
       "async": false
     },
@@ -2647,37 +2743,134 @@
       "id": "(app-client)/./src/shared/NextPrev/Prev.tsx",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/404.png": {
-      "id": "(app-client)/./src/images/404.png",
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/BackgroundLine.svg": {
+      "id": "(app-client)/./src/images/BackgroundLine.svg",
       "name": "*",
       "chunks": [
-        "app/not-found:static/chunks/app/not-found.js"
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/hero-right1.png": {
+      "id": "(app-client)/./src/images/hero-right1.png",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/promo3.png": {
+      "id": "(app-client)/./src/images/promo3.png",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/HeaderTitle.jsx": {
+      "id": "(app-client)/./src/app/about/HeaderTitle.jsx",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/SectionFounder.jsx": {
+      "id": "(app-client)/./src/app/about/SectionFounder.jsx",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/SectionHero.jsx": {
+      "id": "(app-client)/./src/app/about/SectionHero.jsx",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/SectionHero2.jsx": {
+      "id": "(app-client)/./src/app/about/SectionHero2.jsx",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/SectionStatistic.jsx": {
+      "id": "(app-client)/./src/app/about/SectionStatistic.jsx",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/SectionVideos.jsx": {
+      "id": "(app-client)/./src/app/about/SectionVideos.jsx",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/data.ts": {
+      "id": "(app-client)/./src/app/about/data.ts",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/page.jsx": {
+      "id": "(app-client)/./src/app/about/page.jsx",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
       ],
       "async": false
     }
   },
   "entryCSSFiles": {
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/not-found": {
+      "modules": [],
+      "files": []
+    },
     "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/layout": {
       "modules": [
         "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/rc-slider/assets/index.css",
         "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/globals.css",
         "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/fonts/line-awesome-1.3.0/css/line-awesome.css",
         "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/styles/index.scss",
-        "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/font/google/target.css?{\"path\":\"src/app/layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"display\":\"swap\",\"weight\":[\"300\",\"400\",\"500\",\"600\",\"700\"]}],\"variableName\":\"poppins\"}"
+        "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/font/google/target.css?{\"path\":\"src/app/layout.jsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"display\":\"swap\",\"weight\":[\"300\",\"400\",\"500\",\"600\",\"700\"]}],\"variableName\":\"poppins\"}"
       ],
       "files": [
         "static/css/app/layout.css"
       ]
     },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/contact/page": {
+      "modules": [],
+      "files": []
+    },
     "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/page": {
       "modules": [],
       "files": []
     },
-    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/not-found": {
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/page": {
+      "modules": [
+        "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/HeaderTitle.css",
+        "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/about/SectionStatistic.css"
+      ],
+      "files": [
+        "static/css/app/about/page.css"
+      ]
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/tender/page": {
       "modules": [],
       "files": []
     }

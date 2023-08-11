@@ -2,13 +2,9 @@
 import React, { FC } from "react";
 import Heading from "@/components/Heading/Heading";
 import './SectionStatistic.css';
-export interface Statistic {
-  id: string;
-  heading: string;
-  subHeading: string;
-}
 
-const FOUNDER_DEMO: Statistic[] = [
+
+const FOUNDER_DEMO = [
   {
     id: "1",
     heading: "10 million",
@@ -28,11 +24,9 @@ const FOUNDER_DEMO: Statistic[] = [
   },
 ];
 
-export interface SectionStatisticProps {
-  className?: string;
-}
 
-const SectionStatistic: FC<SectionStatisticProps> = ({ className = "" }) => {
+
+const SectionStatistic = ({ className = "" }) => {
   return (
     <div className={`nc-SectionStatistic relative ${className}`}>
       <Heading

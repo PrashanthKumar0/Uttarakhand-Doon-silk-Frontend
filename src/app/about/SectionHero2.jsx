@@ -11,13 +11,10 @@ import Image from "next/image";
 import './SectionStatistic.css';
 import { HERO2_DEMO_DATA as DATA } from "./data";
 
-export interface SectionHero2Props {
-  className?: string;
-}
 
-let TIME_OUT: NodeJS.Timeout | null = null;
+let TIME_OUT = null;
 
-const SectionHero2: FC<SectionHero2Props> = ({ className = "" }) => {
+const SectionHero2 = ({ className = "" }) => {
   // =================
   const [indexActive, setIndexActive] = useState(0);
   const [isRunning, toggleIsRunning] = useBoolean(true);
@@ -70,7 +67,7 @@ const SectionHero2: FC<SectionHero2Props> = ({ className = "" }) => {
   };
   // =================
 
-  const renderItem = (index: number) => {
+  const renderItem = (index) => {
     const isActive = indexActive === index;
     const item = DATA[index];
     if (!isActive) {
