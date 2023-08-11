@@ -1,6 +1,2729 @@
 {
-  "ssrModuleMapping": {},
+  "ssrModuleMapping": {
+    "(app-client)/./node_modules/next/dist/client/components/app-router.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/error-boundary.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/layout-router.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/layout-router.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/404.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/404.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/image.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/image.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/link.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/shared/lib/head.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/shared/Button/Button.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/shared/Button/Button.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/avatars/Image-1.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/avatars/Image-1.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/avatars/Image-10.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/avatars/Image-10.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/avatars/Image-2.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/avatars/Image-2.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/avatars/Image-3.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/avatars/Image-3.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/avatars/Image-4.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/avatars/Image-4.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/avatars/Image-5.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/avatars/Image-5.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/avatars/Image-6.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/avatars/Image-6.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/avatars/Image-7.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/avatars/Image-7.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/avatars/Image-8.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/avatars/Image-8.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/avatars/Image-9.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/avatars/Image-9.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/1.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/1.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/3.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/3.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/4.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/4.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/5.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/5.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/logo.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/logo.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/1.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/1.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/10.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/10.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/11.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/11.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/12.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/12.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/13.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/13.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/14.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/14.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/15.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/15.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/16.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/16.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/17.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/17.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/18.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/18.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/19.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/19.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/2.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/2.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/20.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/20.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/21.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/21.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/22.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/22.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/23.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/23.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/24.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/24.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/3.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/3.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/4.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/4.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/5.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/5.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/6.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/6.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/7.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/7.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/8.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/8.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/9.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/9.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/sport-1.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/sport-1.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/sport-2.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/sport-2.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/sport-3.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/sport-3.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/sport-4.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/sport-4.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/sport-5.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/sport-5.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/sport-6.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/sport-6.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/sport-7.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/sport-7.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/sport-8.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/sport-8.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/v2.jpg": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/v2.jpg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/v3.jpg": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/v3.jpg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/v4.jpg": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/v4.jpg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/v5.jpg": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/v5.jpg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/v6.jpg": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/v6.jpg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/socials/facebook.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/socials/facebook.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/socials/telegram.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/socials/telegram.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/socials/twitter.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/socials/twitter.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/socials/youtube.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/socials/youtube.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/CommonClient.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/CommonClient.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/SiteHeader.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/SiteHeader.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/headlessui.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/headlessui.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/Header/AvatarDropdown.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/Header/AvatarDropdown.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/Header/CartDropdown.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/Header/CartDropdown.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/Header/DropdownCategories.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/Header/DropdownCategories.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/Header/LangDropdown.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/Header/LangDropdown.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/Header/MainNav2.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/Header/MainNav2.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/Header/MainNav2Logged.jsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/Header/MainNav2Logged.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/Header/TemplatesDropdown.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/Header/TemplatesDropdown.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/hooks/useThemeMode.ts": {
+      "*": {
+        "id": "(sc_client)/./src/hooks/useThemeMode.ts",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/shared/MenuBar/MenuBar.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/shared/MenuBar/MenuBar.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/shared/Navigation/NavMobile.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/shared/Navigation/NavMobile.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/shared/Navigation/NavigationItem.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/shared/Navigation/NavigationItem.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/NcInputNumber.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/NcInputNumber.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/Moon.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/Moon.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/detail1.jpg": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/detail1.jpg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/detail2.jpg": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/detail2.jpg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/detail3.jpg": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/detail3.jpg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/promo2.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/promo2.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/product-detail/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/product-detail/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/AccordionInfo.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/AccordionInfo.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/LikeButton.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/LikeButton.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/ModalQuickView.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/ModalQuickView.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/ProductCard.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/ProductCard.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/ProductQuickView.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/ProductQuickView.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/ProductQuickView2.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/ProductQuickView2.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/SectionGridMoreExplore/SortOrderFilter.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/SectionGridMoreExplore/SortOrderFilter.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/SectionSliderProductCard.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/SectionSliderProductCard.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/shared/NextPrev/NextPrev.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/shared/NextPrev/NextPrev.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/HIW1img.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/HIW1img.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/HIW2img.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/HIW2img.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/HIW3img.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/HIW3img.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/HIW4img.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/HIW4img.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/VectorHIW.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/VectorHIW.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/clientSay1.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/clientSay1.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/clientSay2.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/clientSay2.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/clientSay3.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/clientSay3.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/clientSay4.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/clientSay4.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/clientSay5.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/clientSay5.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/clientSay6.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/clientSay6.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/clientSayMain.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/clientSayMain.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/department1.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/department1.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/department2.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/department2.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/department3.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/department3.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/department4.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/department4.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore1.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore1.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore1.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore1.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore2.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore2.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore2.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore2.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore3.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore3.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore3.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore3.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore4.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore4.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore4.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore4.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore5.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore5.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore5.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore5.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore6.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore6.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore6.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore6.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore7.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore7.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore7.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore7.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore8.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore8.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore8.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore8.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore9.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore9.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/collections/explore9.svg": {
+      "*": {
+        "id": "(sc_client)/./src/images/collections/explore9.svg",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/hero-right-2.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/hero-right-2.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/hero-right-3.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/hero-right-3.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/hero-right.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/hero-right.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/full1-1.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/full1-1.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/full1-2.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/full1-2.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/full1-3.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/full1-3.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/full1.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/full1.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/full2-1.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/full2-1.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/full2-2.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/full2-2.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/full2-3.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/full2-3.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/full2.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/full2.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/full3-1.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/full3-1.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/full3-2.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/full3-2.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/full3-3.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/full3-3.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/products/full3.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/products/full3.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/quotation.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/quotation.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/images/quotation2.png": {
+      "*": {
+        "id": "(sc_client)/./src/images/quotation2.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/HeaderFilterSection.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/HeaderFilterSection.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/MySwitch.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/MySwitch.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/SectionClientSay/SectionClientSay.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/SectionClientSay/SectionClientSay.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/SectionGridMoreExplore/SectionGridMoreExplore.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/SectionGridMoreExplore/SectionGridMoreExplore.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/SectionHero/SectionHero2.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/SectionHero/SectionHero2.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/SectionSliderCategories/SectionSliderCategories.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/SectionSliderCategories/SectionSliderCategories.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/SectionSliderLargeProduct.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/SectionSliderLargeProduct.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/SectionSliderLargeProduct2.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/SectionSliderLargeProduct2.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/TabFilters.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/TabFilters.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/shared/NextPrev/Next.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/shared/NextPrev/Next.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/shared/NextPrev/Prev.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/shared/NextPrev/Prev.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    }
+  },
   "edgeSSRModuleMapping": {},
-  "clientModules": {},
-  "entryCSSFiles": {}
+  "clientModules": {
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/components/app-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/components/app-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/components/error-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/components/error-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/components/redirect-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/components/redirect-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/components/router-reducer/fetch-server-response.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/components/router-reducer/fetch-server-response.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/shared/lib/app-router-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/shared/lib/app-router-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/shared/lib/hooks-client-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/shared/lib/hooks-client-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/shared/lib/server-inserted-html.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/shared/lib/server-inserted-html.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/components/layout-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/components/layout-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/components/render-from-template-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/components/render-from-template-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/components/static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/404.png": {
+      "id": "(app-client)/./src/images/404.png",
+      "name": "*",
+      "chunks": [
+        "app/not-found:static/chunks/app/not-found.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/image.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/image.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/client/link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/client/link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/shared/lib/head.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/dist/esm/shared/lib/head.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/shared/Button/Button.tsx": {
+      "id": "(app-client)/./src/shared/Button/Button.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/avatars/Image-1.png": {
+      "id": "(app-client)/./src/images/avatars/Image-1.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/avatars/Image-10.png": {
+      "id": "(app-client)/./src/images/avatars/Image-10.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/avatars/Image-2.png": {
+      "id": "(app-client)/./src/images/avatars/Image-2.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/avatars/Image-3.png": {
+      "id": "(app-client)/./src/images/avatars/Image-3.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/avatars/Image-4.png": {
+      "id": "(app-client)/./src/images/avatars/Image-4.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/avatars/Image-5.png": {
+      "id": "(app-client)/./src/images/avatars/Image-5.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/avatars/Image-6.png": {
+      "id": "(app-client)/./src/images/avatars/Image-6.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/avatars/Image-7.png": {
+      "id": "(app-client)/./src/images/avatars/Image-7.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/avatars/Image-8.png": {
+      "id": "(app-client)/./src/images/avatars/Image-8.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/avatars/Image-9.png": {
+      "id": "(app-client)/./src/images/avatars/Image-9.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/1.png": {
+      "id": "(app-client)/./src/images/collections/1.png",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/3.png": {
+      "id": "(app-client)/./src/images/collections/3.png",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/4.png": {
+      "id": "(app-client)/./src/images/collections/4.png",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/5.png": {
+      "id": "(app-client)/./src/images/collections/5.png",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/logo.png": {
+      "id": "(app-client)/./src/images/logo.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/1.png": {
+      "id": "(app-client)/./src/images/products/1.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/10.png": {
+      "id": "(app-client)/./src/images/products/10.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/11.png": {
+      "id": "(app-client)/./src/images/products/11.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/12.png": {
+      "id": "(app-client)/./src/images/products/12.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/13.png": {
+      "id": "(app-client)/./src/images/products/13.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/14.png": {
+      "id": "(app-client)/./src/images/products/14.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/15.png": {
+      "id": "(app-client)/./src/images/products/15.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/16.png": {
+      "id": "(app-client)/./src/images/products/16.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/17.png": {
+      "id": "(app-client)/./src/images/products/17.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/18.png": {
+      "id": "(app-client)/./src/images/products/18.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/19.png": {
+      "id": "(app-client)/./src/images/products/19.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/2.png": {
+      "id": "(app-client)/./src/images/products/2.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/20.png": {
+      "id": "(app-client)/./src/images/products/20.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/21.png": {
+      "id": "(app-client)/./src/images/products/21.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/22.png": {
+      "id": "(app-client)/./src/images/products/22.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/23.png": {
+      "id": "(app-client)/./src/images/products/23.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/24.png": {
+      "id": "(app-client)/./src/images/products/24.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/3.png": {
+      "id": "(app-client)/./src/images/products/3.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/4.png": {
+      "id": "(app-client)/./src/images/products/4.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/5.png": {
+      "id": "(app-client)/./src/images/products/5.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/6.png": {
+      "id": "(app-client)/./src/images/products/6.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/7.png": {
+      "id": "(app-client)/./src/images/products/7.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/8.png": {
+      "id": "(app-client)/./src/images/products/8.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/9.png": {
+      "id": "(app-client)/./src/images/products/9.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/sport-1.png": {
+      "id": "(app-client)/./src/images/products/sport-1.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/sport-2.png": {
+      "id": "(app-client)/./src/images/products/sport-2.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/sport-3.png": {
+      "id": "(app-client)/./src/images/products/sport-3.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/sport-4.png": {
+      "id": "(app-client)/./src/images/products/sport-4.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/sport-5.png": {
+      "id": "(app-client)/./src/images/products/sport-5.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/sport-6.png": {
+      "id": "(app-client)/./src/images/products/sport-6.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/sport-7.png": {
+      "id": "(app-client)/./src/images/products/sport-7.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/sport-8.png": {
+      "id": "(app-client)/./src/images/products/sport-8.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/v2.jpg": {
+      "id": "(app-client)/./src/images/products/v2.jpg",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/v3.jpg": {
+      "id": "(app-client)/./src/images/products/v3.jpg",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/v4.jpg": {
+      "id": "(app-client)/./src/images/products/v4.jpg",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/v5.jpg": {
+      "id": "(app-client)/./src/images/products/v5.jpg",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/v6.jpg": {
+      "id": "(app-client)/./src/images/products/v6.jpg",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/socials/facebook.svg": {
+      "id": "(app-client)/./src/images/socials/facebook.svg",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/socials/telegram.svg": {
+      "id": "(app-client)/./src/images/socials/telegram.svg",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/socials/twitter.svg": {
+      "id": "(app-client)/./src/images/socials/twitter.svg",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/socials/youtube.svg": {
+      "id": "(app-client)/./src/images/socials/youtube.svg",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/CommonClient.tsx": {
+      "id": "(app-client)/./src/app/CommonClient.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/SiteHeader.tsx": {
+      "id": "(app-client)/./src/app/SiteHeader.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/headlessui.tsx": {
+      "id": "(app-client)/./src/app/headlessui.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/Header/AvatarDropdown.tsx": {
+      "id": "(app-client)/./src/components/Header/AvatarDropdown.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/Header/CartDropdown.tsx": {
+      "id": "(app-client)/./src/components/Header/CartDropdown.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/Header/DropdownCategories.tsx": {
+      "id": "(app-client)/./src/components/Header/DropdownCategories.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/Header/LangDropdown.tsx": {
+      "id": "(app-client)/./src/components/Header/LangDropdown.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/Header/MainNav2.tsx": {
+      "id": "(app-client)/./src/components/Header/MainNav2.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/Header/MainNav2Logged.jsx": {
+      "id": "(app-client)/./src/components/Header/MainNav2Logged.jsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/Header/TemplatesDropdown.tsx": {
+      "id": "(app-client)/./src/components/Header/TemplatesDropdown.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/hooks/useThemeMode.ts": {
+      "id": "(app-client)/./src/hooks/useThemeMode.ts",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/shared/MenuBar/MenuBar.tsx": {
+      "id": "(app-client)/./src/shared/MenuBar/MenuBar.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/shared/Navigation/NavMobile.tsx": {
+      "id": "(app-client)/./src/shared/Navigation/NavMobile.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/shared/Navigation/NavigationItem.tsx": {
+      "id": "(app-client)/./src/shared/Navigation/NavigationItem.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/NcInputNumber.tsx": {
+      "id": "(app-client)/./src/components/NcInputNumber.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/Moon.svg": {
+      "id": "(app-client)/./src/images/Moon.svg",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/detail1.jpg": {
+      "id": "(app-client)/./src/images/products/detail1.jpg",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/detail2.jpg": {
+      "id": "(app-client)/./src/images/products/detail2.jpg",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/detail3.jpg": {
+      "id": "(app-client)/./src/images/products/detail3.jpg",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/promo2.png": {
+      "id": "(app-client)/./src/images/promo2.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/product-detail/page.tsx": {
+      "id": "(app-client)/./src/app/product-detail/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/product-detail/page:static/chunks/app/product-detail/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/AccordionInfo.tsx": {
+      "id": "(app-client)/./src/components/AccordionInfo.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/LikeButton.tsx": {
+      "id": "(app-client)/./src/components/LikeButton.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/ModalQuickView.tsx": {
+      "id": "(app-client)/./src/components/ModalQuickView.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/ProductCard.tsx": {
+      "id": "(app-client)/./src/components/ProductCard.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/ProductQuickView.tsx": {
+      "id": "(app-client)/./src/components/ProductQuickView.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/ProductQuickView2.tsx": {
+      "id": "(app-client)/./src/components/ProductQuickView2.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/SectionGridMoreExplore/SortOrderFilter.tsx": {
+      "id": "(app-client)/./src/components/SectionGridMoreExplore/SortOrderFilter.tsx",
+      "name": "*",
+      "chunks": [
+        "app/product-detail/page:static/chunks/app/product-detail/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/SectionSliderProductCard.tsx": {
+      "id": "(app-client)/./src/components/SectionSliderProductCard.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/shared/NextPrev/NextPrev.tsx": {
+      "id": "(app-client)/./src/shared/NextPrev/NextPrev.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/HIW1img.png": {
+      "id": "(app-client)/./src/images/HIW1img.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/HIW2img.png": {
+      "id": "(app-client)/./src/images/HIW2img.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/HIW3img.png": {
+      "id": "(app-client)/./src/images/HIW3img.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/HIW4img.png": {
+      "id": "(app-client)/./src/images/HIW4img.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/VectorHIW.svg": {
+      "id": "(app-client)/./src/images/VectorHIW.svg",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/clientSay1.png": {
+      "id": "(app-client)/./src/images/clientSay1.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/clientSay2.png": {
+      "id": "(app-client)/./src/images/clientSay2.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/clientSay3.png": {
+      "id": "(app-client)/./src/images/clientSay3.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/clientSay4.png": {
+      "id": "(app-client)/./src/images/clientSay4.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/clientSay5.png": {
+      "id": "(app-client)/./src/images/clientSay5.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/clientSay6.png": {
+      "id": "(app-client)/./src/images/clientSay6.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/clientSayMain.png": {
+      "id": "(app-client)/./src/images/clientSayMain.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/department1.png": {
+      "id": "(app-client)/./src/images/collections/department1.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/department2.png": {
+      "id": "(app-client)/./src/images/collections/department2.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/department3.png": {
+      "id": "(app-client)/./src/images/collections/department3.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/department4.png": {
+      "id": "(app-client)/./src/images/collections/department4.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore1.png": {
+      "id": "(app-client)/./src/images/collections/explore1.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore1.svg": {
+      "id": "(app-client)/./src/images/collections/explore1.svg",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore2.png": {
+      "id": "(app-client)/./src/images/collections/explore2.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore2.svg": {
+      "id": "(app-client)/./src/images/collections/explore2.svg",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore3.png": {
+      "id": "(app-client)/./src/images/collections/explore3.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore3.svg": {
+      "id": "(app-client)/./src/images/collections/explore3.svg",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore4.png": {
+      "id": "(app-client)/./src/images/collections/explore4.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore4.svg": {
+      "id": "(app-client)/./src/images/collections/explore4.svg",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore5.png": {
+      "id": "(app-client)/./src/images/collections/explore5.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore5.svg": {
+      "id": "(app-client)/./src/images/collections/explore5.svg",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore6.png": {
+      "id": "(app-client)/./src/images/collections/explore6.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore6.svg": {
+      "id": "(app-client)/./src/images/collections/explore6.svg",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore7.png": {
+      "id": "(app-client)/./src/images/collections/explore7.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore7.svg": {
+      "id": "(app-client)/./src/images/collections/explore7.svg",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore8.png": {
+      "id": "(app-client)/./src/images/collections/explore8.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore8.svg": {
+      "id": "(app-client)/./src/images/collections/explore8.svg",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore9.png": {
+      "id": "(app-client)/./src/images/collections/explore9.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/collections/explore9.svg": {
+      "id": "(app-client)/./src/images/collections/explore9.svg",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/hero-right-2.png": {
+      "id": "(app-client)/./src/images/hero-right-2.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/hero-right-3.png": {
+      "id": "(app-client)/./src/images/hero-right-3.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/hero-right.png": {
+      "id": "(app-client)/./src/images/hero-right.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/full1-1.png": {
+      "id": "(app-client)/./src/images/products/full1-1.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/full1-2.png": {
+      "id": "(app-client)/./src/images/products/full1-2.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/full1-3.png": {
+      "id": "(app-client)/./src/images/products/full1-3.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/full1.png": {
+      "id": "(app-client)/./src/images/products/full1.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/full2-1.png": {
+      "id": "(app-client)/./src/images/products/full2-1.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/full2-2.png": {
+      "id": "(app-client)/./src/images/products/full2-2.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/full2-3.png": {
+      "id": "(app-client)/./src/images/products/full2-3.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/full2.png": {
+      "id": "(app-client)/./src/images/products/full2.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/full3-1.png": {
+      "id": "(app-client)/./src/images/products/full3-1.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/full3-2.png": {
+      "id": "(app-client)/./src/images/products/full3-2.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/full3-3.png": {
+      "id": "(app-client)/./src/images/products/full3-3.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/products/full3.png": {
+      "id": "(app-client)/./src/images/products/full3.png",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/quotation.png": {
+      "id": "(app-client)/./src/images/quotation.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/images/quotation2.png": {
+      "id": "(app-client)/./src/images/quotation2.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/HeaderFilterSection.tsx": {
+      "id": "(app-client)/./src/components/HeaderFilterSection.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/MySwitch.tsx": {
+      "id": "(app-client)/./src/components/MySwitch.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/SectionClientSay/SectionClientSay.tsx": {
+      "id": "(app-client)/./src/components/SectionClientSay/SectionClientSay.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/SectionGridMoreExplore/SectionGridMoreExplore.tsx": {
+      "id": "(app-client)/./src/components/SectionGridMoreExplore/SectionGridMoreExplore.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/SectionHero/SectionHero2.tsx": {
+      "id": "(app-client)/./src/components/SectionHero/SectionHero2.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/SectionSliderCategories/SectionSliderCategories.tsx": {
+      "id": "(app-client)/./src/components/SectionSliderCategories/SectionSliderCategories.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/SectionSliderLargeProduct.tsx": {
+      "id": "(app-client)/./src/components/SectionSliderLargeProduct.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/SectionSliderLargeProduct2.tsx": {
+      "id": "(app-client)/./src/components/SectionSliderLargeProduct2.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/components/TabFilters.tsx": {
+      "id": "(app-client)/./src/components/TabFilters.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/shared/NextPrev/Next.tsx": {
+      "id": "(app-client)/./src/shared/NextPrev/Next.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/shared/NextPrev/Prev.tsx": {
+      "id": "(app-client)/./src/shared/NextPrev/Prev.tsx",
+      "name": "*",
+      "chunks": [
+        "app/collection/page:static/chunks/app/collection/page.js"
+      ],
+      "async": false
+    }
+  },
+  "entryCSSFiles": {
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/not-found": {
+      "modules": [],
+      "files": []
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/layout": {
+      "modules": [
+        "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/rc-slider/assets/index.css",
+        "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/globals.css",
+        "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/fonts/line-awesome-1.3.0/css/line-awesome.css",
+        "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/styles/index.scss",
+        "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/node_modules/next/font/google/target.css?{\"path\":\"src/app/layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"display\":\"swap\",\"weight\":[\"300\",\"400\",\"500\",\"600\",\"700\"]}],\"variableName\":\"poppins\"}"
+      ],
+      "files": [
+        "static/css/app/layout.css"
+      ]
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/cart/page": {
+      "modules": [],
+      "files": []
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/product-detail/page": {
+      "modules": [],
+      "files": []
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/page": {
+      "modules": [],
+      "files": []
+    },
+    "/Users/aditisharma/Doon Silk Project/Ciseco_Nextjs/CisecoNextjs/src/app/collection/page": {
+      "modules": [],
+      "files": []
+    }
+  }
 }

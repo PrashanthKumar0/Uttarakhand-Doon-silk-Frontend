@@ -5,18 +5,11 @@ import NcPlayIcon from "@/shared/NcPlayIcon/NcPlayIcon";
 import React, { FC, useState } from "react";
 import isSafariBrowser from "@/utils/isSafariBrowser";
 
-export interface VideoType {
-  id: string;
-  title: string;
-  thumbnail: string;
-}
 
-export interface SectionVideosProps {
-  videos?: VideoType[];
-  className?: string;
-}
 
-const VIDEOS_DEMO: VideoType[] = [
+
+
+const VIDEOS_DEMO = [
   {
     id: "RzVvThhjAKw",
     title: "Uttarakhand -Doon",
@@ -25,7 +18,7 @@ const VIDEOS_DEMO: VideoType[] = [
   },
 ];
 
-const SectionVideos: FC<SectionVideosProps> = ({
+const SectionVideos = ({
   videos = VIDEOS_DEMO,
   className = "",
 }) => {
@@ -33,7 +26,7 @@ const SectionVideos: FC<SectionVideosProps> = ({
   const [currentVideo] = useState(0);
 
   const renderMainVideo = () => {
-    const video: VideoType = videos[currentVideo];
+    const video = videos[currentVideo];
     return (
       <div
         className="group aspect-w-16 aspect-h-16 sm:aspect-h-9 bg-neutral-800 rounded-3xl overflow-hidden border-4 border-white dark:border-neutral-900 sm:rounded-[50px] sm:border-[10px] z-0"

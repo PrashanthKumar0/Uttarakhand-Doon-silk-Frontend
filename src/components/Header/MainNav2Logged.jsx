@@ -10,11 +10,11 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
 
 
-export interface MainNav2LoggedProps {}
 
 
-const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
-  const inputRef = createRef<HTMLInputElement>();
+
+const MainNav2Logged = () => {
+  const inputRef = createRef();
   const [showSearchForm, setShowSearchForm] = useState(false);
   const router = useRouter();
   const [token, setToken] = useState<string | null>(null);

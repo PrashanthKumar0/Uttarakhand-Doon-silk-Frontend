@@ -9,9 +9,17 @@
 // import Input from "@/shared/Input/Input";
 
 const Otp = () => {
+<<<<<<< Updated upstream:src/app/otp/page.js
 //   const router = useRouter();
 //   const [OTP, setOTP] = useState("");
 //   const id = window.localStorage.getItem('id')
+=======
+  const router = useRouter();
+  const [OTP, setOTP] = useState("");
+  const id = window.localStorage.getItem('id')
+  
+
+>>>>>>> Stashed changes:src/app/otp/page.jsx
 
 // const handleClick=()=>{
 

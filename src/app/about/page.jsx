@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:src/app/about/page.tsx
 "use client"
 // import rightImg from "@/images/hero-right1.png";
 // import React, { FC, useEffect } from "react";
@@ -11,6 +12,23 @@
 // import HeaderTitle from './HeaderTitle';
 // import SectionHero2 from "./SectionHero2";
 // import SectionVideo from "./SectionVideos"
+=======
+"use client";
+
+
+import rightImg from "@/images/hero-right1.png";
+import React from "react";
+import SectionFounder from "./SectionFounder";
+import SectionStatistic from "./SectionStatistic";
+import BgGlassmorphism from "@/components/BgGlassmorphism/BgGlassmorphism";
+import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
+import SectionHero from "./SectionHero";
+import SectionClientSay from "@/components/SectionClientSay/SectionClientSay";
+import SectionPromo3 from "@/components/SectionPromo3";
+import HeaderTitle from './HeaderTitle';
+import SectionHero2 from "./SectionHero2";
+import SectionVideo from "./SectionVideos"
+>>>>>>> Stashed changes:src/app/about/page.jsx
 
 const PageAbout = ({}) => {
   return ('')

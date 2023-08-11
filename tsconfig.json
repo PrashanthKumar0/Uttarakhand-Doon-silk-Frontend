@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/login/page.js", "src/app/signup/page.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/login/page.js", "src/app/signup/page.js", "src/app/(accounts)/account/page.jsx", "src/app/about/page.jsx", "src/components/Header/MainNav2Logged.jsx", "src/app/about/SectionVideos.jsx"],
   "exclude": ["node_modules"]
 }
