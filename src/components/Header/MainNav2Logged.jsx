@@ -17,7 +17,7 @@ const MainNav2Logged = () => {
   const inputRef = createRef();
   const [showSearchForm, setShowSearchForm] = useState(false);
   const router = useRouter();
-  const [token, setToken] = useState<string | null>(null);
+  const [token, setToken] = useState(null);
   useEffect(()=>{ 
     const storedToken = window.localStorage.getItem('token');
     console.log('token', storedToken);
