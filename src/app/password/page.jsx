@@ -19,11 +19,9 @@ const [error,setError]=useState(false)
       
   });
   const router = useRouter();
-<<<<<<< Updated upstream:src/app/password/page.js
-  const userId = typeof localStorage !== 'undefined' ? localStorage.getItem('id') : ''
-=======
+
+ 
   const userId = window.localStorage.getItem('id')
->>>>>>> Stashed changes:src/app/password/page.jsx
   return (
     <Formik
     validationSchema={schema}
