@@ -12,7 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation';
 import { baseUrl } from "../../Url";
 
-function PageSignUp(){
+function Page(){
   const router = useRouter();
   const schema = Yup.object().shape({
     email: Yup.string()
@@ -124,4 +124,4 @@ function PageSignUp(){
   );
 };
 
-export default PageSignUp;
+export default Page;

@@ -130,7 +130,7 @@ const PageLogin = () => {
           {/* ==== */}
           <span className="block text-center text-neutral-700 dark:text-neutral-300">
             New user? {` `}
-            <Link className="text-green-600" href="/signup">
+            <Link className="text-green-600" to='/signup' href="/signup">
               Create an account
             </Link>
 
