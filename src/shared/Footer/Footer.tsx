@@ -10,44 +10,35 @@ export interface WidgetFooterMenu {
 }
 
 const widgetMenus: WidgetFooterMenu[] = [
-  {
-    id: "5",
-    title: "Getting started",
-    menus: [
-      { href: "/", label: "Release Notes" },
-      { href: "/", label: "Upgrade Guide" },
-      { href: "/", label: "Browser Support" },
-      { href: "/", label: "Dark Mode" },
-    ],
-  },
+  
   {
     id: "1",
     title: "Explore",
     menus: [
-      { href: "/", label: "Prototyping" },
-      { href: "/", label: "Design systems" },
-      { href: "/", label: "Pricing" },
-      { href: "/", label: "Security" },
+      { href: "/about", label: "About Us" },
+      { href: "/", label: "Home" },
+     
+      { href: "/contact", label: "Contact Us" },
     ],
   },
   {
     id: "2",
     title: "Resources",
     menus: [
-      { href: "/", label: "Best practices" },
-      { href: "/", label: "Support" },
+      { href: "/tender", label: "Tender" },
+      { href: "/contact", label: "Support" },
       { href: "/", label: "Developers" },
-      { href: "/", label: "Learn design" },
+    
     ],
   },
   {
     id: "4",
-    title: "Community",
+    title: "Contacts",
     menus: [
-      { href: "/", label: "Discussion Forums" },
-      { href: "/", label: "Code of Conduct" },
-      { href: "/", label: "Contributing" },
-      { href: "/", label: "API Reference" },
+      { href: "/", label: "Silk Park Bhawan, Premnagar, Dehradun, 248007 Uttarakhand" },
+      { href: "/", label: "ucrf.silk@gmail.com" },
+      { href: "/", label: "(0135)2770093" },
+     
     ],
   },
 ];
@@ -79,8 +70,8 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <div className="nc-Footer relative py-20 lg:pt-28 lg:pb-24 border-t border-neutral-200 dark:border-neutral-700">
-      <div className="container grid grid-cols-2 gap-y-10 gap-x-5 sm:gap-x-8 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-10 ">
+    <div className="nc-Footer relative py-10 lg:pt-10  lg:pb-10 border-t border-neutral-200 dark:border-neutral-700">
+      <div className="container grid grid-cols-2 gap-y-10 gap-x-5 sm:gap-x-8 md:grid-cols-4 lg:grid-cols-4 lg:gap-x-10 ">
         <div className="grid grid-cols-4 gap-5 col-span-2 md:col-span-4 lg:md:col-span-1 lg:flex lg:flex-col">
           <div className="col-span-2 md:col-span-1">
             <Logo />

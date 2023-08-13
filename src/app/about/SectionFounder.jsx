@@ -7,11 +7,11 @@ import NcImage from "@/shared/NcImage/NcImage";
 
 const FOUNDER_DEMO = [
   {
-    id: "1",
-    name: `Chaudhary Ajeet Singh`,
-    job: "Chairman",
+    id: "5",
+    name: `Mr. Alok Kumar Pandey`,
+    job: "Registrar Co-Operatives Societies Uttarakhand",
     avatar:
-    "https://ucrf.org.in/wp-content/uploads/2022/06/Chairman-Chaudhary-Ajeet-Singh-150x150.jpg"
+    "https://ucrf.org.in/wp-content/uploads/2022/06/Alok-Kumar-Pandey-150x150.jpg",
   },
   {
     id: "2",
@@ -34,12 +34,13 @@ const FOUNDER_DEMO = [
     avatar:
     "https://ucrf.org.in/wp-content/uploads/2022/06/BVRC-Purushottam-150x150.jpeg",
   },
+ 
   {
-    id: "5",
-    name: `Mr. Alok Kumar Pandey`,
-    job: "Registrar Co-Operatives Societies Uttarakhand",
+    id: "1",
+    name: `Chaudhary Ajeet Singh`,
+    job: "Chairman",
     avatar:
-    "https://ucrf.org.in/wp-content/uploads/2022/06/Alok-Kumar-Pandey-150x150.jpg",
+    "https://ucrf.org.in/wp-content/uploads/2022/06/Chairman-Chaudhary-Ajeet-Singh-150x150.jpg"
   },
 
 ];

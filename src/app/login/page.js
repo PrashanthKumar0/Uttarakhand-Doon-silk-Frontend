@@ -41,7 +41,7 @@ const PageLogin = () => {
     initialValues={{ email: "" ,password:''}}
     onSubmit={(values) => {
      
-     console.log(values);
+    
      axios.post(`${baseUrl}/loginUser`,{email:values.email,password:values.password})
      .then((response)=>{
       if(response.status===200){

@@ -10,15 +10,15 @@ import SectionPromo1 from "@/components/SectionPromo1";
 const info = [
   {
     title: "🗺 ADDRESS",
-    desc: "Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter",
+    desc: "Silk Park Bhawan, Premnagar, Dehradun, 248007 Uttarakhand",
   },
   {
     title: "💌 EMAIL",
-    desc: "nc.example@example.com",
+    desc: "ucrf.silk@gmail.com",
   },
   {
     title: "☎ PHONE",
-    desc: "000-123-456-7890",
+    desc: "0135-2770093",
   },
 ];
 

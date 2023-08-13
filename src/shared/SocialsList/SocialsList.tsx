@@ -11,8 +11,8 @@ export interface SocialsListProps {
 }
 
 const socialsDemo = [
-  { name: "Facebook", icon: facebook, href: "#" },
-  { name: "Twitter", icon: twitter, href: "#" },
+  { name: "Facebook", icon: facebook, href: "https://m.facebook.com/DOONSILK" },
+  { name: "Intagram", icon: twitter, href: "https://instagram.com/doon.silk" },
   { name: "Youtube", icon: youtube, href: "#" },
   { name: "Telegram", icon: telegram, href: "#" },
 ];
