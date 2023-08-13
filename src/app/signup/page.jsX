@@ -10,6 +10,7 @@ import Input from "@/shared/Input/Input";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation';
+import { baseUrl } from "../../Url";
 
 function PageSignUp(){
   const router = useRouter();
@@ -26,7 +27,7 @@ function PageSignUp(){
     onSubmit={(values) => {
      
       console.log(values);
-      axios.post('http://localhost:8000/signupUsers',{email:values.email})
+      axios.post(`${baseUrl}/signupUsers`,{email:values.email})
       .then((response)=>{
        if(response.status===201){
     window.localStorage.setItem('id',response.data.id)

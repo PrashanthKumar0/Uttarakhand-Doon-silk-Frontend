@@ -2,15 +2,17 @@
 
 import { Popover, Transition } from "@/app/headlessui";
 import { avatarImgs } from "@/contains/fakeData";
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import Avatar from "@/shared/Avatar/Avatar";
 import SwitchDarkMode2 from "@/shared/SwitchDarkMode/SwitchDarkMode2";
 import Link from "next/link";
-
+import AppContext from "@/context/withAuth";
 export default function AvatarDropdown() {
+  const value= useContext(AppContext)
   const handleLogout=()=>{
   localStorage.clear();
     window.location.reload()
+    value.setToken('')
   }
   return (
     <div className="AvatarDropdown ">

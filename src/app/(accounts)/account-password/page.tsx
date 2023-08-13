@@ -6,6 +6,7 @@ import Input from "@/shared/Input/Input";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer,toast } from "react-toastify";
 import axios from "axios";
+import { baseUrl } from "@/Url";
 const AccountPass = () => {
   const [pass, setPass] =useState('')
   const [newPass, setNewPass]=useState('')
@@ -17,7 +18,7 @@ const handleClick=()=>{
     toast.error('Fill all the details')}
     if(newPass!==''&&pass!==''&&confirm!=='')  {
 
-        axios.post('http://localhost:8000/updatePassword',{
+        axios.post(`${baseUrl}/updatePassword`,{
           user_id:id,
           oldPassword:pass,
           newPassword:newPass

@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React,{useEffect} from "react";
 import SectionHowItWork from "@/components/SectionHowItWork/SectionHowItWork";
 import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
 //import SectionPromo1 from "@/components/SectionPromo1";
@@ -18,6 +19,18 @@ import SectionGridFeatureItems from "@/components/SectionGridFeatureItems";
 //import SectionMagazine5 from "@/app/blog/SectionMagazine5";
 
 function PageHome() {
+  // useEffect(()=>{
+  //   window.location.reload();
+  //   console.log('useeffect')
+  // },[])
+  // useEffect(()=>{
+  //   console.log('first reload')
+  // },[])
+  // useEffect(()=>{
+  //   console.log('second reload')
+  // },[])
+
+
   return (
     <div className="nc-PageHome relative overflow-hidden">
  

@@ -10,8 +10,12 @@ import axios from "axios";
 import { useRouter } from 'next/navigation';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const PageLogin = () => {
+import { baseUrl } from "../../Url";
+import { useContext } from "react";
+import AppContext from '../../context/withAuth';
 
+const PageLogin = () => {
+  const value = useContext(AppContext);
   const schema = Yup.object().shape({
     email: Yup.string()
       .required("Email is a required field")
@@ -21,7 +25,16 @@ const PageLogin = () => {
       
   });
   const router = useRouter();
- 
+ useEffect(()=>{
+  const token = window.localStorage.getItem('token')
+  console.log('inside login')
+  if(token!==''||token!==null){
+    router.push('/')
+  }
+  if(token===null || token===''){
+    router.push('/login')
+  }
+ },[])
   return (
     <Formik
     validationSchema={schema}
@@ -29,13 +42,14 @@ const PageLogin = () => {
     onSubmit={(values) => {
      
      console.log(values);
-     axios.post('http://localhost:8000/loginUser',{email:values.email,password:values.password})
+     axios.post(`${baseUrl}/loginUser`,{email:values.email,password:values.password})
      .then((response)=>{
       if(response.status===200){
        toast.success(response.data.message)
        window.localStorage.setItem('token',response.data.token)
+       value.setToken(response.data.token)
        console.log(window.localStorage.getItem('token'))
-       router.push('/');
+       router.push('/about')
       }else{
        toast.error(response.data.message)
       }

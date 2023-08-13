@@ -8,21 +8,24 @@ import Navigation from "@/shared/Navigation/Navigation";
 import CartDropdown from "./CartDropdown";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
-
-
+import AppContext from "@/context/withAuth";
+import { useContext } from "react";
 
 export interface MainNav2LoggedProps {}
 
 const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
   const inputRef = createRef<HTMLInputElement>();
+  const value = useContext(AppContext)
   const [showSearchForm, setShowSearchForm] = useState(false);
   const router = useRouter();
-  const [token, setToken] = useState('');
-  useEffect(()=>{ 
-    const storedToken:string|null = window.localStorage.getItem('token');
-    console.log('token', storedToken);
-    setToken(storedToken || ''); 
-  },[])
+  // const [token, setToken] = useState('');
+  // useEffect(()=>{ 
+  //   console.log('component mount')
+  //   const storedToken:string|null = window.localStorage.getItem('token');
+  //   console.log('token', storedToken);
+  //   setToken(storedToken || ''); 
+
+  // },[])
   const renderMagnifyingGlassIcon = () => {
     return (
       <svg
@@ -103,13 +106,13 @@ const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
             </button>
           )}
            {
-          token===''||token===null?
+          value.token===''||value.token===null?
           <button className="btn btn-success rounded-full bg-green-600 px-6 py-2 text-white"  onClick={()=>{  router.push("/login");}}> Login</button> : <AvatarDropdown />
 
             }
          
      {
-          token===''||token===null? '': <CartDropdown />
+          value.token===''||value.token===null? '': <CartDropdown />
 
             }
   

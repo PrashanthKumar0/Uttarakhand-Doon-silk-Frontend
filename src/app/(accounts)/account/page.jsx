@@ -1,13 +1,16 @@
 "use client"
 import Label from "@/components/Label/Label";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useContext, useEffect, useState } from "react";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import Input from "@/shared/Input/Input";
 import Select from "@/shared/Select/Select";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { baseUrl } from "@/Url";
+import AppContext from "@/context/withAuth";
 const AccountPage = () => {
+  const value =useContext(AppContext)
   const [name, setName]= useState('')
   const [pin, setPin]= useState('')
   const [address,setAddress] =useState('')
@@ -16,8 +19,8 @@ const AccountPage = () => {
   const [data, setData]=useState({})
 
   useEffect(()=>{
-    const token = localStorage.getItem('token')
-    axios.get('http://localhost:8000/getUserDetails', {headers:{Authorization: `Bearer ${token}`}})
+   
+    axios.get(`${baseUrl}/getUserDetails`, {headers:{Authorization: `Bearer ${value.token}`}})
     .then((response)=>{setData(response.data.user) 
       ,setName(response.data.user.name)
       ,setAddress(response.data.user.address)
@@ -34,10 +37,10 @@ const AccountPage = () => {
     console.log('address', address)
     console.log('gender', gender)
     console.log('phone', phone)
-    const token =localStorage.getItem('token')
-      axios.post('http://localhost:8000/addUserDetails',
+   
+      axios.post(`${baseUrl}/addUserDetails`,
       {name:name,phone:phone, address:address,pincode:pin,gender:gender},
-      {headers:{Authorization: `Bearer ${token}`}})
+      {headers:{Authorization: `Bearer ${value.token}`}})
       .then((response)=>{if(response.status==200){toast.success('Updated Successfully')}}).catch((error)=>{toast.error('There was some issue in updating')})
   }
  
@@ -69,7 +72,7 @@ const AccountPage = () => {
                 </span>
                 <Input
                   className="!rounded-l-none"
-                //  defaultValue={data.email}
+                 defaultValue={data!==null &&data.email}
 
                  disabled
                 />

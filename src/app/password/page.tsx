@@ -10,7 +10,7 @@ import axios from "axios";
 import { useRouter } from 'next/navigation';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
-
+import {baseUrl} from '../../Url.jsx';
 const Password  =() => {
 const [error,setError]=useState(false)
   const schema = Yup.object().shape({
@@ -35,7 +35,7 @@ var userId :string|null
       setError(true)
      }else{
       console.log(values);
-     axios.post('http://localhost:8000/savePassword',{user_id:userId ,password:values.password})
+     axios.post(`${baseUrl}/savePassword`,{user_id:userId ,password:values.password})
      .then((response)=>{
       if(response.status===200){
       toast.success('user created Successfully')
