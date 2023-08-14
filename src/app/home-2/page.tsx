@@ -2,7 +2,7 @@ import React from "react";
 import SectionHowItWork from "@/components/SectionHowItWork/SectionHowItWork";
 import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
 import SectionSliderLargeProduct from "@/components/SectionSliderLargeProduct";
-import SectionSliderProductCard from "@/components/SectionSliderProductCard";
+import SectionSlider from "@/components/SectionSliderProductCard";
 import SectionGridMoreExplore from "@/components/SectionGridMoreExplore/SectionGridMoreExplore";
 import { DEMO_MORE_EXPLORE_DATA_2 } from "@/components/SectionGridMoreExplore/data";
 import SectionPromo2 from "@/components/SectionPromo2";

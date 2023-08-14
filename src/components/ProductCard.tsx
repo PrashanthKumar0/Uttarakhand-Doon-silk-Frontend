@@ -18,40 +18,12 @@ import Image from "next/image";
 import Link from "next/link";
 import NcImage from "@/shared/NcImage/NcImage";
 
-export interface ProductCardProps {
-  className?: string;
-  data?: Product;
-  isLiked?: boolean;
-}
-export interface varient{
-  varient_id:number;
-  product_id:number;
-  color:string;
-  size:null|string;
-  image1:string;
-  image2:string;
-  image3:string;
-  color_hex:number|string;
-}
-export interface GetProducts{
-  category_id:number;
-  color?:string;
-  color_hex?:null|string;
-  description:string;
- discount_percentage:string;
- image1:string;
- image2:string;
- image3:string;
- name:string;
- price:number;
- product_id:1;
-  size:null;
-  new_varient_s:[varient]
-}
 
-const ProductCard: FC<ProductCardProps> = ({
+
+const ProductCard = ({
   className = "",
-  data = PRODUCTS[0],
+  data ,
+
   isLiked,
 }) => {
   const {
@@ -68,6 +40,7 @@ const ProductCard: FC<ProductCardProps> = ({
     numberOfReviews,
   } = data;
 
+  
   const [variantActive, setVariantActive] = useState(0);
   const [showModalQuickView, setShowModalQuickView] = useState(false);
   const router = useRouter();
@@ -286,7 +259,7 @@ const ProductCard: FC<ProductCardProps> = ({
 
   return (
     <>
-      <div
+   <div
         className={`nc-ProductCard relative flex flex-col bg-transparent ${className}`}
       >
         <Link href={"/product-detail"} className="absolute inset-0"></Link>
@@ -334,9 +307,10 @@ const ProductCard: FC<ProductCardProps> = ({
       <ModalQuickView
         show={showModalQuickView}
         onCloseModalQuickView={() => setShowModalQuickView(false)}
-      />
-    </>
+      /> 
+ </>
   );
 };
 
 export default ProductCard;
+

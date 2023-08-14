@@ -3,15 +3,12 @@ import React, { useEffect, useState } from "react";
 import Pagination from "@/shared/Pagination/Pagination";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import SectionSliderCollections from "@/components/SectionSliderLargeProduct";
-import SectionPromo1 from "@/components/SectionPromo1";
-import ProductCard from "@/components/ProductCard";
-import { PRODUCTS } from "@/data/data";
-import TabFilters from "@/components/TabFilters";
 
 import axios from "axios";
 import { usePathname, useSearchParams, useParams } from 'next/navigation'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer,toast } from "react-toastify";
+import NewProduct from "../NewProduct/page";
 const Page = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -63,9 +60,9 @@ console.log('p-data', pData)
               {/* {PRODUCTS.map((item, index) => (
                 <ProductCard data={item} key={index} />
               ))} */}
-               {/* { pData===null && pData===''?"" :pData.map((item, index) => (
-                <ProductCard data={item} key={index} />
-              ))} */}
+               { pData===null && pData===''?"" :pData?.map((item, index) => (
+               <NewProduct item={item}/>
+              ))}
             </div>
 
             {/* PAGINATION */}
