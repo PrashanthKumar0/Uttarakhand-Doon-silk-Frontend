@@ -23,6 +23,31 @@ export interface ProductCardProps {
   data?: Product;
   isLiked?: boolean;
 }
+export interface varient{
+  varient_id:number;
+  product_id:number;
+  color:string;
+  size:null|string;
+  image1:string;
+  image2:string;
+  image3:string;
+  color_hex:number|string;
+}
+export interface GetProducts{
+  category_id:number;
+  color?:string;
+  color_hex?:null|string;
+  description:string;
+ discount_percentage:string;
+ image1:string;
+ image2:string;
+ image3:string;
+ name:string;
+ price:number;
+ product_id:1;
+  size:null;
+  new_varient_s:[varient]
+}
 
 const ProductCard: FC<ProductCardProps> = ({
   className = "",
@@ -298,7 +323,7 @@ const ProductCard: FC<ProductCardProps> = ({
             <div className="flex items-center mb-0.5">
               <StarIcon className="w-5 h-5 pb-[1px] text-amber-400" />
               <span className="text-sm ml-1 text-slate-500 dark:text-slate-400">
-                {rating || ""} ({numberOfReviews || 0} reviews)
+                {rating || ""} ({numberOfReviews || 23 } reviews)
               </span>
             </div>
           </div>

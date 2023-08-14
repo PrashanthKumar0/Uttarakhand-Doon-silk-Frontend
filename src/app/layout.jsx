@@ -20,6 +20,8 @@ export default function RootLayout({
   params,
 }) {
   const[token , setToken]=useState('')
+  const[id , setId]=useState('')
+
   useEffect(()=>{
     const value = window.localStorage.getItem('token')
    // console.log(value)
@@ -27,11 +29,11 @@ export default function RootLayout({
       setToken(value)
     }
     console.log('token-auth', token)  
-  },[ token ,setToken])
+  },[token])
   return (
     <html lang="en" className={poppins.className}>
       <body className="bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
-      <AppContext.Provider value={{token, setToken}}>
+      <AppContext.Provider value={{token, setToken, id ,setId}}>
       <SiteHeader />
         {children}
         <CommonClient />

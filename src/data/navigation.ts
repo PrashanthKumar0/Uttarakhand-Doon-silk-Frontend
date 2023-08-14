@@ -72,7 +72,7 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
   },
   {
     id: ncNanoId(),
-    href: "/collection",
+    href: "/",
     name: "Categories",
     type: "dropdown",
     children: OTHER_PAGE_CHILD,
@@ -88,6 +88,7 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
     href: "/tender",
     name: "Tender",
   },
+ 
  
 
 ];

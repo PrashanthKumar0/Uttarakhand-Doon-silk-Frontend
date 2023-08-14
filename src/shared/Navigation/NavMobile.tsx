@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React,{useState, useEffect} from "react";
 import ButtonClose from "@/shared/ButtonClose/ButtonClose";
 import Logo from "@/shared/Logo/Logo";
 import { Disclosure } from "@/app/headlessui";
@@ -11,68 +11,45 @@ import SocialsList from "@/shared/SocialsList/SocialsList";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import SwitchDarkMode from "@/shared/SwitchDarkMode/SwitchDarkMode";
 import Link from "next/link";
-
+import { useRouter } from "next/navigation";
+import axios from "axios";
 export interface NavMobileProps {
   data?: NavItemType[];
   onClickClose?: () => void;
 }
-
+export interface MenuProps {
+  category_id: string;
+  category_name:string;
+  description:string;
+}
 const NavMobile: React.FC<NavMobileProps> = ({
   data = NAVIGATION_DEMO_2,
   onClickClose,
 }) => {
-  const _renderMenuChild = (
-    item: NavItemType,
-    itemClass = " pl-3 text-neutral-900 dark:text-neutral-200 font-medium "
-  ) => {
-    return (
-      <ul className="nav-mobile-sub-menu pl-6 pb-1 text-base">
-        {item.children?.map((i, index) => (
-          <Disclosure key={index} as="li">
-            <Link
-              href={{
-                pathname: i.href || undefined,
-              }}
-              className={`flex text-sm rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 mt-0.5 pr-4 ${itemClass}`}
-            >
-              <span
-                className={`py-2.5 ${!i.children ? "block w-full" : ""}`}
-                onClick={onClickClose}
-              >
-                {i.name}
-              </span>
-              {i.children && (
-                <span
-                  className="flex items-center flex-grow"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <Disclosure.Button
-                    as="span"
-                    className="flex justify-end flex-grow"
-                  >
-                    <ChevronDownIcon
-                      className="ml-2 h-4 w-4 text-slate-500"
-                      aria-hidden="true"
-                    />
-                  </Disclosure.Button>
-                </span>
-              )}
-            </Link>
-            {i.children && (
-              <Disclosure.Panel>
-                {_renderMenuChild(
-                  i,
-                  "pl-3 text-slate-600 dark:text-slate-400 "
-                )}
-              </Disclosure.Panel>
-            )}
-          </Disclosure>
-        ))}
-      </ul>
-    );
-  };
+
+  const router = useRouter();
+  const handleclick=(id:string)=>{
+  router.push(`/collection?id=${id}`,id)
+  }
+  const [menuCategory, setMenuCategory] = useState<MenuProps[]>([]);
+  useEffect(()=>{
+    axios.get('http://localhost:8000/get_all_categories')
+    .then((response)=>{
+      console.log(response)
+    setMenuCategory(response.data.data)})
+    .catch((error)=>{console.log(error)}) 
+  },[])
+
+
+
+  
+
+
+
+
 
   const _renderItem = (item: NavItemType, index: number) => {
+    const itemClass = " pl-3 text-neutral-900 dark:text-neutral-200 font-medium ";
     return (
       <Disclosure
         key={index}
@@ -108,9 +85,38 @@ const NavMobile: React.FC<NavMobileProps> = ({
             </span>
           )}
         </Link>
-        {item.children && (
-          <Disclosure.Panel>{_renderMenuChild(item)}</Disclosure.Panel>
-        )}
+      {item.children && (
+          <Disclosure.Panel>
+
+      <ul className="nav-mobile-sub-menu pl-6 pb-1 text-base">
+        {menuCategory?.map((i, index) => (
+          <Disclosure key={index} as="li">
+            <button
+             onClick={()=>{handleclick(i.category_id)}}
+              className={`flex text-sm rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 mt-0.5 pr-4 ${itemClass}`}
+            >
+              <span
+                className={`py-2.5`}
+                onClick={onClickClose}
+              >
+                {i.category_name}
+              </span>
+              
+            </button>
+      
+          </Disclosure>
+        ))}
+      </ul>
+
+
+
+
+
+
+
+
+          </Disclosure.Panel>
+        )} 
       </Disclosure>
     );
   };
