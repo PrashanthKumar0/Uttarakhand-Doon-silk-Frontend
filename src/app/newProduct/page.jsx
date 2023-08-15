@@ -20,42 +20,96 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import NcImage from "@/shared/NcImage/NcImage";
- function RenderVariants(){
-  if (!variants || !variants.length || !variantType) {
-    return null;
-  }
+import axios from 'axios';
 
-  if (variantType === "color") {
+
+
+function RenderVariants({data}){
+  
+  const [variantActive, setVariantActive] = useState(0);
+
     return (
       <div className="flex space-x-1">
-        {variants.map((variant, index) => (
+       
+        {data.map((variant, index) => (
           <div
             key={index}
             onClick={() => setVariantActive(index)}
-            className={`relative w-6 h-6 rounded-full overflow-hidden z-10 border cursor-pointer ${
+            className={`relative w-11 h-6 rounded-full overflow-hidden z-10 border cursor-pointer ${
               variantActive === index
-                ? getBorderClass(variant.color)
+                ? "border-black dark:border-slate-300"
                 : "border-transparent"
             }`}
-            title={variant.name}
+            title={variant.color}
           >
             <div
-              className={`absolute inset-0.5 rounded-full z-0 ${variant.color}`}
+              className="absolute inset-0.5 rounded-full overflow-hidden z-0 bg-cover"
+              style={{
+                backgroundImage: 'pink',
+              }}
             ></div>
           </div>
         ))}
       </div>
     );
   }
-}
+
+  function RenderGroupButtons({setShowModalQuickView, data,item}){
+
+    
+   
+    
+    const handleCart=()=>{
+        
+      console.log(item)
+
+      axios.post('http://localhost:8000/addToCart', {product_id:item.product_id, quantity:1}, {headers:{
+        Authorization : `Bearer ${window.localStorage.getItem('token')}`
+      }}).then((response)=>{console.log(response)})
+      .catch((error)=>{console.log(error)})
+    }
+
+    return (
+      <div className="absolute bottom-0 group-hover:bottom-4 inset-x-1 flex justify-center opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+        <ButtonPrimary
+          className="shadow-lg"
+          fontSize="text-xs"
+          sizeClass="py-2 px-4"
+          onClick={handleCart}
+        >
+          <BagIcon className="w-3.5 h-3.5 mb-0.5" />
+          <span className="ml-1">Add to bag</span>
+        </ButtonPrimary>
+        <ButtonSecondary
+          className="ml-1.5 bg-white hover:!bg-gray-100 hover:text-slate-900 transition-colors shadow-lg"
+          fontSize="text-xs"
+          sizeClass="py-2 px-4"
+          onClick={() => setShowModalQuickView(false)}
+        >
+          <ArrowsPointingOutIcon className="w-3.5 h-3.5" />
+          <span className="ml-1">Quick view</span>
+        </ButtonSecondary>
+      </div>
+    );
+  };
+
 
 function NewProduct({item}) {
+  const [data, setData]=useState('')
+  const[price, setPrice]=useState('')
 useEffect(()=>{
-  console.log('item',item)
+  axios.get(`http://localhost:8000/getMainProductById/${item.product_id}`)
+  .then((response)=>{
+    //console.log('varient', response)
+setPrice(response.data.actualPrice)
+setData(response.data.new_varient_s)
+})
+  .catch((error)=>{console.log(error)})
+  //console.log('item',item)
 },[])
 const status= "Sold Out";
 const isLiked= true;
-const [variantActive, setVariantActive] = useState(0);
+
   const [showModalQuickView, setShowModalQuickView] = useState(false);
 
   
@@ -65,10 +119,10 @@ const [variantActive, setVariantActive] = useState(0);
    <div
         className={`nc-ProductCard relative flex flex-col bg-transparent`}
       >
-        <Link href={"/product-detail"} className="absolute inset-0"></Link>
+        <Link href={`/product-detail?id=${item.product_id}`} className="absolute inset-0"></Link>
 
         <div className="relative flex-shrink-0 bg-slate-50 dark:bg-slate-300 rounded-3xl overflow-hidden z-1 group">
-          <Link href={"/product-detail"} className="block">
+          <Link href={`/product-detail?id=${item.product_id}`} className="block">
             <NcImage
               containerClassName="flex aspect-w-11 aspect-h-12 w-full h-0"
               src={`http://localhost:8000/public/image/${item.image1}`}
@@ -80,11 +134,11 @@ const [variantActive, setVariantActive] = useState(0);
           </Link>
       <ProductStatus status={status} />
           <LikeButton liked={isLiked} className="absolute top-3 right-3 z-10" />
-          {/* {sizes ? renderSizeList() : renderGroupButtons()}  */}
+        <RenderGroupButtons setShowModalQuickView={setShowModalQuickView} item={item}/>
         </div>
 
         <div className="space-y-4 px-2.5 pt-5 pb-2.5">
-{item.new_varient_s?<RenderVariants/>:''}
+{data&& <RenderVariants data={data} image={item.image1} name={item.name} price={price}/>}
        
           <div>
             <h2 className="nc-ProductCard__title text-base font-semibold transition-colors">
@@ -96,7 +150,7 @@ const [variantActive, setVariantActive] = useState(0);
           </div>
 
           <div className="flex justify-between items-end ">
-            <Prices price={item.price} />
+            <Prices price={price} />
             <div className="flex items-center mb-0.5">
               <StarIcon className="w-5 h-5 pb-[1px] text-amber-400" />
               <span className="text-sm ml-1 text-slate-500 dark:text-slate-400">

@@ -1,12 +1,13 @@
 "use client";
 
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import LikeButton from "@/components/LikeButton";
 import { StarIcon } from "@heroicons/react/24/solid";
 import BagIcon from "@/components/BagIcon";
 import NcInputNumber from "@/components/NcInputNumber";
 import { PRODUCTS } from "@/data/data";
+import {data} from "./productdata"
 import {
   NoSymbolIcon,
   ClockIcon,
@@ -14,7 +15,6 @@ import {
 } from "@heroicons/react/24/outline";
 import IconDiscount from "@/components/IconDiscount";
 import Prices from "@/components/Prices";
-import toast from "react-hot-toast";
 import SectionSliderProductCard from "@/components/SectionSliderProductCard";
 import detail1JPG from "@/images/products/detail1.jpg";
 import detail2JPG from "@/images/products/detail2.jpg";
@@ -25,40 +25,83 @@ import ButtonSecondary from "@/shared/Button/ButtonSecondary";
 import SectionPromo2 from "@/components/SectionPromo2";
 import ModalViewAllReviews from "./ModalViewAllReviews";
 import NotifyAddTocart from "@/components/NotifyAddTocart";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import AccordionInfo from "@/components/AccordionInfo";
-
-const LIST_IMAGES_DEMO = [detail1JPG, detail2JPG, detail3JPG];
+import { useSearchParams } from "next/navigation";
+import axios from "axios";
+import { ToastContainer,toast } from "react-toastify";
+//const LIST_IMAGES_DEMO = [detail1JPG, detail2JPG, detail3JPG];
+interface variant{
+  varient_id:number;
+  product_id:number;
+  image1:StaticImageData | string;
+  image2:StaticImageData | string;
+  image3:StaticImageData | string;
+  color_hex:string;
+  color:string;
+}
+interface Product {
+  image1:StaticImageData | string;
+  image2: string;
+  image3: string;
+  new_varient_S: variant[];
+  name:string;
+  color:string;
+  color_hex:string;
+  product_id: number;
+  description: string;
+  price: number;
+  discount: number;
+ category_id:number;
+}
 
 const ProductDetailPage = () => {
-  const { sizes, variants, status, allOfSizes, image } = PRODUCTS[0];
+  const [product, setProduct] = useState<Product>(data);
+  const[price, setPrice]=useState(4)
+  const searchParams = useSearchParams();
+  useEffect(()=>{
+    const value = searchParams.get('id')
+   // console.log('value',value)
+    axios.get(`http://localhost:8000/getMainProductById/${value}`)
+    .then((response)=>{
+      //console.log(response)
+      if(response.status===200){
+        setProduct(response.data.data)
+        setPrice(response.data.actualPrice)}
+      }
+    )
+    .catch((error)=>{console.log(error)})
+  },[])
+  //const { sizes, variants, status, allOfSizes, image } = PRODUCTS[0];
   //
+  const status:string= "New in";
   const [variantActive, setVariantActive] = useState(0);
-  const [sizeSelected, setSizeSelected] = useState(sizes ? sizes[0] : "");
   const [qualitySelected, setQualitySelected] = useState(1);
   const [isOpenModalViewAllReviews, setIsOpenModalViewAllReviews] =
     useState(false);
 
   //
-  const notifyAddTocart = () => {
-    toast.custom(
-      (t) => (
-        <NotifyAddTocart
-          productImage={image}
-          qualitySelected={qualitySelected}
-          show={t.visible}
-          sizeSelected={sizeSelected}
-          variantActive={variantActive}
-        />
-      ),
-      { position: "top-right", id: "nc-product-notify", duration: 3000 }
-    );
+  const notifyAddTocart = (e) => {
+    const value = searchParams.get('id')
+    e.preventDefault();
+    axios.post('http://localhost:8000/addToCart', {product_id:value, quantity:qualitySelected}, {headers:{
+      Authorization : `Bearer ${window.localStorage.getItem('token')}`
+    }}).then((response)=>{
+      console.log(response)
+    if(response.status===201){
+      toast.success('Added to cart')
+    }else{
+      toast.error('There was some error')
+    }
+    })
+    .catch((error)=>{
+      toast.error('opps!server error!!')
+      console.log(error)})
+   
   };
 
   const renderVariants = () => {
-    if (!variants || !variants.length) {
-      return null;
-    }
+   
 
     return (
       <div>
@@ -66,12 +109,12 @@ const ProductDetailPage = () => {
           <span className="text-sm font-medium">
             Color:
             <span className="ml-1 font-semibold">
-              {variants[variantActive].name}
+              {product.color}
             </span>
           </span>
         </label>
         <div className="flex mt-3">
-          {variants.map((variant, index) => (
+          {product.new_varient_S?.map((variant, index) => (
             <div
               key={index}
               onClick={() => setVariantActive(index)}
@@ -84,15 +127,7 @@ const ProductDetailPage = () => {
               <div
                 className="absolute inset-0.5 rounded-full overflow-hidden z-0 object-cover bg-cover"
                 style={{
-                  backgroundImage: `url(${
-                    // @ts-ignore
-                    typeof variant.thumbnail?.src === "string"
-                      ? // @ts-ignore
-                        variant.thumbnail?.src
-                      : typeof variant.thumbnail === "string"
-                      ? variant.thumbnail
-                      : ""
-                  })`,
+                  backgroundImage: `http://localhost:8000/public/image/${variant.image1}`,
                 }}
               ></div>
             </div>
@@ -102,60 +137,7 @@ const ProductDetailPage = () => {
     );
   };
 
-  const renderSizeList = () => {
-    if (!allOfSizes || !sizes || !sizes.length) {
-      return null;
-    }
-    return (
-      <div>
-        <div className="flex justify-between font-medium text-sm">
-          <label htmlFor="">
-            <span className="">
-              Size:
-              <span className="ml-1 font-semibold">{sizeSelected}</span>
-            </span>
-          </label>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="##"
-            className="text-primary-6000 hover:text-primary-500"
-          >
-            See sizing chart
-          </a>
-        </div>
-        <div className="grid grid-cols-5 sm:grid-cols-7 gap-2 mt-3">
-          {allOfSizes.map((size, index) => {
-            const isActive = size === sizeSelected;
-            const sizeOutStock = !sizes.includes(size);
-            return (
-              <div
-                key={index}
-                className={`relative h-10 sm:h-11 rounded-2xl border flex items-center justify-center 
-                text-sm sm:text-base uppercase font-semibold select-none overflow-hidden z-0 ${
-                  sizeOutStock
-                    ? "text-opacity-20 dark:text-opacity-20 cursor-not-allowed"
-                    : "cursor-pointer"
-                } ${
-                  isActive
-                    ? "bg-primary-6000 border-primary-6000 text-white hover:bg-primary-6000"
-                    : "border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-200 hover:bg-neutral-50 dark:hover:bg-neutral-700"
-                }`}
-                onClick={() => {
-                  if (sizeOutStock) {
-                    return;
-                  }
-                  setSizeSelected(size);
-                }}
-              >
-                {size}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    );
-  };
+  
 
   const renderStatus = () => {
     if (!status) {
@@ -204,14 +186,14 @@ const ProductDetailPage = () => {
         {/* ---------- 1 HEADING ----------  */}
         <div>
           <h2 className="text-2xl sm:text-3xl font-semibold">
-            Heavy Weight Shoes
+         {product.name}
           </h2>
 
           <div className="flex items-center mt-5 space-x-4 sm:space-x-5">
             {/* <div className="flex text-xl font-semibold">$112.00</div> */}
             <Prices
               contentClass="py-1 px-2 md:py-1.5 md:px-3 text-lg font-semibold"
-              price={112}
+              price={price}
             />
 
             <div className="h-7 border-l border-slate-300 dark:border-slate-700"></div>
@@ -241,7 +223,7 @@ const ProductDetailPage = () => {
 
         {/* ---------- 3 VARIANTS AND SIZE LIST ----------  */}
         <div className="">{renderVariants()}</div>
-        <div className="">{renderSizeList()}</div>
+        {/* <div className="">{renderSizeList()}</div> */}
 
         {/*  ---------- 4  QTY AND ADD TO CART BUTTON */}
         <div className="flex space-x-3.5">
@@ -280,26 +262,9 @@ const ProductDetailPage = () => {
       <div className="">
         <h2 className="text-2xl font-semibold">Product Details</h2>
         <div className="prose prose-sm sm:prose dark:prose-invert sm:max-w-4xl mt-7">
-          <p>
-            The patented eighteen-inch hardwood Arrowhead deck --- finely
-            mortised in, makes this the strongest and most rigid canoe ever
-            built. You cannot buy a canoe that will afford greater satisfaction.
-          </p>
-          <p>
-            The St. Louis Meramec Canoe Company was founded by Alfred Wickett in
-            1922. Wickett had previously worked for the Old Town Canoe Co from
-            1900 to 1914. Manufacturing of the classic wooden canoes in Valley
-            Park, Missouri ceased in 1978.
-          </p>
-          <ul>
-            <li>Regular fit, mid-weight t-shirt</li>
-            <li>Natural color, 100% premium combed organic cotton</li>
-            <li>
-              Quality cotton grown without the use of herbicides or pesticides -
-              GOTS certified
-            </li>
-            <li>Soft touch water based printed in the USA</li>
-          </ul>
+        <p>{product.description}</p>
+       
+          
         </div>
       </div>
     );
@@ -360,6 +325,7 @@ const ProductDetailPage = () => {
 
   return (
     <div className={`nc-ProductDetailPage `}>
+      <ToastContainer/>
       {/* MAIn */}
       <main className="container mt-5 lg:mt-11">
         <div className="lg:flex">
@@ -371,7 +337,7 @@ const ProductDetailPage = () => {
                 <Image
                   fill
                   sizes="(max-width: 640px) 100vw, 33vw"
-                  src={LIST_IMAGES_DEMO[0]}
+                  src={`http://localhost:8000/public/image/${product.image1}`}
                   className="w-full rounded-2xl object-cover"
                   alt="product detail 1"
                 />
@@ -381,7 +347,7 @@ const ProductDetailPage = () => {
               <LikeButton className="absolute right-3 top-3 " />
             </div>
             <div className="grid grid-cols-2 gap-3 mt-3 sm:gap-6 sm:mt-6 xl:gap-8 xl:mt-8">
-              {[LIST_IMAGES_DEMO[1], LIST_IMAGES_DEMO[2]].map((item, index) => {
+              {[product.image2, product.image3].map((item, index) => {
                 return (
                   <div
                     key={index}
@@ -390,7 +356,7 @@ const ProductDetailPage = () => {
                     <Image
                       sizes="(max-width: 640px) 100vw, 33vw"
                       fill
-                      src={item}
+                      src={`http://localhost:8000/public/image/${item}`}
                       className="w-full rounded-2xl object-cover"
                       alt="product detail 1"
                     />
@@ -426,6 +392,7 @@ const ProductDetailPage = () => {
             subHeading=""
             headingFontClassName="text-2xl font-semibold"
             headingClassName="mb-10 text-neutral-900 dark:text-neutral-50"
+            product={product}
           />
 
           {/* SECTION */}
@@ -435,7 +402,7 @@ const ProductDetailPage = () => {
         </div>
       </main>
 
-      {/* MODAL VIEW ALL REVIEW */}
+   
       <ModalViewAllReviews
         show={isOpenModalViewAllReviews}
         onCloseModalViewAllReviews={() => setIsOpenModalViewAllReviews(false)}

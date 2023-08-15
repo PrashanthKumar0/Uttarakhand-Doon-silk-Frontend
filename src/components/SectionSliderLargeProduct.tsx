@@ -25,6 +25,7 @@ const SectionSliderLargeProduct: FC<SectionSliderLargeProductProps> = ({
   const [isShow, setIsShow] = useState(false);
 
   useEffect(() => {
+    
     const OPTIONS: Partial<Glide.Options> = {
       perView: 3,
       gap: 32,

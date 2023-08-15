@@ -1,5 +1,5 @@
 "use client"
-import React,{useEffect} from "react";
+import React,{useEffect, useState} from "react";
 import SectionHowItWork from "@/components/SectionHowItWork/SectionHowItWork";
 import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
 //import SectionPromo1 from "@/components/SectionPromo1";
@@ -17,12 +17,29 @@ import SectionClientSay from "@/components/SectionClientSay/SectionClientSay";
 import { PRODUCTS, SPORT_PRODUCTS } from "@/data/data";
 import SectionGridFeatureItems from "@/components/SectionGridFeatureItems";
 //import SectionMagazine5 from "@/app/blog/SectionMagazine5";
-
+import axios from "axios";
 function PageHome() {
-  // useEffect(()=>{
-  //   window.location.reload();
-  //   console.log('useeffect')
-  // },[])
+  const [data , setData]= useState('');
+  useEffect(()=>{
+
+    const fetchData = async () => {
+      try {
+        axios.get('http://localhost:8000/getRandomProducts')
+      .then((response)=>{
+        console.log(response)
+        setData(response.data)
+      console.log('success')
+      }
+      )
+      .catch((error)=>{console.log(error)})
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+  fetchData();
+  
+  },[])
   // useEffect(()=>{
   //   console.log('first reload')
   // },[])
@@ -41,15 +58,9 @@ function PageHome() {
       </div> */}
 
       <div className="container relative space-y-24 my-24 lg:space-y-32 lg:my-32">
-        <SectionSliderProductCard
-          data={[
-            PRODUCTS[4],
-            SPORT_PRODUCTS[5],
-            PRODUCTS[7],
-            SPORT_PRODUCTS[1],
-            PRODUCTS[6],
-          ]}
-        />
+        {/* <SectionSliderProductCard
+         product={data}
+        /> */}
 
         <div className="py-24 lg:py-32 border-t border-b border-slate-200 dark:border-slate-700">
           <SectionHowItWork />
@@ -61,12 +72,12 @@ function PageHome() {
           <SectionGridMoreExplore />
         </div>
 
-        <SectionSliderProductCard
+        {/* <SectionSliderProductCard
           heading="Best Sellers"
           subHeading="Best selling of the month"
-        />
+        /> */}
 
-        <SectionPromo2 />
+        {/* <SectionPromo2 /> */}
 
         <SectionSliderLargeProduct cardStyle="style2" />
 
@@ -74,7 +85,7 @@ function PageHome() {
 
         {/* <SectionPromo3 /> */}
 
-        <SectionGridFeatureItems />
+        {/* <SectionGridFeatureItems /> */}
 
         {/* <div className="relative py-24 lg:py-32">
           <BackgroundSection />
