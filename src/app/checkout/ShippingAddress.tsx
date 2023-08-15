@@ -1,12 +1,14 @@
 "use client";
 
 import Label from "@/components/Label/Label";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import ButtonSecondary from "@/shared/Button/ButtonSecondary";
 import Input from "@/shared/Input/Input";
 import Radio from "@/shared/Radio/Radio";
 import Select from "@/shared/Select/Select";
+import axios from "axios";
+import { baseUrl } from "@/Url";
 
 interface Props {
   isActive: boolean;
@@ -20,6 +22,48 @@ const ShippingAddress: FC<Props> = ({
   onOpenActive,
 }) => {
   const renderShippingAddress = () => {
+   const[name, setName]=useState('')
+   const[address, setAddress]=useState('')
+   const[city, setCity]=useState('')
+   const[country, setCountry]=useState('')
+   const[state, setState]=useState('')
+   const[pinCode, setPinCode]=useState('')
+   const[phone, setPhone]=useState('')
+///axios code for posting data
+
+const handleSubmit = async () => {
+  event.preventDefault();
+
+  const config = {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('token')} `,
+      'Content-Type': 'application/json',
+    },
+  };
+
+  try {
+    const response = await axios.post(`${baseUrl}/order`,
+        {
+          phone:phone,
+          shippingAddress:address,
+          name:name,
+          address:address,
+          city:city,
+          country:country,
+          state:state,
+          postalCode:pinCode,
+        },
+     config);
+    console.log('Post response:', response.data);
+  } catch (error) {
+    console.error('Error posting data:', error);
+  }
+};
+
+
+
+
+   ///code starts here
     return (
       <div className="border border-slate-200 dark:border-slate-700 rounded-xl ">
         <div className="p-6 flex flex-col sm:flex-row items-start">
@@ -101,13 +145,17 @@ const ShippingAddress: FC<Props> = ({
           {/* ============ */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3">
             <div>
-              <Label className="text-sm">First name</Label>
-              <Input className="mt-1.5" defaultValue="Cole" />
+              <Label className="text-sm">Name</Label>
+              <Input className="mt-1.5" defaultValue={name} onChange={(e)=>{setName(e.target.value)}} />
             </div>
+           
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3">
             <div>
-              <Label className="text-sm">Last name</Label>
-              <Input className="mt-1.5" defaultValue="Enrico " />
+              <Label className="text-sm">Phone</Label>
+              <Input className="mt-1.5" defaultValue={phone} onChange={(e)=>{setPhone(e.target.value)}} />
             </div>
+           
           </div>
 
           {/* ============ */}
@@ -117,31 +165,23 @@ const ShippingAddress: FC<Props> = ({
               <Input
                 className="mt-1.5"
                 placeholder=""
-                defaultValue={"123, Dream Avenue, USA"}
+                defaultValue={address}
+                onChange={(e)=>{setAddress(e.target.value)}}
                 type={"text"}
               />
             </div>
             
           </div>
-
+          
           {/* ============ */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3">
             <div>
               <Label className="text-sm">City</Label>
-              <Input className="mt-1.5" defaultValue="Norris" />
+              <Input className="mt-1.5" defaultValue={city} onChange={(e)=>{setCity(e.target.value)}} />
             </div>
             <div>
               <Label className="text-sm">Country</Label>
-              <Select className="mt-1.5" defaultValue="United States ">
-                <option value="United States">United States</option>
-                <option value="United States">Canada</option>
-                <option value="United States">Mexico</option>
-                <option value="United States">Israel</option>
-                <option value="United States">France</option>
-                <option value="United States">England</option>
-                <option value="United States">Laos</option>
-                <option value="United States">China</option>
-              </Select>
+              <Input className="mt-1.5" defaultValue={country} onChange={(e)=>{setCountry(e.target.value)}} />
             </div>
           </div>
 
@@ -149,11 +189,11 @@ const ShippingAddress: FC<Props> = ({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3">
             <div>
               <Label className="text-sm">State/Province</Label>
-              <Input className="mt-1.5" defaultValue="Texas" />
+              <Input className="mt-1.5"defaultValue={state} onChange={(e)=>{setState(e.target.value)}} />
             </div>
             <div>
               <Label className="text-sm">Postal code</Label>
-              <Input className="mt-1.5" defaultValue="2500 " />
+              <Input className="mt-1.5" defaultValue={pinCode} onChange={(e)=>{setPinCode(e.target.value)}} />
             </div>
           </div>
 
@@ -179,7 +219,7 @@ const ShippingAddress: FC<Props> = ({
           <div className="flex flex-col sm:flex-row pt-6">
             <ButtonPrimary
               className="sm:!px-7 shadow-none"
-              onClick={onCloseActive}
+              onClick={handleSubmit}
             >
             Confirm Order
             </ButtonPrimary>
