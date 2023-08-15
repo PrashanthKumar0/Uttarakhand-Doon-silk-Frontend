@@ -13,7 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 
-export default function AddToCart({info, index,setReload, reload}){
+export default function AddToCart({info, index,setReload, reload,QantitySelected}){
 
     // useEffect(()=>{
     //   console.log('inuseefect')
@@ -33,8 +33,9 @@ const handleClick=()=>{
        // console.log(response)
        if(response.status===200){
         toast.success('Item Deleted successfully!!')
+        window.location.reload();
        }
-        setReload(!reload)
+       // setReload(!reload)
     })
      .catch((error)=>{console.log(error)})
 }
@@ -167,6 +168,7 @@ const handleClick=()=>{
                   </div>
     
                   <div className="hidden sm:block text-center relative">
+                    <div className="border bg-slate-200 p-3 border-r-4">{info.quantity}</div>
                     {/* <NcInputNumber className="relative z-10"  defaultValue={info.quantity}
                 onChange={setQualitySelected} /> */}
                   </div>

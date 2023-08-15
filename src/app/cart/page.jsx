@@ -18,6 +18,7 @@ import AddToCart from './AddToCart'
 
 const CartPage = () => {
   const[data, setData]=useState([])
+  const[price, setPrice]=useState([])
   const [qualitySelected, setQualitySelected] = useState(1);
 useEffect(()=>{
   axios.get(`${baseUrl}/getUserCart`,{headers:{
@@ -25,25 +26,12 @@ useEffect(()=>{
   }}).then((response)=>{
     console.log(response) 
     setData(response.data.cartItems)
+    setPrice(response.data.total_price)
   }).catch((error)=>{console.log(error)})
 },[])
-  const renderStatusSoldout = () => {
-    return (
-      <div className="rounded-full flex items-center justify-center px-2.5 py-1.5 text-xs text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-        <NoSymbolIcon className="w-3.5 h-3.5" />
-        <span className="ml-1 leading-none">Sold Out</span>
-      </div>
-    );
-  };
+  
 
-  const renderStatusInstock = () => {
-    return (
-      <div className="rounded-full flex items-center justify-center px-2.5 py-1.5 text-xs text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-        <CheckIcon className="w-3.5 h-3.5" />
-        <span className="ml-1 leading-none">In Stock</span>
-      </div>
-    );
-  };
+  
 
   
   return (
@@ -91,7 +79,7 @@ return(
                 <div className="flex justify-between pb-4">
                   <span>Subtotal</span>
                   <span className="font-semibold text-slate-900 dark:text-slate-200">
-                    $249.00
+                   Rs {price}
                   </span>
                 </div>
                 <div className="flex justify-between py-4">
