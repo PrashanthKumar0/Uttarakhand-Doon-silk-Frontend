@@ -1,73 +1,20 @@
 "use client";
 
 import { Popover, Transition } from "@/app/headlessui";
-import Prices from "@/components/Prices";
-import { Product, PRODUCTS } from "@/data/data";
-import { Fragment } from "react";
-import ButtonPrimary from "@/shared/Button/ButtonPrimary";
-import ButtonSecondary from "@/shared/Button/ButtonSecondary";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function CartDropdown() {
-  const renderProduct = (item, index, close) => {
-    const { name, price, image } = item;
-    return (
-      <div key={index} className="flex py-5 last:pb-0">
-        <div className="relative h-24 w-20 flex-shrink-0 overflow-hidden rounded-xl bg-slate-100">
-          <Image
-            fill
-            src={image}
-            alt={name}
-            className="h-full w-full object-contain object-center"
-          />
-          <Link
-            onClick={close}
-            className="absolute inset-0"
-            href={"/product-detail"}
-          />
-        </div>
-
-        <div className="ml-4 flex flex-1 flex-col">
-          <div>
-            <div className="flex justify-between ">
-              <div>
-                <h3 className="text-base font-medium ">
-                  <Link onClick={close} href={"/product-detail"}>
-                    {name}
-                  </Link>
-                </h3>
-                <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-                  <span>{`Natural`}</span>
-                  <span className="mx-2 border-l border-slate-200 dark:border-slate-700 h-4"></span>
-                  <span>{"XL"}</span>
-                </p>
-              </div>
-              <Prices price={price} className="mt-0.5" />
-            </div>
-          </div>
-          <div className="flex flex-1 items-end justify-between text-sm">
-            <p className="text-gray-500 dark:text-slate-400">{`Qty 1`}</p>
-
-            <div className="flex">
-              <button
-                type="button"
-                className="font-medium text-primary-6000 dark:text-primary-500 "
-              >
-                Remove
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
+ const router = useRouter();
+const handleClick=()=>{
+  router.push('/cart')
+}
   return (
     <Popover className="relative">
-      {({ open, close }) => (
-        <>
+      {/* {({ open, close }) => (
+        <> */}
           <Popover.Button
+          onClick={handleClick}
             className={`
                 ${open ? "" : "text-opacity-90"}
                  group w-10 h-10 sm:w-12 sm:h-12 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full inline-flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 relative`}
@@ -117,7 +64,7 @@ export default function CartDropdown() {
 
             <Link className="block md:hidden absolute inset-0" href={"/cart"} />
           </Popover.Button>
-          <Transition
+          {/* <Transition
             as={Fragment}
             enter="transition ease-out duration-200"
             enterFrom="opacity-0 translate-y-1"
@@ -167,9 +114,9 @@ export default function CartDropdown() {
                 </div>
               </div>
             </Popover.Panel>
-          </Transition>
-        </>
-      )}
+          </Transition> */}
+        {/* </>
+      )} */}
     </Popover>
   );
 }

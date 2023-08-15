@@ -87,16 +87,11 @@ const ShippingAddress: FC<Props> = ({
             </h3>
             <div className="font-semibold mt-1 text-sm">
               <span className="">
-                {`St. Paul's Road, Norris, SD 57560, Dakota, USA`}
+                
               </span>
             </div>
           </div>
-          <button
-            className="py-2 px-4 bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-700 mt-5 sm:mt-0 sm:ml-auto text-sm font-medium rounded-lg"
-            onClick={onOpenActive}
-          >
-            Change
-          </button>
+         
         </div>
         <div
           className={`border-t border-slate-200 dark:border-slate-700 px-6 py-7 space-y-4 sm:space-y-6 ${
@@ -126,10 +121,7 @@ const ShippingAddress: FC<Props> = ({
                 type={"text"}
               />
             </div>
-            <div className="sm:w-1/3">
-              <Label className="text-sm">Apt, Suite *</Label>
-              <Input className="mt-1.5" defaultValue="55U - DD5 " />
-            </div>
+            
           </div>
 
           {/* ============ */}
@@ -189,14 +181,14 @@ const ShippingAddress: FC<Props> = ({
               className="sm:!px-7 shadow-none"
               onClick={onCloseActive}
             >
-              Save and next to Payment
+            Confirm Order
             </ButtonPrimary>
-            <ButtonSecondary
+            {/* <ButtonSecondary
               className="mt-3 sm:mt-0 sm:ml-3"
               onClick={onCloseActive}
             >
               Cancel
-            </ButtonSecondary>
+            </ButtonSecondary> */}
           </div>
         </div>
       </div>

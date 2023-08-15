@@ -1,9 +1,12 @@
+"use client";
 import Label from "@/components/Label/Label";
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import ButtonSecondary from "@/shared/Button/ButtonSecondary";
 import Checkbox from "@/shared/Checkbox/Checkbox";
 import Input from "@/shared/Input/Input";
+import axios from "axios";
+import { baseUrl } from "@/Url";
 
 interface Props {
   isActive: boolean;
@@ -12,6 +15,17 @@ interface Props {
 }
 
 const ContactInfo: FC<Props> = ({ isActive, onCloseActive, onOpenActive }) => {
+  const[email, setEmail]=useState('')
+  useEffect(()=>{
+ 
+     axios.get(`${baseUrl}/getUserDetails`, {headers:{Authorization: `Bearer ${window.localStorage.getItem('token')}`}})
+    .then((response)=>{console.log(response)
+      if(response.status===200){
+        setEmail(response.data.user.email)
+      }
+    })
+    .catch((err)=>{console.log(err)})
+  },[])
   const renderAccount = () => {
     return (
       <div className="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden z-0">
@@ -64,16 +78,11 @@ const ContactInfo: FC<Props> = ({ isActive, onCloseActive, onOpenActive }) => {
               </svg>
             </h3>
             <div className="font-semibold mt-1 text-sm">
-              <span className="">Enrico Smith</span>
-              <span className="ml-3 tracking-tighter">+855 - 666 - 7744</span>
+              <span className="">Email:   </span>
+              <span className="ml-3 tracking-tighter">{email}</span>
             </div>
           </div>
-          <button
-            className="py-2 px-4 bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-700 mt-5 sm:mt-0 sm:ml-auto text-sm font-medium rounded-lg"
-            onClick={() => onOpenActive()}
-          >
-            Change
-          </button>
+         
         </div>
         <div
           className={`border-t border-slate-200 dark:border-slate-700 px-6 py-7 space-y-4 sm:space-y-6 ${
