@@ -13,15 +13,15 @@ const DEMO_DATA = [
   {
     name: "Fabric + Care",
     content: `<ul class="list-disc list-inside leading-7">
-    <li>Made from a sheer Belgian power micromesh.</li>
+    <li>Luxurious Silk: Experience the opulence of our silk sarees, known for their lustrous sheen and soft feel.</li>
     <li>
-    74% Polyamide (Nylon) 26% Elastane (Spandex)
+    Gentle Handling: Treat your silk saree delicately to prevent snags and friction, ensuring its longevity.(Spandex)
     </li>
     <li>
-    Adjustable hook & eye closure and straps
+    Professional Care: Opt for dry cleaning to maintain the intricate weaves and colors of your silk saree.
     </li>
     <li>
-    Hand wash in cold water, dry flat
+    Smart Storage: Store in a cool, dry place away from sunlight, using breathable fabric covers to protect your silk saree's beauty.
     </li>
   </ul>`,
   },

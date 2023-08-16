@@ -21,6 +21,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NcImage from "@/shared/NcImage/NcImage";
 import axios from 'axios';
+import { baseUrl } from '@/Url';
 
 
 
@@ -63,7 +64,7 @@ function RenderVariants({data}){
         
       console.log(item)
 
-      axios.post('http://localhost:8000/addToCart', {product_id:item.product_id, quantity:1}, {headers:{
+      axios.post(`${baseUrl}/addToCart`, {product_id:item.product_id, quantity:1}, {headers:{
         Authorization : `Bearer ${window.localStorage.getItem('token')}`
       }}).then((response)=>{console.log(response)})
       .catch((error)=>{console.log(error)})
@@ -98,7 +99,7 @@ function NewProduct({item}) {
   const [data, setData]=useState('')
   const[price, setPrice]=useState('')
 useEffect(()=>{
-  axios.get(`http://localhost:8000/getMainProductById/${item.product_id}`)
+  axios.get(`${baseUrl}/getMainProductById/${item.product_id}`)
   .then((response)=>{
     //console.log('varient', response)
 setPrice(response.data.actualPrice)
@@ -125,7 +126,7 @@ const isLiked= true;
           <Link href={`/product-detail?id=${item.product_id}`} className="block">
             <NcImage
               containerClassName="flex aspect-w-11 aspect-h-12 w-full h-0"
-              src={`http://localhost:8000/public/image/${item.image1}`}
+              src={`${baseUrl}/public/image/${item.image1}`}
               className="object-cover w-full h-full drop-shadow-xl"
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 40vw"

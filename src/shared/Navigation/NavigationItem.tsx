@@ -9,6 +9,7 @@ import { Route } from "@/routers/types";
 import Link from "next/link";
 import axios from "axios";
 import AppContext from "@/context/withAuth";
+import { baseUrl } from "@/Url";
 
 export interface NavItemType {
   id: string;
@@ -39,7 +40,7 @@ router.push(`/collection?id=${id}`,id)
   const [menuCurrentHovers, setMenuCurrentHovers] = useState<string[]>([]);
   const [menuCategory, setMenuCategory] = useState<MenuProps[]>([]);
   useEffect(()=>{
-    axios.get('http://localhost:8000/get_all_categories')
+    axios.get(`${baseUrl}/get_all_categories`)
     .then((response)=>{
       console.log(response)
     setMenuCategory(response.data.data)})

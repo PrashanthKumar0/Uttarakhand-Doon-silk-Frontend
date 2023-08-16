@@ -17,7 +17,9 @@ import SectionClientSay from "@/components/SectionClientSay/SectionClientSay";
 import { PRODUCTS, SPORT_PRODUCTS } from "@/data/data";
 import SectionGridFeatureItems from "@/components/SectionGridFeatureItems";
 //import SectionMagazine5 from "@/app/blog/SectionMagazine5";
+//import {Banner} from '../images/Banner.jpg'
 import axios from "axios";
+import Crousal from "./Crousal/page";
 function PageHome() {
   const [data , setData]= useState('');
   useEffect(()=>{
@@ -46,12 +48,16 @@ function PageHome() {
   // useEffect(()=>{
   //   console.log('second reload')
   // },[])
-
+  const banners = [
+   Banner,
+    '/banner2.jpg',
+    '/banner3.jpg',
+  ];
 
   return (
     <div className="nc-PageHome relative overflow-hidden">
  
-      <SectionHero2 />
+      <Crousal  banners={banners}/>
 
       {/* <div className="mt-24 lg:mt-32">
         <DiscoverMoreSlider />

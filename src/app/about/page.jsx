@@ -29,6 +29,17 @@ const PageAbout = ({}) => {
       </div>
      
        <div className="container py-16 lg:py-28 space-y-16 lg:space-y-28">
+
+       <div className="relative overflow-hidden">
+      <div className="aspect-w-16 aspect-h-9 rounded">
+        <iframe
+          className="w-full h-full absolute top-0 left-0 rounded"
+          src={'https://www.youtube.com/embed/pcZivOPnsJU'}
+          title="YouTube Video"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
        {/* <SectionVideo/> */}
         <SectionHero
           rightImg={rightImg}

@@ -9,6 +9,7 @@ import { usePathname, useSearchParams, useParams } from 'next/navigation'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer,toast } from "react-toastify";
 import NewProduct from "../NewProduct/page";
+import { baseUrl } from "@/Url";
 const Page = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -18,12 +19,12 @@ const [pData, setPData]= useState()
 useEffect(()=>{
 const id= searchParams.get('id')
 
-axios.get(`http://localhost:8000/get_category/${id}`).then(
+axios.get(`${baseUrl}/get_category/${id}`).then(
   (response)=>{
   setData(response.data.data)}
 ).catch((error)=>{console.log(error)})
 
-axios.get(`http://localhost:8000/getProductsByCategoryId/${id}`)
+axios.get(`${baseUrl}/getProductsByCategoryId/${id}`)
 .then((response)=>{console.log('products',response)
 if(response.status===200){
   setPData(response.data.data)}

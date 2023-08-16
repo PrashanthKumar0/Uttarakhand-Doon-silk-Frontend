@@ -30,6 +30,7 @@ import AccordionInfo from "@/components/AccordionInfo";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
 import { ToastContainer,toast } from "react-toastify";
+import Home from '../productSwiper/page'
 //const LIST_IMAGES_DEMO = [detail1JPG, detail2JPG, detail3JPG];
 interface variant{
   varient_id:number;
@@ -387,14 +388,15 @@ const ProductDetailPage = () => {
           <hr className="border-slate-200 dark:border-slate-700" />
 
           {/* OTHER SECTION */}
-          <SectionSliderProductCard
+          {/* <SectionSliderProductCard
             heading="Customers also purchased"
             subHeading=""
             headingFontClassName="text-2xl font-semibold"
             headingClassName="mb-10 text-neutral-900 dark:text-neutral-50"
             product={product}
-          />
+          /> */}
 
+<Home/>
           {/* SECTION */}
           <div className="pb-20 xl:pb-28 lg:pt-14">
             <SectionPromo2 />

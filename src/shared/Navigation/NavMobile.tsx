@@ -13,6 +13,7 @@ import SwitchDarkMode from "@/shared/SwitchDarkMode/SwitchDarkMode";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import { baseUrl } from "@/Url";
 export interface NavMobileProps {
   data?: NavItemType[];
   onClickClose?: () => void;
@@ -33,7 +34,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
   }
   const [menuCategory, setMenuCategory] = useState<MenuProps[]>([]);
   useEffect(()=>{
-    axios.get('http://localhost:8000/get_all_categories')
+    axios.get(`${baseUrl}/get_all_categories`)
     .then((response)=>{
       console.log(response)
     setMenuCategory(response.data.data)})
