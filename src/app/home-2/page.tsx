@@ -15,9 +15,9 @@ import Crousal from "../Crousal/page";
 function PageHome2() {
   return (
     <div className="nc-PageHome2 relative overflow-hidden">
-      <div className="container px-4">
+      
      <Crousal/>
-      </div>
+    
 
       <div className="container relative space-y-24 my-24 lg:space-y-32 lg:my-32">
         <SectionHowItWork />

@@ -12,8 +12,9 @@ import SectionHero from "./SectionHero";
 import SectionClientSay from "@/components/SectionClientSay/SectionClientSay";
 import SectionPromo3 from "@/components/SectionPromo3";
 import HeaderTitle from './HeaderTitle';
-import SectionHero2 from "./SectionHero2";
+
 //import SectionVideo from "./SectionVideos"
+import Crousal from "../Crousal/page";
 
 const PageAbout = ({}) => {
  
@@ -22,8 +23,9 @@ const PageAbout = ({}) => {
       {/* ======== BG GLASS ======== */}
 
       <BgGlassmorphism />
-   
-      <SectionHero2/>
+      <Crousal 
+      />
+     
       <div className="pt-2 ">
       <HeaderTitle/>
       </div>

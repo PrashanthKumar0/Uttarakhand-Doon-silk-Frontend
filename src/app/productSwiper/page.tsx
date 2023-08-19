@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import React, { useEffect , useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import 'swiper/swiper.min.css';
 // import 'swiper/components/navigation/navigation.min.css';
@@ -12,15 +13,24 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import ProductCard from './ProductCard';
+import axios from 'axios';
+import { baseUrl } from '@/Url';
 
-const products = [
-  { title: 'Product 1', imageSrc: '/product1.jpg', price: '$100' },
-  { title: 'Product 2', imageSrc: '/product2.jpg', price: '$150' },
-  { title: 'Product 3', imageSrc: '/product3.jpg', price: '$200' },
-  { title: 'Product 4', imageSrc: '/product4.jpg', price: '$120' },
-];
+// const products = [
+//   { title: 'Product 1', imageSrc: '/product1.jpg', price: '$100' },
+//   { title: 'Product 2', imageSrc: '/product2.jpg', price: '$150' },
+//   { title: 'Product 3', imageSrc: '/product3.jpg', price: '$200' },
+//   { title: 'Product 4', imageSrc: '/product4.jpg', price: '$120' },
+// ];
 
 const Home: React.FC = () => {
+  const [images, setImages] = useState<string[]>([]);
+ useEffect(()=>{
+axios.get(`${baseUrl}/getRandomProducts`)
+.then((response)=>{setImages(response.data)} )
+.catch((error)=>{console.log(error)})
+console.log('images',images)
+ },[])
   return (
     <div className="bg-gray-100 p-8">
       <Swiper
@@ -38,11 +48,11 @@ const Home: React.FC = () => {
           },
         }}
       >
-        {products.map((product, index) => (
+        {images.map((product, index) => (
           <SwiperSlide key={index}>
             <ProductCard
-              title={product.title}
-              imageSrc={product.imageSrc}
+              title={product.name}
+              imageSrc={product.image1}
               price={product.price}
             />
           </SwiperSlide>

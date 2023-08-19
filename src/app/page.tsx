@@ -19,14 +19,17 @@ import SectionGridFeatureItems from "@/components/SectionGridFeatureItems";
 //import SectionMagazine5 from "@/app/blog/SectionMagazine5";
 //import {Banner} from '../images/Banner.jpg'
 import axios from "axios";
-import Crousal from "./Crousal/page";
+import { baseUrl } from "@/Url";
+//import Crousal from "./Crousal/page";
+
 function PageHome() {
   const [data , setData]= useState('');
+
   useEffect(()=>{
 
     const fetchData = async () => {
       try {
-        axios.get('http://localhost:8000/getRandomProducts')
+        axios.get(`${baseUrl} /getRandomProducts`)
       .then((response)=>{
         console.log(response)
         setData(response.data)
@@ -42,14 +45,10 @@ function PageHome() {
   fetchData();
   
   },[])
-  // useEffect(()=>{
-  //   console.log('first reload')
-  // },[])
-  // useEffect(()=>{
-  //   console.log('second reload')
-  // },[])
+ 
+  
   const banners = [
-   Banner,
+  // Banner,
     '/banner2.jpg',
     '/banner3.jpg',
   ];
@@ -57,7 +56,7 @@ function PageHome() {
   return (
     <div className="nc-PageHome relative overflow-hidden">
  
-      <Crousal  banners={banners}/>
+ <SectionHero2/>
 
       {/* <div className="mt-24 lg:mt-32">
         <DiscoverMoreSlider />
@@ -85,9 +84,9 @@ function PageHome() {
 
         {/* <SectionPromo2 /> */}
 
-        <SectionSliderLargeProduct cardStyle="style2" />
+      
 
-        <SectionSliderCategories />
+        {/* <SectionSliderCategories /> */}
 
         {/* <SectionPromo3 /> */}
 

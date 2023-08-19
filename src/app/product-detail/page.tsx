@@ -31,6 +31,7 @@ import { useSearchParams } from "next/navigation";
 import axios from "axios";
 import { ToastContainer,toast } from "react-toastify";
 import Home from '../productSwiper/page'
+import { baseImgUrl, baseUrl } from "@/Url";
 //const LIST_IMAGES_DEMO = [detail1JPG, detail2JPG, detail3JPG];
 interface variant{
   varient_id:number;
@@ -85,7 +86,7 @@ const ProductDetailPage = () => {
   const notifyAddTocart = (e) => {
     const value = searchParams.get('id')
     e.preventDefault();
-    axios.post('http://localhost:8000/addToCart', {product_id:value, quantity:qualitySelected}, {headers:{
+    axios.post(`${baseUrl}/addToCart`, {product_id:value, quantity:qualitySelected}, {headers:{
       Authorization : `Bearer ${window.localStorage.getItem('token')}`
     }}).then((response)=>{
       console.log(response)
@@ -128,7 +129,7 @@ const ProductDetailPage = () => {
               <div
                 className="absolute inset-0.5 rounded-full overflow-hidden z-0 object-cover bg-cover"
                 style={{
-                  backgroundImage: `http://localhost:8000/public/image/${variant.image1}`,
+                  backgroundImage: `${baseImgUrl}${variant.image1}`,
                 }}
               ></div>
             </div>
@@ -396,11 +397,8 @@ const ProductDetailPage = () => {
             product={product}
           /> */}
 
-<Home/>
-          {/* SECTION */}
-          <div className="pb-20 xl:pb-28 lg:pt-14">
-            <SectionPromo2 />
-          </div>
+        <Home/>
+         
         </div>
       </main>
 
