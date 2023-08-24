@@ -21,7 +21,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NcImage from "@/shared/NcImage/NcImage";
 import axios from 'axios';
-import { baseUrl } from '@/Url';
+import { baseImgUrl, baseUrl } from '@/Url';
 
 
 
@@ -126,7 +126,7 @@ const isLiked= true;
           <Link href={`/product-detail?id=${item.product_id}`} className="block">
             <NcImage
               containerClassName="flex aspect-w-11 aspect-h-12 w-full h-0"
-              src={`${baseUrl}/public/image/${item.image1}`}
+              src={`${baseImgUrl}/${item.image1}`}
               className="object-cover w-full h-full drop-shadow-xl"
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 40vw"

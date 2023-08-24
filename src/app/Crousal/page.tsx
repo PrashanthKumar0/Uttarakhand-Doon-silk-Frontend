@@ -6,7 +6,7 @@ import axios from 'axios';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { baseImgUrl } from '@/Url';
+import { baseImgUrl, baseUrl } from '@/Url';
 
 
 
@@ -14,7 +14,7 @@ import { baseImgUrl } from '@/Url';
 const Crousal: React.FC = () => {
   const [images, setImages] = useState<string[]>([]);
   useEffect(()=>{
-    axios.get('http://localhost:8000/getBanner')
+    axios.get(`${baseUrl}/getBanner`)
     .then((response)=>{setImages(response.data.data[0]),console.log('getbannr',image)})
     .catch((error)=>{console.log(error)})
     console.log('images',images)

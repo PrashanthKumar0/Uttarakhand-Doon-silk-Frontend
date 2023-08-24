@@ -64,7 +64,7 @@ const ProductDetailPage = () => {
   useEffect(()=>{
     const value = searchParams.get('id')
    // console.log('value',value)
-    axios.get(`http://localhost:8000/getMainProductById/${value}`)
+    axios.get(`${baseUrl}/getMainProductById/${value}`)
     .then((response)=>{
       //console.log(response)
       if(response.status===200){
@@ -339,7 +339,7 @@ const ProductDetailPage = () => {
                 <Image
                   fill
                   sizes="(max-width: 640px) 100vw, 33vw"
-                  src={`http://localhost:8000/public/image/${product.image1}`}
+                  src={`${baseImgUrl}/${product.image1}`}
                   className="w-full rounded-2xl object-cover"
                   alt="product detail 1"
                 />
@@ -358,7 +358,7 @@ const ProductDetailPage = () => {
                     <Image
                       sizes="(max-width: 640px) 100vw, 33vw"
                       fill
-                      src={`http://localhost:8000/public/image/${item}`}
+                      src={`${baseImgUrl}/${item}`}
                       className="w-full rounded-2xl object-cover"
                       alt="product detail 1"
                     />

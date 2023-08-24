@@ -7,6 +7,7 @@ import Glide from "@glidejs/glide/dist/glide.esm";
 
 import axios from "axios";
 import NewProduct from "@/app/NewProduct/page";
+import { baseUrl } from "@/Url";
 interface variant{
   varient_id:number;
   product_id:number;
@@ -61,7 +62,7 @@ const [data , setData]=useState<Product|null>(product);
 useEffect(() => {
   const fetchData = async () => {
     try {
-      axios.get('http://localhost:8000/getRandomProducts')
+      axios.get(`${baseUrl}/getRandomProducts`)
     .then((response)=>{
       console.log(response)
       if(response.status===200){

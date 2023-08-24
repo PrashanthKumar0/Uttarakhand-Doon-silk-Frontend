@@ -9,6 +9,8 @@ import Radio from "@/shared/Radio/Radio";
 import Select from "@/shared/Select/Select";
 import axios from "axios";
 import { baseUrl } from "@/Url";
+import { toast ,ToastContainer} from "react-toastify";
+
 
 interface Props {
   isActive: boolean;
@@ -41,8 +43,8 @@ const handleSubmit = async () => {
     },
   };
 
-  try {
-    const response = await axios.post(`${baseUrl}/order`,
+  
+   axios.post(`${baseUrl}/order`,
         {
           phone:phone,
           shippingAddress:address,
@@ -53,11 +55,16 @@ const handleSubmit = async () => {
           state:state,
           postalCode:pinCode,
         },
-     config);
-    console.log('Post response:', response.data);
-  } catch (error) {
-    console.error('Error posting data:', error);
-  }
+     config).then((response)=>{console.log(response.data) 
+      if(response.status===200||response.status===201){
+       toast.success("Order is confirmed")
+      }else(
+        toast.error("There was some error: Try Again")
+      )
+    })
+     .catch((error)=>{console.log(error) 
+    toast.error("Server Was Slow")})
+   
 };
 
 

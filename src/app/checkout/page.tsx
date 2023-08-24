@@ -12,6 +12,7 @@ import PaymentMethod from "./PaymentMethod";
 import ShippingAddress from "./ShippingAddress";
 import Image from "next/image";
 import Link from "next/link";
+import { ToastContainer } from "react-toastify";
 
 const CheckoutPage = () => {
   const [tabActive, setTabActive] = useState<
@@ -74,6 +75,7 @@ const CheckoutPage = () => {
 
   return (
     <div className="nc-CheckoutPage">
+      <ToastContainer/>
       <main className="container py-16 lg:pb-28 lg:pt-20 ">
         <div className="mb-16">
           <h2 className="block text-2xl sm:text-3xl lg:text-4xl font-semibold ">
