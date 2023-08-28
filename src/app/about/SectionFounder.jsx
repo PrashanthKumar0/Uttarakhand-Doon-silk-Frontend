@@ -57,7 +57,7 @@ const SectionFounder = () => {
       >
         ⛱ Message Desk
       </Heading>
-      <div className="grid sm:grid-cols-2 gap-x-5 gap-y-8 lg:grid-cols-3 xl:gap-x-8 ">
+      <div className="grid sm:grid-cols-2 gap-x-5 gap-y-8 lg:grid-cols-3 xl:gap-x-8 justify-center">
         {FOUNDER_DEMO.map((item) => (
           <div key={item.id} className="max-w-sm">
             <NcImage

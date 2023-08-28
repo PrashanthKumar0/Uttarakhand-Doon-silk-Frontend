@@ -2,6 +2,7 @@
 import React, { FC } from "react";
 import Heading from "@/components/Heading/Heading";
 import './SectionStatistic.css';
+import Link from "next/link";
 
 
 const FOUNDER_DEMO = [
@@ -52,7 +53,7 @@ const SectionStatistic = ({ className = "" }) => {
             className="marquee-item"
           >
             <span className="block text-sm text-neutral-500 mt-3 sm:text-base dark:text-neutral-400">
-              <a> {item.subHeading}</a>  
+              <Link to={'/tender'} href={'/tender'}> {item.subHeading}</Link>  
             </span>
           </div>
         ))} 
@@ -81,7 +82,7 @@ const SectionStatistic = ({ className = "" }) => {
             className="marquee-item"
           >
             <span className="block text-sm text-neutral-500 mt-3 sm:text-base dark:text-neutral-400">
-              <a> {item.subHeading}</a>  
+            <Link to={'/tender'} href={'/tender'}> {item.subHeading}</Link>  
             </span>
           </div>
         ))} 
@@ -110,7 +111,7 @@ const SectionStatistic = ({ className = "" }) => {
             className="marquee-item"
           >
             <span className="block text-sm text-neutral-500 mt-3 sm:text-base dark:text-neutral-400">
-              <a> {item.subHeading}</a>  
+            <Link to={'/tender'} href={'/tender'}> {item.subHeading}</Link>  
             </span>
           </div>
         ))} 
