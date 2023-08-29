@@ -8,7 +8,7 @@ import axios from "axios";
 import { usePathname, useSearchParams, useParams } from 'next/navigation'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer,toast } from "react-toastify";
-import NewProduct from "../NewProduct/page";
+import NewProduct from "../newProduct/page";
 import { baseUrl } from "@/Url";
 const Page = () => {
   const pathname = usePathname()
