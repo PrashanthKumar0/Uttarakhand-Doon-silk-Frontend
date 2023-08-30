@@ -11,3 +11,4 @@ node_modules
 
 .next/fallback-build-manifest.json
 doonsilkmain.zip
+*.zip
