@@ -29,7 +29,7 @@ function PageHome() {
 
     const fetchData = async () => {
       try {
-        axios.get(`${baseUrl} /getRandomProducts`)
+        axios.get(`${baseUrl}/getRandomProducts`)
       .then((response)=>{
         console.log(response)
         setData(response.data)

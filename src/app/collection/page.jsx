@@ -31,7 +31,7 @@ if(response.status===200){
   toast.success('products updated')
 }
 )
-.catch((error)=>{console.log(error)})
+.catch((error)=>{console.log('product err',error)})
 console.log('p-data', pData)
   },
 
