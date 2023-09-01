@@ -20,11 +20,13 @@ const Crousal: React.FC = () => {
   useEffect(()=>{
     axios.get(`${baseUrl}/getBanner`)
     .then((response)=>{
-     
+     console.log('responseBanner' ,response)
       setImages({
-        image1: response.data.data.image1 , // Replace with your actual property names
+        image1: response.data.data.image1 , 
         image2: response.data.data.image2 ,
         image3: response.data.data.image3 ,
+       
+
       })
       console.log('images',images)
       //setImages(response.data.data[0]),

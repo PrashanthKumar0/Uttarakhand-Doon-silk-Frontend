@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { baseUrl } from "@/Url";
+import { baseImgUrl, baseUrl } from "@/Url";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -48,7 +48,7 @@ const handleClick=()=>{
             <div className="relative h-36 w-24 sm:w-32 flex-shrink-0 overflow-hidden rounded-xl bg-slate-100">
               <Image
                 fill
-                src={`${baseUrl}/${info.main_products_.image1}`}
+                src={`${baseImgUrl}/${info.main_products_.image1}`}
                 alt={info.main_products_.name}
                 sizes="300px"
                 className="h-full w-full object-contain object-center"

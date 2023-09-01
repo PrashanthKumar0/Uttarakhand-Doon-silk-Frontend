@@ -113,7 +113,7 @@ const isLiked= true;
 
   const [showModalQuickView, setShowModalQuickView] = useState(false);
 
-  
+  console.log('item', {item})
   return (
     <div>
          <>
