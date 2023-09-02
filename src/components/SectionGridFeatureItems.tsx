@@ -3,7 +3,7 @@ import HeaderFilterSection from "@/components/HeaderFilterSection";
 import ProductCard from "@/components/ProductCard";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import { Product, PRODUCTS } from "@/data/data";
-import NewProduct from "@/app/NewProduct/page";
+import NewProduct from "@/app/newProduct/page";
 
 //
 export interface SectionGridFeatureItemsProps {

@@ -6,7 +6,7 @@ import Heading from "@/components/Heading/Heading";
 import Glide from "@glidejs/glide/dist/glide.esm";
 
 import axios from "axios";
-import NewProduct from "@/app/NewProduct/page";
+import NewProduct from "@/app/newProduct/page";
 import { baseUrl } from "@/Url";
 interface variant{
   varient_id:number;
