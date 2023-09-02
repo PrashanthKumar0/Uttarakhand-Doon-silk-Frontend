@@ -145,9 +145,9 @@ const isLiked= true;
             <h2 className="nc-ProductCard__title text-base font-semibold transition-colors">
               {item.name}
             </h2>
-            <p className={`text-sm text-slate-500 dark:text-slate-400 mt-1 `}>
+            {/* <p className={`text-sm text-slate-500 dark:text-slate-400 mt-1 `}>
               {item.description}
-            </p>
+            </p> */}
           </div>
 
           <div className="flex justify-between items-end ">
