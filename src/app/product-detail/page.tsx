@@ -97,7 +97,7 @@ const ProductDetailPage = () => {
     }
     })
     .catch((error)=>{
-      toast.error('opps!server error!!')
+      toast.warn('Please login First')
       console.log(error)})
    
   };

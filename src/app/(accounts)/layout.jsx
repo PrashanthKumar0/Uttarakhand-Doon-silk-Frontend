@@ -13,14 +13,14 @@ const pages = [
     name: "Account info",
     link: "/account",
   },
-  {
-    name: "Save lists",
-    link: "/account-savelists",
-  },
-  {
-    name: " My order",
-    link: "/account-order",
-  },
+  // {
+  //   name: "Save lists",
+  //   link: "/account-savelists",
+  // },
+  // {
+  //   name: " My order",
+  //   link: "/account-order",
+  // },
   {
     name: "Change password",
     link: "/account-password",

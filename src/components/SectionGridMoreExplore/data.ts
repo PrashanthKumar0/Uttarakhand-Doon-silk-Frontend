@@ -87,8 +87,8 @@ export const DEMO_MORE_EXPLORE_DATA_2: ExploreType[] = [
 ];
 export const DEMO_MORE_EXPLORE_DATA: ExploreType[] = [
   {
-    id: 1,
-    name: "Fabric",
+    id: 5,
+    name: "Muffler",
     desc: "Manufacturar",
     image: explore1Png,
     svgBg: explore1Svg,
@@ -96,7 +96,7 @@ export const DEMO_MORE_EXPLORE_DATA: ExploreType[] = [
     count: 155,
   },
   {
-    id: 2,
+    id: 6,
     name: "Saree",
     desc: "Manufacturar",
     image: explore2Png,
@@ -105,7 +105,7 @@ export const DEMO_MORE_EXPLORE_DATA: ExploreType[] = [
     count: 22,
   },
   {
-    id: 3,
+    id: 8,
     name: "Suit",
     desc: "Manufacturar",
     image: explore3Png,
@@ -115,7 +115,7 @@ export const DEMO_MORE_EXPLORE_DATA: ExploreType[] = [
   },
   {
     id: 4,
-    name: "Jackets",
+    name: "Stole",
     desc: "Manufacturar",
     image: explore9Png,
     svgBg: explore9Svg,
@@ -123,7 +123,7 @@ export const DEMO_MORE_EXPLORE_DATA: ExploreType[] = [
     count: 343,
   },
   {
-    id: 5,
+    id: 4,
     name: "Shawls",
     desc: "Manufacturar",
     image: explore5Png,
@@ -132,8 +132,8 @@ export const DEMO_MORE_EXPLORE_DATA: ExploreType[] = [
     count: 222,
   },
   {
-    id: 6,
-    name: "Waist Coats",
+    id: 9,
+    name: "Fabric",
     desc: "Manufacturar",
     image: explore6Png,
     svgBg: explore6Svg,

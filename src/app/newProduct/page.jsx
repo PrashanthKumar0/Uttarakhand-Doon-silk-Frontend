@@ -12,7 +12,7 @@ import { StarIcon } from "@heroicons/react/24/solid";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import ButtonSecondary from "@/shared/Button/ButtonSecondary";
 // import BagIcon from "./BagIcon";
-import toast from "react-hot-toast";
+
 import { Transition } from "@/app/headlessui";
 // import ModalQuickView from "./ModalQuickView";
 // import ProductStatus from "./ProductStatus";
@@ -22,6 +22,7 @@ import Link from "next/link";
 import NcImage from "@/shared/NcImage/NcImage";
 import axios from 'axios';
 import { baseImgUrl, baseUrl } from '@/Url';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -66,12 +67,15 @@ function RenderVariants({data}){
 
       axios.post(`${baseUrl}/addToCart`, {product_id:item.product_id, quantity:1}, {headers:{
         Authorization : `Bearer ${window.localStorage.getItem('token')}`
-      }}).then((response)=>{console.log(response)})
-      .catch((error)=>{console.log(error)})
+      }}).then((response)=>{console.log(response)
+      })
+      .catch((error)=>{console.log(error)
+      toast.warning('Please login first')})
     }
 
     return (
       <div className="absolute bottom-0 group-hover:bottom-4 inset-x-1 flex justify-center opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+        <ToastContainer/>
         <ButtonPrimary
           className="shadow-lg"
           fontSize="text-xs"

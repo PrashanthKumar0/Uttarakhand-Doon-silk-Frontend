@@ -8,6 +8,7 @@ import Link from "next/link";
 export interface CardCategory4Props {
   className?: string;
   featuredImage?: StaticImageData | string;
+  id?:any;
   bgSVG?: string;
   name: string;
   desc: string;
@@ -21,6 +22,7 @@ const CardCategory4: FC<CardCategory4Props> = ({
   bgSVG = explore1Svg,
   name,
   desc,
+  id,
   color = "bg-rose-50",
   count,
 }) => {
@@ -57,7 +59,7 @@ const CardCategory4: FC<CardCategory4Props> = ({
           </div>
 
           <Link
-            href={"/collection"}
+            href={`collection?id=${id}`}
             className="flex items-center text-sm font-medium group-hover:text-primary-500 transition-colors"
           >
             <span>See Collection</span>
@@ -66,7 +68,7 @@ const CardCategory4: FC<CardCategory4Props> = ({
         </div>
       </div>
 
-      <Link href={"/collection"}></Link>
+      <Link href={`collection?id=${id}`}></Link>
     </div>
   );
 };
