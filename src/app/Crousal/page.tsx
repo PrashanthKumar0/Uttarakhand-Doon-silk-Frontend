@@ -37,7 +37,7 @@ const Crousal: React.FC = () => {
   
   },[])
   return (
-    <div className="w-full h-full ">
+    <div className="w-full h-full " >
       <Swiper
         spaceBetween={0}
         slidesPerView={1}

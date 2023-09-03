@@ -28,7 +28,7 @@ axios.get(`${baseUrl}/getProductsByCategoryId/${id}`)
 .then((response)=>{console.log('products',response)
 if(response.status===200){
   setPData(response.data.data)}
-  toast.success('products updated')
+ // toast.success('products updated')
 }
 )
 .catch((error)=>{console.log('product err',error)})

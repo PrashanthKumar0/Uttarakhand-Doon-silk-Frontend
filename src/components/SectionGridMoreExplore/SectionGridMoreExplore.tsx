@@ -55,6 +55,7 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
       default:
         return (
           <CardCategory4
+          id ={item.id}
             bgSVG={item.svgBg}
             featuredImage={item.image}
             key={item.id}
