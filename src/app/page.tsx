@@ -20,6 +20,7 @@ import SectionGridFeatureItems from "@/components/SectionGridFeatureItems";
 //import {Banner} from '../images/Banner.jpg'
 import axios from "axios";
 import { baseUrl } from "@/Url";
+import ImageSlider from "./PdfSlider";
 //import Crousal from "./Crousal/page";
 
 function PageHome() {
@@ -55,8 +56,8 @@ function PageHome() {
 
   return (
     <div className="nc-PageHome relative overflow-hidden">
+   <ImageSlider />
  
- <SectionHero2/>
 
       {/* <div className="mt-24 lg:mt-32">
         <DiscoverMoreSlider />
