@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import './image.css'
 import 'swiper/css';
-import 'swiper/css/navigation';
+
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import category1 from './Category/category1.jpg';
@@ -54,14 +54,15 @@ const ImageSlider: React.FC = () => {
     spaceBetween={30}
     centeredSlides={true}
     autoplay={{
-      delay: 2500,
+      delay: 5000,
       disableOnInteraction: false,
     }}
+    className="mySwiper"
     pagination={{
-      clickable: true,
-    }}
+        clickable: true,
+      }}
     navigation={true}
-    modules={[Autoplay, Pagination, Navigation]}
+    modules={[Autoplay, Pagination,Navigation]}
     >
      
         <SwiperSlide ><Image src={category1} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
