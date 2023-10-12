@@ -14,9 +14,9 @@ const LikeButton: React.FC<LikeButtonProps> = ({
   const [isLiked, setIsLiked] = useState(liked);
 
   // make random for demo
-  useEffect(() => {
-    setIsLiked(Math.random() > 0.5);
-  }, []);
+  // useEffect(() => {
+  //    setIsLiked(Math.random() > 0.5);
+  // }, []);
 
   return (
     <button

@@ -23,6 +23,7 @@ import NcImage from "@/shared/NcImage/NcImage";
 import axios from 'axios';
 import { baseImgUrl, baseUrl } from '@/Url';
 import { ToastContainer, toast } from 'react-toastify';
+import WishListButton from '@/components/WishListButton';
 
 
 
@@ -130,10 +131,10 @@ function NewProduct({ item }) {
   const handleShowModalView = () => {
     setShowModalQuickView(!showModalQuickView);
     setModelProductData({
-      id: item.category_id,
+      id: item.product_id,
       name: item.name,
       description: item.description,
-      price: item.price,
+      price,
       image: item.image1,
       rating: 4.5,
       reviews: 2457,
@@ -142,7 +143,7 @@ function NewProduct({ item }) {
     });
     // sizes, variants, status, allOfSizes
 
-
+    console.log('d-item',item);
 
     // {
     //   id: 1,
@@ -190,7 +191,8 @@ function NewProduct({ item }) {
               />
             </Link>
             <ProductStatus status={status} />
-            <LikeButton liked={isLiked} className="absolute top-3 right-3 z-10" />
+            <WishListButton product_id={item.product_id} className="z-10"/>
+            {/* <LikeButton liked={isLiked} className="absolute top-3 right-3 z-10" /> */}
             <RenderGroupButtons setShowModalQuickView={() => { handleShowModalView(); }} item={item} />
           </div>
 

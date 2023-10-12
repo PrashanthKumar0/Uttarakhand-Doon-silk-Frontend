@@ -22,6 +22,7 @@ import AccordionInfo from "@/components/AccordionInfo";
 import Image from "next/image";
 import Link from "next/link";
 import { baseImgUrl } from "@/Url";
+import WishListButton from "./WishListButton";
 
 export interface ProductQuickViewProps {
   className?: string;
@@ -73,6 +74,8 @@ const ProductQuickView: FC<ProductQuickViewProps> = ({ className = "", data }) =
   const [variantActive, setVariantActive] = useState(0);
   // const [sizeSelected, setSizeSelected] = useState(sizes ? sizes[0] : "");
   const [qualitySelected, setQualitySelected] = useState(1);
+
+  console.log("m-dat",data);
 
   const notifyAddTocart = () => {
     // toast.custom(
@@ -329,7 +332,7 @@ const ProductQuickView: FC<ProductQuickViewProps> = ({ className = "", data }) =
             {/* STATUS */}
             {renderStatus()}
             {/* META FAVORITES */}
-            {/* <LikeButton className="absolute right-3 top-3 " /> */}
+            <WishListButton product_id={data.id} />
           </div>
           <div className="hidden lg:grid grid-cols-2 gap-3 mt-3 sm:gap-6 sm:mt-6 xl:gap-5 xl:mt-5">
             {[LIST_IMAGES_DEMO[1], LIST_IMAGES_DEMO[2]].map((item, index) => {
