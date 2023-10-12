@@ -7,7 +7,7 @@ import { StarIcon } from "@heroicons/react/24/solid";
 import BagIcon from "@/components/BagIcon";
 import NcInputNumber from "@/components/NcInputNumber";
 import { PRODUCTS } from "@/data/data";
-import {data} from "./productdata"
+import { data } from "./productdata"
 import {
   NoSymbolIcon,
   ClockIcon,
@@ -29,54 +29,55 @@ import Image, { StaticImageData } from "next/image";
 import AccordionInfo from "@/components/AccordionInfo";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
-import { ToastContainer,toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import Home from '../productSwiper/page'
 import { baseImgUrl, baseUrl } from "@/Url";
 //const LIST_IMAGES_DEMO = [detail1JPG, detail2JPG, detail3JPG];
-interface variant{
-  varient_id:number;
-  product_id:number;
-  image1:StaticImageData | string;
-  image2:StaticImageData | string;
-  image3:StaticImageData | string;
-  color_hex:string;
-  color:string;
+interface variant {
+  varient_id: number;
+  product_id: number;
+  image1: StaticImageData | string;
+  image2: StaticImageData | string;
+  image3: StaticImageData | string;
+  color_hex: string;
+  color: string;
 }
 interface Product {
-  image1:StaticImageData | string;
+  image1: StaticImageData | string;
   image2: string;
   image3: string;
   new_varient_S: variant[];
-  name:string;
-  color:string;
-  color_hex:string;
+  name: string;
+  color: string;
+  color_hex: string;
   product_id: number;
   description: string;
   price: number;
   discount: number;
- category_id:number;
+  category_id: number;
 }
 
 const ProductDetailPage = () => {
   const [product, setProduct] = useState<Product>(data);
-  const[price, setPrice]=useState(4)
+  const [price, setPrice] = useState(0)
   const searchParams = useSearchParams();
-  useEffect(()=>{
+  useEffect(() => {
     const value = searchParams.get('id')
-   // console.log('value',value)
+    // console.log('value',value)
     axios.get(`${baseUrl}/getMainProductById/${value}`)
-    .then((response)=>{
-      //console.log(response)
-      if(response.status===200){
-        setProduct(response.data.data)
-        setPrice(response.data.actualPrice)}
+      .then((response) => {
+        //console.log(response)
+        if (response.status === 200) {
+          setProduct(response.data.data)
+          setPrice(response.data.actualPrice)
+        }
       }
-    )
-    .catch((error)=>{console.log(error)})
-  },[])
+      )
+      .catch((error) => { console.log(error) })
+  }, [])
   //const { sizes, variants, status, allOfSizes, image } = PRODUCTS[0];
   //
-  const status:string= "New in";
+  const status: string = "New in";
   const [variantActive, setVariantActive] = useState(0);
   const [qualitySelected, setQualitySelected] = useState(1);
   const [isOpenModalViewAllReviews, setIsOpenModalViewAllReviews] =
@@ -86,24 +87,27 @@ const ProductDetailPage = () => {
   const notifyAddTocart = (e) => {
     const value = searchParams.get('id')
     e.preventDefault();
-    axios.post(`${baseUrl}/addToCart`, {product_id:value, quantity:qualitySelected}, {headers:{
-      Authorization : `Bearer ${window.localStorage.getItem('token')}`
-    }}).then((response)=>{
+    axios.post(`${baseUrl}/addToCart`, { product_id: value, quantity: qualitySelected }, {
+      headers: {
+        Authorization: `Bearer ${window.localStorage.getItem('token')}`
+      }
+    }).then((response) => {
       console.log(response)
-    if(response.status===201){
-      toast.success('Added to cart')
-    }else{
-      toast.error('There was some error')
-    }
+      if (response.status === 201) {
+        toast.success('Added to cart')
+      } else {
+        toast.error('There was some error')
+      }
     })
-    .catch((error)=>{
-      toast.warn('Please login First')
-      console.log(error)})
-   
+      .catch((error) => {
+        toast.warn('Please login First')
+        console.log(error)
+      })
+
   };
 
   const renderVariants = () => {
-   
+
 
     return (
       <div>
@@ -120,11 +124,10 @@ const ProductDetailPage = () => {
             <div
               key={index}
               onClick={() => setVariantActive(index)}
-              className={`relative flex-1 max-w-[75px] h-10 sm:h-11 rounded-full border-2 cursor-pointer ${
-                variantActive === index
-                  ? "border-primary-6000 dark:border-primary-500"
-                  : "border-transparent"
-              }`}
+              className={`relative flex-1 max-w-[75px] h-10 sm:h-11 rounded-full border-2 cursor-pointer ${variantActive === index
+                ? "border-primary-6000 dark:border-primary-500"
+                : "border-transparent"
+                }`}
             >
               <div
                 className="absolute inset-0.5 rounded-full overflow-hidden z-0 object-cover bg-cover"
@@ -139,7 +142,7 @@ const ProductDetailPage = () => {
     );
   };
 
-  
+
 
   const renderStatus = () => {
     if (!status) {
@@ -188,7 +191,7 @@ const ProductDetailPage = () => {
         {/* ---------- 1 HEADING ----------  */}
         <div>
           <h2 className="text-2xl sm:text-3xl font-semibold">
-         {product.name}
+            {product.name}
           </h2>
 
           <div className="flex items-center mt-5 space-x-4 sm:space-x-5">
@@ -249,12 +252,12 @@ const ProductDetailPage = () => {
         {/*  */}
 
         {/* ---------- 5 ----------  */}
-        <AccordionInfo />
+        <AccordionInfo description={product.description}/>
 
         {/* ---------- 6 ----------  */}
-        <div className="hidden xl:block">
-          <Policy />
-        </div>
+        {/* <div className="hidden xl:block"> */}
+        {/* <Policy /> */}
+        {/* </div> */}
       </div>
     );
   };
@@ -264,9 +267,9 @@ const ProductDetailPage = () => {
       <div className="">
         <h2 className="text-2xl font-semibold">Product Details</h2>
         <div className="prose prose-sm sm:prose dark:prose-invert sm:max-w-4xl mt-7">
-        <p>{product.description}</p>
-       
-          
+          <p>{product.description}</p>
+
+
         </div>
       </div>
     );
@@ -327,7 +330,7 @@ const ProductDetailPage = () => {
 
   return (
     <div className={`nc-ProductDetailPage `}>
-      <ToastContainer/>
+      <ToastContainer />
       {/* MAIn */}
       <main className="container mt-5 lg:mt-11">
         <div className="lg:flex">
@@ -373,36 +376,10 @@ const ProductDetailPage = () => {
             {renderSectionContent()}
           </div>
         </div>
-
-        {/* DETAIL AND REVIEW */}
-        <div className="mt-12 sm:mt-16 space-y-10 sm:space-y-16">
-          <div className="block xl:hidden">
-            <Policy />
-          </div>
-
-          {renderDetailSection()}
-
-          <hr className="border-slate-200 dark:border-slate-700" />
-
-          {renderReviews()}
-
-          <hr className="border-slate-200 dark:border-slate-700" />
-
-          {/* OTHER SECTION */}
-          {/* <SectionSliderProductCard
-            heading="Customers also purchased"
-            subHeading=""
-            headingFontClassName="text-2xl font-semibold"
-            headingClassName="mb-10 text-neutral-900 dark:text-neutral-50"
-            product={product}
-          /> */}
-
-        <Home/>
-         
-        </div>
+        {/*  Something Removed From Here Scroll below */}
       </main>
 
-   
+
       <ModalViewAllReviews
         show={isOpenModalViewAllReviews}
         onCloseModalViewAllReviews={() => setIsOpenModalViewAllReviews(false)}
@@ -411,4 +388,35 @@ const ProductDetailPage = () => {
   );
 };
 
+
+
+
+// that something is here
+
+// {/* DETAIL AND REVIEW */}
+// <div className="mt-12 sm:mt-16 space-y-10 sm:space-y-16">
+//   <div className="block xl:hidden">
+//     {/* <Policy /> */}
+//   </div>
+
+//   {/* {renderDetailSection()} */}
+
+//   <hr className="border-slate-200 dark:border-slate-700" />
+
+//   {/* {renderReviews()} */}
+
+//   <hr className="border-slate-200 dark:border-slate-700" />
+
+//   {/* OTHER SECTION */}
+//   {/* <SectionSliderProductCard
+//     heading="Customers also purchased"
+//     subHeading=""
+//     headingFontClassName="text-2xl font-semibold"
+//     headingClassName="mb-10 text-neutral-900 dark:text-neutral-50"
+//     product={product}
+//   /> */}
+
+//   <Home />
+
+// </div>
 export default ProductDetailPage;

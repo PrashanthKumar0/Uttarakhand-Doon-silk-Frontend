@@ -10,55 +10,65 @@ const DEMO_DATA = [
     content:
       "Fashion is a form of self-expression and autonomy at a particular period and place and in a specific context, of clothing, footwear, lifestyle, accessories, makeup, hairstyle, and body posture.",
   },
-  {
-    name: "Fabric + Care",
-    content: `<ul class="list-disc list-inside leading-7">
-    <li>Luxurious Silk: Experience the opulence of our silk sarees, known for their lustrous sheen and soft feel.</li>
-    <li>
-    Gentle Handling: Treat your silk saree delicately to prevent snags and friction, ensuring its longevity.(Spandex)
-    </li>
-    <li>
-    Professional Care: Opt for dry cleaning to maintain the intricate weaves and colors of your silk saree.
-    </li>
-    <li>
-    Smart Storage: Store in a cool, dry place away from sunlight, using breathable fabric covers to protect your silk saree's beauty.
-    </li>
-  </ul>`,
-  },
+  // {
+  //   name: "Fabric + Care",
+  //   content: `<ul class="list-disc list-inside leading-7">
+  //   <li>Luxurious Silk: Experience the opulence of our silk sarees, known for their lustrous sheen and soft feel.</li>
+  //   <li>
+  //   Gentle Handling: Treat your silk saree delicately to prevent snags and friction, ensuring its longevity.(Spandex)
+  //   </li>
+  //   <li>
+  //   Professional Care: Opt for dry cleaning to maintain the intricate weaves and colors of your silk saree.
+  //   </li>
+  //   <li>
+  //   Smart Storage: Store in a cool, dry place away from sunlight, using breathable fabric covers to protect your silk saree's beauty.
+  //   </li>
+  // </ul>`,
+  // },
 
-  {
-    name: "How it Fits",
-    content:
-      "Use this as a guide. Preference is a huge factor — if you're near the top of a size range and/or prefer more coverage, you may want to size up.",
-  },
-  {
-    name: "FAQ",
-    content: `
-    <ul class="list-disc list-inside leading-7">
-    <li>All full-priced, unworn items, with tags attached and in their original packaging are eligible for return or exchange within 30 days of placing your order.</li>
-    <li>
-    Please note, packs must be returned in full. We do not accept partial returns of packs.
-    </li>
-    <li>
-    Want to know our full returns policies? Here you go.
-    </li>
-    <li>
-    Want more info about shipping, materials or care instructions? Here!
-    </li>
-  </ul>
-    `,
-  },
+  // {
+  //   name: "How it Fits",
+  //   content:
+  //     "Use this as a guide. Preference is a huge factor — if you're near the top of a size range and/or prefer more coverage, you may want to size up.",
+  // },
+  // {
+  //   name: "FAQ",
+  //   content: `
+  //   <ul class="list-disc list-inside leading-7">
+  //   <li>All full-priced, unworn items, with tags attached and in their original packaging are eligible for return or exchange within 30 days of placing your order.</li>
+  //   <li>
+  //   Please note, packs must be returned in full. We do not accept partial returns of packs.
+  //   </li>
+  //   <li>
+  //   Want to know our full returns policies? Here you go.
+  //   </li>
+  //   <li>
+  //   Want more info about shipping, materials or care instructions? Here!
+  //   </li>
+  // </ul>
+  //   `,
+  // },
 ];
 
 interface Props {
   panelClassName?: string;
-  data?: typeof DEMO_DATA;
+  description: string;
 }
+
+interface IData { name: string; content: string };
 
 const AccordionInfo: FC<Props> = ({
   panelClassName = "p-4 pt-3 last:pb-0 text-slate-600 text-sm dark:text-slate-300 leading-6",
-  data = DEMO_DATA,
+  description,
 }) => {
+
+  const data: IData[] = [
+    {
+      name: "Description",
+      content: description,
+    },
+  ];
+
   return (
     <div className="w-full rounded-2xl space-y-2.5">
       {/* ============ */}
