@@ -3,7 +3,7 @@ import React from 'react'
 
 function DownloadTender({url}) {
   const handleDownload = () => {
-    const pdfUrl= `${baseImgUrl}${url}`
+    const pdfUrl= `${baseImgUrl}/${url}`
     if (pdfUrl) {
       const link = document.createElement('a');
       link.href = pdfUrl;
