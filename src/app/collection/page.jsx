@@ -7,47 +7,87 @@ import SectionSliderCollections from "@/components/SectionSliderLargeProduct";
 import axios from "axios";
 import { usePathname, useSearchParams, useParams } from 'next/navigation'
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer,toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import NewProduct from "../newProduct/page";
 import { baseUrl } from "@/Url";
+
+const LOAD_STATUS = {
+  loading: 0,
+  loaded: 2,
+  failed: 3,
+};
+
 const Page = () => {
+
+
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const Params = useParams()
-const[data, setData]= useState('');
-const [pData, setPData]= useState()
-useEffect(()=>{
-const id= searchParams.get('id')
+  const [data, setData] = useState('');
+  const [pData, setPData] = useState();
+  const [loadStatus, setLoadStatus] = useState(LOAD_STATUS.loading);
 
-axios.get(`${baseUrl}/get_category/${id}`).then(
-  (response)=>{
-  setData(response.data.data)}
-).catch((error)=>{console.log(error)})
+  useEffect(() => {
+    const id = searchParams.get('id');
+    setLoadStatus(LOAD_STATUS.loading);
+    axios.get(`${baseUrl}/get_category/${id}`).then(
+      (response) => {
+        setData(response.data.data);
+        setLoadStatus(LOAD_STATUS.loaded);
+      }
+    ).catch((error) => {
+      setLoadStatus(LOAD_STATUS.failed);
+      console.log(error);
+    })
 
-axios.get(`${baseUrl}/getProductsByCategoryId/${id}`)
-.then((response)=>{console.log('products',response)
-if(response.status===200){
-  setPData(response.data.data)}
- // toast.success('products updated')
-}
-)
-.catch((error)=>{console.log('product err',error)})
-console.log('p-data', pData)
+    axios.get(`${baseUrl}/getProductsByCategoryId/${id}`)
+      .then((response) => {
+        console.log('products', response)
+        if (response.status === 200) {
+          if ("message" in response.data.data) {
+            setPData("");
+
+            setLoadStatus(LOAD_STATUS.failed);
+          }
+          else {
+            setPData(response.data.data);
+            setLoadStatus(LOAD_STATUS.loaded);
+          }
+        }
+        // toast.success('products updated')
+      }
+      )
+      .catch((error) => {
+        console.log('product err', error);
+        setLoadStatus(LOAD_STATUS.failed);
+      })
+    console.log('p-data', pData)
   },
 
-  [pathname, searchParams])
+    [pathname, searchParams])
   return (
     <div className={`nc-PageCollection`}>
-      <ToastContainer/>
+      <ToastContainer />
       <div className="container py-16 lg:pb-28 lg:pt-20 space-y-16 sm:space-y-20 lg:space-y-28">
         <div className="space-y-10 lg:space-y-14">
           {/* HEADING */}
+          {(loadStatus == LOAD_STATUS.loading) ?
+            (
+              <div className="flex flex-col mt-12 lg:mt-16 space-y-5 sm:space-y-0 sm:space-x-3 sm:flex-row justify-center items-center">
+                {/* <Pagination /> */}
+                <ButtonPrimary loading>Loading</ButtonPrimary>
+              </div>
+            ) : null
+          }
+
+ 
+
           <div className="max-w-screen-sm">
             <h2 className="block text-2xl sm:text-3xl lg:text-4xl font-semibold">
-             {data==null?'':data.category_name}
+              {data == null ? '' : data.category_name}
             </h2>
             <span className="block mt-4 text-neutral-500 dark:text-neutral-400 text-sm sm:text-base">
-            {data==null?'':data.description}
+              {data == null ? '' : data.description}
             </span>
           </div>
 
@@ -61,16 +101,23 @@ console.log('p-data', pData)
               {/* {PRODUCTS.map((item, index) => (
                 <ProductCard data={item} key={index} />
               ))} */}
-               { pData===null && pData===''?"" :pData?.map((item, index) => (
-               <NewProduct item={item}/>
+              {pData === null && pData === '' ? "" : pData?.map((item, index) => (
+                <NewProduct item={item} key={index} />
               ))}
             </div>
 
             {/* PAGINATION */}
-            <div className="flex flex-col mt-12 lg:mt-16 space-y-5 sm:space-y-0 sm:space-x-3 sm:flex-row sm:justify-between sm:items-center">
-              {/* <Pagination /> */}
-              <ButtonPrimary loading>Show me more</ButtonPrimary>
-            </div>
+            {
+            (loadStatus == LOAD_STATUS.failed) ? 
+            (
+              <div className="flex my-10 w-full align-center justify-center opacity-50 text-2xl sm:text-3xl lg:text-4xl font-semibold">
+                {/* <div className="m-auto opacity-50 text-2xl sm:text-3xl lg:text-4xl font-semibold">  */}
+                No {data.category_name} Found. 
+                {/* </div> */}
+              </div>
+            ):null
+          }
+
           </main>
         </div>
 
@@ -85,7 +132,7 @@ console.log('p-data', pData)
       </div>
     </div>
   );
-  
+
 };
 
 
