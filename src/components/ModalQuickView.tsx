@@ -3,18 +3,20 @@
 import { Dialog, Transition } from "@/app/headlessui";
 import React, { FC, Fragment } from "react";
 import ButtonClose from "@/shared/ButtonClose/ButtonClose";
-import ProductQuickView from "./ProductQuickView";
+import ProductQuickView, { ProductQuickData } from "./ProductQuickView";
 import ProductQuickView2 from "./ProductQuickView2";
 import { usePathname } from "next/navigation";
 
 export interface ModalQuickViewProps {
   show: boolean;
   onCloseModalQuickView: () => void;
+  data: ProductQuickData;
 }
 
 const ModalQuickView: FC<ModalQuickViewProps> = ({
   show,
   onCloseModalQuickView,
+  data
 }) => {
   const pathname = usePathname();
 
@@ -64,7 +66,7 @@ const ModalQuickView: FC<ModalQuickViewProps> = ({
                   {pathname.includes("/home-2") ? (
                     <ProductQuickView2 />
                   ) : (
-                    <ProductQuickView />
+                    <ProductQuickView data={data}/>
                   )}
                 </div>
               </div>

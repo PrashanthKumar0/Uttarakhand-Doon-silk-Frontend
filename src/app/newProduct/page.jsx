@@ -38,8 +38,8 @@ function RenderVariants({ data }) {
           key={index}
           onClick={() => setVariantActive(index)}
           className={`relative w-11 h-6 rounded-full overflow-hidden z-10 border cursor-pointer ${variantActive === index
-              ? "border-black dark:border-slate-300"
-              : "border-transparent"
+            ? "border-black dark:border-slate-300"
+            : "border-transparent"
             }`}
           title={variant.color}
         >
@@ -103,6 +103,8 @@ function RenderGroupButtons({ setShowModalQuickView, data, item }) {
 };
 
 
+
+
 function NewProduct({ item }) {
   const [data, setData] = useState('')
   const [price, setPrice] = useState('')
@@ -120,8 +122,54 @@ function NewProduct({ item }) {
   const isLiked = true;
 
   const [showModalQuickView, setShowModalQuickView] = useState(false);
+  const [modelProductData, setModelProductData] = useState(null);
 
-  console.log('item', { item })
+
+  // console.log('m-item', item);
+
+  const handleShowModalView = () => {
+    setShowModalQuickView(!showModalQuickView);
+    setModelProductData({
+      id: item.category_id,
+      name: item.name,
+      description: item.description,
+      price: item.price,
+      image: item.image1,
+      rating: 4.5,
+      reviews: 2457,
+      status: "new",
+      images: [item.image1, item.image2, item.image3],
+    });
+    // sizes, variants, status, allOfSizes
+
+
+
+    // {
+    //   id: 1,
+    //   name: "Rey Nylon Backpack",
+    //   description: "Brown cockroach wings", //
+    //   price: 74,
+    //   image: productImgs[16],
+    //   category: "Category 1",
+    //   tags: ["tag1", "tag2"],
+    //   link: "/product-detail/",
+    //   variants: DEMO_VARIANTS,
+    //   variantType: "image",
+    //   sizes: ["XS", "S", "M", "L", "XL"],
+    //   allOfSizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+    //   status: "New in",
+    //   rating: "4.4",
+    //   numberOfReviews: 98,
+    // }
+
+    // console.log('m-item',item);
+  }
+
+
+
+
+
+  // console.log('item', { item })
   return (
     <div>
       <>
@@ -143,7 +191,7 @@ function NewProduct({ item }) {
             </Link>
             <ProductStatus status={status} />
             <LikeButton liked={isLiked} className="absolute top-3 right-3 z-10" />
-            <RenderGroupButtons setShowModalQuickView={setShowModalQuickView} item={item} />
+            <RenderGroupButtons setShowModalQuickView={() => { handleShowModalView(); }} item={item} />
           </div>
 
           <div className="space-y-4 px-2.5 pt-5 pb-2.5">
@@ -172,6 +220,7 @@ function NewProduct({ item }) {
 
         {/* QUICKVIEW */}
         <ModalQuickView
+          data={modelProductData}
           show={showModalQuickView}
           onCloseModalQuickView={() => setShowModalQuickView(false)}
         />
