@@ -190,7 +190,7 @@ function NewProduct({ item }) {
                 alt="product"
               />
             </Link>
-            <ProductStatus status={status} />
+            {/* <ProductStatus status={status} /> */}
             <WishListButton product_id={item.product_id} className="z-10"/>
             {/* <LikeButton liked={isLiked} className="absolute top-3 right-3 z-10" /> */}
             <RenderGroupButtons setShowModalQuickView={() => { handleShowModalView(); }} item={item} />
