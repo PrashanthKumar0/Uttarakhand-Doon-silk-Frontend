@@ -27,7 +27,7 @@ const widgetMenus: WidgetFooterMenu[] = [
     menus: [
       { href: "/tender", label: "Tender" },
       { href: "/contact", label: "Support" },
-      { href: "/", label: "Developers" },
+      // { href: "/", label: "Developers" },
     
     ],
   },
