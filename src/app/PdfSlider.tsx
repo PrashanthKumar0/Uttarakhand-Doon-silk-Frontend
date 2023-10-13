@@ -47,64 +47,64 @@ import category37 from './Category/category37.jpg';
 
 import Image from 'next/image';
 const ImageSlider: React.FC = () => {
-  
+
 
   return (
     <Swiper
-    spaceBetween={30}
-    centeredSlides={true}
-    autoplay={{
-      delay: 5000,
-      disableOnInteraction: false,
-    }}
-    className="mySwiper"
-    pagination={{
+      spaceBetween={30}
+      centeredSlides={true}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      className=""
+      pagination={{
         clickable: true,
       }}
-    navigation={true}
-    modules={[Autoplay, Pagination,Navigation]}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
     >
-     
-        <SwiperSlide ><Image src={category1} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category2} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category3} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category4} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category5} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category6} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category7} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category8} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category9} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category10} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category11} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category12} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category13} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category14} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category15} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category16} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category17} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category18} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category19} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category20} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category21} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category22} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category23} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category24} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category25} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category26} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category27} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category28} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category29} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category30} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category31} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category32} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category33} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category34} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category35} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category36} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-        <SwiperSlide ><Image src={category37} alt="Category"  style={{minWidth:'100vw',height:'85vh' }}/>  </SwiperSlide>
-       
-        
-        </Swiper>
+
+      <SwiperSlide ><Image src={category1} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category2} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category3} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category4} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category5} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category6} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category7} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category8} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category9} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category10} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category11} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category12} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category13} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category14} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category15} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category16} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category17} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category18} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category19} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category20} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category21} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category22} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category23} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category24} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category25} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category26} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category27} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category28} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category29} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category30} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category31} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category32} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category33} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category34} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category35} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category36} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+      <SwiperSlide ><Image src={category37} alt="Category" style={{ minWidth: '100vw', height: 'auto', maxHeight: "85vh" }} />  </SwiperSlide>
+
+
+    </Swiper>
   );
 };
 
