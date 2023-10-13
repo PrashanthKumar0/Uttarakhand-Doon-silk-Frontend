@@ -1,6 +1,28 @@
 "use client";
 
-import React, { FC, useState } from "react";
+//---------------------------------------------------------
+import explore1Svg from "@/images/collections/explore1.svg";
+import explore2Svg from "@/images/collections/explore2.svg";
+import explore3Svg from "@/images/collections/explore3.svg";
+import explore4Svg from "@/images/collections/explore4.svg";
+import explore5Svg from "@/images/collections/explore5.svg";
+import explore6Svg from "@/images/collections/explore6.svg";
+import explore7Svg from "@/images/collections/explore7.svg";
+import explore8Svg from "@/images/collections/explore8.svg";
+import explore9Svg from "@/images/collections/explore9.svg";
+//
+import explore1Png from "@/images/collections/explore1.png";
+import explore2Png from "@/images/collections/explore2.png";
+import explore3Png from "@/images/collections/explore3.png";
+import explore4Png from "@/images/collections/explore4.png";
+import explore5Png from "@/images/collections/explore5.png";
+import explore6Png from "@/images/collections/explore6.png";
+import explore7Png from "@/images/collections/explore7.png";
+import explore8Png from "@/images/collections/explore8.png";
+import explore9Png from "@/images/collections/explore9.png";
+//---------------------------------------------------------
+
+import React, { FC, useEffect, useState } from "react";
 import CardCategory1 from "@/components/CardCategories/CardCategory1";
 import CardCategory4 from "@/components/CardCategories/CardCategory4";
 import Heading from "@/components/Heading/Heading";
@@ -8,6 +30,8 @@ import NavItem2 from "@/components/NavItem2";
 import Nav from "@/shared/Nav/Nav";
 import CardCategory6 from "@/components/CardCategories/CardCategory6";
 import { DEMO_MORE_EXPLORE_DATA, ExploreType } from "./data";
+import axios from "axios";
+import { baseUrl } from "@/Url";
 
 export interface SectionGridMoreExploreProps {
   className?: string;
@@ -16,19 +40,82 @@ export interface SectionGridMoreExploreProps {
   data?: ExploreType[];
 }
 
+
+
+const imageMap = {
+  'Shawls': explore5Png,
+  'Mufflers': explore1Png,
+  'Sarees': explore2Png,
+  'Stoles': explore9Png,
+  'Suits': explore3Png,
+  'Fabrics': explore6Png,
+};
+
+const svgBgMap = {
+  'Shawls': explore5Svg,
+  'Mufflers': explore1Svg,
+  'Sarees': explore2Svg,
+  'Stoles': explore9Svg,
+  'Suits': explore3Svg,
+  'Fabrics': explore6Svg,
+}
+
+const colorMap = {
+  'Shawls': "bg-blue-50",
+  'Mufflers': "bg-indigo-50",
+  'Sarees': "bg-slate-100/0",
+  'Stoles': "bg-orange-50",
+  'Suits': "bg-violet-50",
+  'Fabrics': "bg-orange-50",
+}
+
 const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
   className = "",
   boxCard = "box4",
   gridClassName = "grid-cols-1 md:grid-cols-2 xl:grid-cols-3",
-  data = DEMO_MORE_EXPLORE_DATA.filter((_, i) => i < 6),
+  // data = DEMO_MORE_EXPLORE_DATA.filter((_, i) => i < 6),
 }) => {
   const [tabActive, setTabActive] = useState("Man");
 
-  const renderCard = (item: ExploreType) => {
+  const [data, setData] = useState(DEMO_MORE_EXPLORE_DATA.filter((_, i) => i < 6));
+
+
+  const fetchData = async () => {
+    let _data = [];
+    try {
+
+      let res = await axios.get(`${baseUrl}/get_all_categories`);
+      console.log('res',res);
+      _data = res.data.data.map((dat: any) => {
+        return {
+          id: dat.category_id,
+          name: dat.category_name,
+          desc: '',
+          image: imageMap[dat.category_name] ?? '',
+          svgBg: svgBgMap[dat.category_name] ?? '',
+          color: colorMap[dat.category_name] ?? '',
+          count: dat.productCount,
+        };
+      });
+
+    } catch (err) {
+      console.error(err);
+    }
+    console.log('data',_data);
+    return _data;
+  }
+
+  useEffect(() => {
+    fetchData().then(_data => {
+      setData(_data);
+    });
+  }, []);
+
+  const renderCard = (item: ExploreType, key: number) => {
     switch (boxCard) {
       case "box1":
         return (
-          <CardCategory1 key={item.id} featuredImage={item.image} {...item} />
+          <CardCategory1 key={key} featuredImage={item.image} {...item} />
         );
 
       case "box4":
@@ -36,7 +123,7 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
           <CardCategory4
             bgSVG={item.svgBg}
             featuredImage={item.image}
-            key={item.id}
+            key={key}
             color={item.color}
             {...item}
           />
@@ -46,7 +133,7 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
           <CardCategory6
             bgSVG={item.svgBg}
             featuredImage={item.image}
-            key={item.id}
+            key={key}
             color={item.color}
             {...item}
           />
@@ -55,10 +142,10 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
       default:
         return (
           <CardCategory4
-          id ={item.id}
+            id={item.id}
             bgSVG={item.svgBg}
             featuredImage={item.image}
-            key={item.id}
+            key={key}
             color={item.color}
             {...item}
           />
@@ -162,7 +249,7 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
     <div className={`nc-SectionGridMoreExplore relative ${className}`}>
       {renderHeading()}
       <div className={`grid gap-4 md:gap-7 ${gridClassName}`}>
-        {data.map((item) => renderCard(item))}
+        {data.map((item, idx) => renderCard(item, idx))}
       </div>
     </div>
   );
