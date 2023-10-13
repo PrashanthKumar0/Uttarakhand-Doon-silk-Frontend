@@ -105,7 +105,7 @@ function PageHome() {
             </div>
           </div>
         </div> */}
-        <SectionClientSay />
+        {/* <SectionClientSay /> */}
       </div>
     </div>
   );
