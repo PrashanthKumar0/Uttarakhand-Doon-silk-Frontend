@@ -58,7 +58,7 @@ const PageAbout = ({}) => {
         <SectionFounder />
         <div className="relative py-16">
           <BackgroundSection />
-          <SectionClientSay />
+          {/* <SectionClientSay /> */}
         </div>
 
         <SectionStatistic />

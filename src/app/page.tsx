@@ -1,5 +1,5 @@
 "use client"
-import React,{useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import SectionHowItWork from "@/components/SectionHowItWork/SectionHowItWork";
 import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
 //import SectionPromo1 from "@/components/SectionPromo1";
@@ -21,43 +21,44 @@ import SectionGridFeatureItems from "@/components/SectionGridFeatureItems";
 import axios from "axios";
 import { baseUrl } from "@/Url";
 import ImageSlider from "./PdfSlider";
+import PageAbout from "./about/page";
 //import Crousal from "./Crousal/page";
 
 function PageHome() {
-  const [data , setData]= useState('');
+  const [data, setData] = useState('');
 
-  useEffect(()=>{
+  useEffect(() => {
 
     const fetchData = async () => {
       try {
         axios.get(`${baseUrl}/getRandomProducts`)
-      .then((response)=>{
-        console.log(response)
-        setData(response.data)
-      console.log('success')
-      }
-      )
-      .catch((error)=>{console.log(error)})
+          .then((response) => {
+            console.log(response)
+            setData(response.data)
+            console.log('success')
+          }
+          )
+          .catch((error) => { console.log(error) })
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
-  
-  fetchData();
-  
-  },[])
- 
-  
+
+    fetchData();
+
+  }, [])
+
+
   const banners = [
-  // Banner,
+    // Banner,
     '/banner2.jpg',
     '/banner3.jpg',
   ];
 
   return (
     <div className="nc-PageHome relative overflow-hidden">
-   <ImageSlider />
- 
+      <ImageSlider />
+
 
       {/* <div className="mt-24 lg:mt-32">
         <DiscoverMoreSlider />
@@ -78,6 +79,13 @@ function PageHome() {
           <SectionGridMoreExplore />
         </div>
 
+
+        {/* ------------------ [NEW] ------------------  */}
+
+        <PageAbout />
+
+        {/* ------------------------------------------- */}
+
         {/* <SectionSliderProductCard
           heading="Best Sellers"
           subHeading="Best selling of the month"
@@ -85,7 +93,7 @@ function PageHome() {
 
         {/* <SectionPromo2 /> */}
 
-      
+
 
         {/* <SectionSliderCategories /> */}
 
