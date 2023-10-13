@@ -143,7 +143,7 @@ function NewProduct({ item }) {
     });
     // sizes, variants, status, allOfSizes
 
-    console.log('d-item',item);
+    console.log('d-item', item);
 
     // {
     //   id: 1,
@@ -177,10 +177,9 @@ function NewProduct({ item }) {
         <div
           className={`nc-ProductCard relative flex flex-col bg-transparent`}
         >
-          <Link href={`/product-detail?id=${item.product_id}`} className="absolute inset-0"></Link>
 
           <div className="relative flex-shrink-0 bg-slate-50 dark:bg-slate-300 rounded-3xl overflow-hidden z-1 group">
-            <Link href={`/product-detail?id=${item.product_id}`} className="block">
+            <Link href={`/product-detail?id=${item.product_id}`} className="block cursor-pointer">
               <NcImage
                 containerClassName="flex aspect-w-11 aspect-h-12 w-full h-0"
                 src={`${baseImgUrl}/${item.image1}`}
@@ -191,11 +190,10 @@ function NewProduct({ item }) {
               />
             </Link>
             {/* <ProductStatus status={status} /> */}
-            <WishListButton product_id={item.product_id} className="z-10"/>
+            <WishListButton product_id={item.product_id} className="z-10" />
             {/* <LikeButton liked={isLiked} className="absolute top-3 right-3 z-10" /> */}
             <RenderGroupButtons setShowModalQuickView={() => { handleShowModalView(); }} item={item} />
           </div>
-
           <div className="space-y-4 px-2.5 pt-5 pb-2.5">
             {data && <RenderVariants data={data} image={item.image1} name={item.name} price={price} />}
 

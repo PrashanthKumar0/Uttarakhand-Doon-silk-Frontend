@@ -19,7 +19,7 @@ export default function WishListButton({ product_id, className }: IWishListButto
             let json_arr = JSON.parse(likedItems_str);
             if (json_arr.includes(product_id)) {
                 setLiked(true);
-                console.log('like', product_id)
+                // console.log('like', product_id)
             }
         }
     }, []);

@@ -75,7 +75,7 @@ const ProductQuickView: FC<ProductQuickViewProps> = ({ className = "", data }) =
   // const [sizeSelected, setSizeSelected] = useState(sizes ? sizes[0] : "");
   const [qualitySelected, setQualitySelected] = useState(1);
 
-  console.log("m-dat",data);
+  // console.log("m-dat", data);
 
   const notifyAddTocart = () => {
     // toast.custom(
@@ -302,7 +302,7 @@ const ProductQuickView: FC<ProductQuickViewProps> = ({ className = "", data }) =
         <AccordionInfo
           data={[
             {
-              name: data.name,
+              name: "Description",
               content: data.description,
             }
           ]}

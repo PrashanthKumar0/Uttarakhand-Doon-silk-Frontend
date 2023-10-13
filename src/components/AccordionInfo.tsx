@@ -50,24 +50,19 @@ const DEMO_DATA = [
   // },
 ];
 
+interface IData { name: string; content: string };
+
+
 interface Props {
   panelClassName?: string;
-  description: string;
+  data: IData[];
 }
 
-interface IData { name: string; content: string };
 
 const AccordionInfo: FC<Props> = ({
   panelClassName = "p-4 pt-3 last:pb-0 text-slate-600 text-sm dark:text-slate-300 leading-6",
-  description,
+  data,
 }) => {
-
-  const data: IData[] = [
-    {
-      name: "Description",
-      content: description,
-    },
-  ];
 
   return (
     <div className="w-full rounded-2xl space-y-2.5">

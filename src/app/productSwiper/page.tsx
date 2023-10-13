@@ -1,6 +1,7 @@
 "use client";
-import React, { useEffect , useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 // import 'swiper/swiper.min.css';
 // import 'swiper/components/navigation/navigation.min.css';
 // import 'swiper/components/pagination/pagination.min.css';
@@ -25,41 +26,57 @@ import { baseUrl } from '@/Url';
 
 const Home: React.FC = () => {
   const [images, setImages] = useState<string[]>([]);
- useEffect(()=>{
-axios.get(`${baseUrl}/getRandomProducts`)
-.then((response)=>{setImages(response.data)} )
-.catch((error)=>{console.log(error)})
-console.log('images',images)
- },[])
+  useEffect(() => {
+    axios.get(`${baseUrl}/getRandomProducts`)
+      .then((response) => { setImages(response.data) })
+      .catch((error) => { console.log(error) })
+    console.log('images', images)
+  }, [])
+
+  
   return (
-    <div className="bg-gray-100 p-8">
-      <Swiper
-        spaceBetween={20}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 4,
-          },
-        }}
-      >
-        {images.map((product, index) => (
-          <SwiperSlide key={index}>
-            <ProductCard
-              title={product.name}
-              imageSrc={product.image1}
-              price={product.price}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div className="bg-gray-100 p-8 flex flex-row gap-10 flex-wrap align-center justify-center">
+      {images.map((product, index) => (
+        <ProductCard
+          title={product.name}
+          imageSrc={product.image1}
+          price={product.price}
+          key={index}
+        />
+      ))}
     </div>
   );
+
+  // old
+  // return (
+  //   <div className="bg-gray-100 p-8">
+  //     <Swiper
+  //       spaceBetween={20}
+  //       slidesPerView={1}
+  //       pagination={true}
+  //       scrollbar={{ draggable: true }}
+  //       modules={[Pagination]}
+  //       breakpoints={{
+  //         640: {
+  //           slidesPerView: 1,
+  //         },
+  //         768: {
+  //           slidesPerView: 3,
+  //         },
+  //       }}
+  //     >
+  //       {images.map((product, index) => (
+  //         <SwiperSlide key={index}>
+  //           <ProductCard
+  //             title={product.name}
+  //             imageSrc={product.image1}
+  //             price={product.price}
+  //           />
+  //         </SwiperSlide>
+  //       ))}
+  //     </Swiper>
+  //   </div>
+  // );
 };
 
 export default Home;

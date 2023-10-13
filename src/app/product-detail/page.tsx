@@ -32,6 +32,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import Home from '../productSwiper/page'
 import { baseImgUrl, baseUrl } from "@/Url";
+import WishListButton from "@/components/WishListButton";
 //const LIST_IMAGES_DEMO = [detail1JPG, detail2JPG, detail3JPG];
 interface variant {
   varient_id: number;
@@ -77,7 +78,7 @@ const ProductDetailPage = () => {
   }, [])
   //const { sizes, variants, status, allOfSizes, image } = PRODUCTS[0];
   //
-  const status: string = "New in";
+  const status = "New in";
   const [variantActive, setVariantActive] = useState(0);
   const [qualitySelected, setQualitySelected] = useState(1);
   const [isOpenModalViewAllReviews, setIsOpenModalViewAllReviews] =
@@ -252,7 +253,14 @@ const ProductDetailPage = () => {
         {/*  */}
 
         {/* ---------- 5 ----------  */}
-        <AccordionInfo description={product.description}/>
+        <AccordionInfo
+          data={[
+            {
+              name: "Description",
+              content: product.description
+            }
+          ]}
+        />
 
         {/* ---------- 6 ----------  */}
         {/* <div className="hidden xl:block"> */}
@@ -349,7 +357,7 @@ const ProductDetailPage = () => {
               </div>
               {renderStatus()}
               {/* META FAVORITES */}
-              <LikeButton className="absolute right-3 top-3 " />
+              <WishListButton product_id={+searchParams.get('id')} />
             </div>
             <div className="grid grid-cols-2 gap-3 mt-3 sm:gap-6 sm:mt-6 xl:gap-8 xl:mt-8">
               {[product.image2, product.image3].map((item, index) => {
@@ -377,13 +385,22 @@ const ProductDetailPage = () => {
           </div>
         </div>
         {/*  Something Removed From Here Scroll below */}
+
+
+
+        <div className="mt-12 sm:mt-16 space-y-10 sm:space-y-16">
+          <SectionSliderProductCard
+            heading="Customers also purchased"
+            subHeading=""
+            headingFontClassName="text-2xl font-semibold"
+            headingClassName="mb-10 text-neutral-900 dark:text-neutral-50"
+            product={product}
+          />
+        </div>
+        <Home />
       </main>
 
 
-      <ModalViewAllReviews
-        show={isOpenModalViewAllReviews}
-        onCloseModalViewAllReviews={() => setIsOpenModalViewAllReviews(false)}
-      />
     </div>
   );
 };
@@ -419,4 +436,5 @@ const ProductDetailPage = () => {
 //   <Home />
 
 // </div>
+
 export default ProductDetailPage;
