@@ -14,7 +14,7 @@ const FOUNDER_DEMO = [
     name: `Dr. BVRC Purushottam (IAS)`,
     job: "Secretary Co-Operatives Uttarakhand",
     avatar:
-    "https://ucrf.org.in/wp-content/uploads/2022/06/BVRC-Purushottam-150x150.jpeg",
+    "/IASPS.jpg",
   },
   {
     id: "5",
@@ -29,7 +29,7 @@ const FOUNDER_DEMO = [
     name: `Chaudhary Ajeet Singh`,
     job: "Chairman",
     avatar:
-    "https://ucrf.org.in/wp-content/uploads/2022/06/Chairman-Chaudhary-Ajeet-Singh-150x150.jpg"
+    "/CAS.jpg"
   },
   {
     id: "2",
