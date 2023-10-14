@@ -223,7 +223,7 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
                   className="inline-block"
                   dangerouslySetInnerHTML={{ __html: iconMap[item.name] }}
                 ></span>
-                <Link href={`${baseUrl}/collection?id=${item.id}`}>{item.name}</Link>
+                <Link href={`/collection?id=${item.id}`}>{item.name}</Link>
               </div>
             </NavItem2>
           ))}
