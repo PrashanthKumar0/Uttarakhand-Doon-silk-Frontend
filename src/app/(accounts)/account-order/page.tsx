@@ -29,7 +29,7 @@ const AccountOrder = () => {
                   <span>{"XL"}</span>
                 </p>
               </div>
-              <Prices className="mt-0.5 ml-2" />
+              <Prices price={0} className="mt-0.5 ml-2" />
             </div>
           </div>
           <div className="flex flex-1 items-end justify-between text-sm">
