@@ -62,10 +62,10 @@ const NavMobile: React.FC<NavMobileProps> = ({
           href={{
             pathname: item.href || undefined,
           }}
+          onClick={onClickClose}
         >
           <span
             className={!item.children ? "block w-full" : ""}
-            onClick={onClickClose}
           >
             {item.name}
           </span>
