@@ -106,7 +106,7 @@ function RenderGroupButtons({ setShowModalQuickView, data, item }) {
 
 
 
-function NewProduct({ item }) {
+function NewProduct({ item } : any) {
   const [data, setData] = useState('')
   const [price, setPrice] = useState('')
   useEffect(() => {
@@ -143,7 +143,7 @@ function NewProduct({ item }) {
     });
     // sizes, variants, status, allOfSizes
 
-    console.log('d-item', item);
+    // console.log('d-item', item);
 
     // {
     //   id: 1,
