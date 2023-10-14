@@ -59,7 +59,7 @@ interface Product {
 }
 
 const ProductDetailPage = () => {
-  const [product, setProduct] = useState<typeof data>(data);
+  const [product, setProduct] = useState<Product>(null);
   const [price, setPrice] = useState(0)
   const searchParams = useSearchParams();
   useEffect(() => {
@@ -187,7 +187,7 @@ const ProductDetailPage = () => {
   };
 
   const renderSectionContent = () => {
-    return (
+    return product ? (
       <div className="space-y-7 2xl:space-y-8">
         {/* ---------- 1 HEADING ----------  */}
         <div>
@@ -267,7 +267,7 @@ const ProductDetailPage = () => {
         {/* <Policy /> */}
         {/* </div> */}
       </div>
-    );
+    ) : null;
   };
 
   const renderDetailSection = () => {
