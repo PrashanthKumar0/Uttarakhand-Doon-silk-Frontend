@@ -38,7 +38,7 @@ export interface SectionSliderProductCardProps {
   headingFontClassName?: string;
   headingClassName?: string;
   subHeading?: string;
-   product?: Product;
+  product?: Product;
 }
 
 

@@ -11,6 +11,7 @@ import SectionPromo1 from "@/components/SectionPromo1";
 import { SPORT_PRODUCTS } from "@/data/data";
 import SectionGridFeatureItems from "@/components/SectionGridFeatureItems";
 import Crousal from "../Crousal/page";
+import SectionSliderProductCard from "@/components/SectionSliderProductCard";
 
 function PageHome2() {
   return (
@@ -24,7 +25,7 @@ function PageHome2() {
 
         {/* SECTION */}
         <SectionSliderProductCard
-          data={SPORT_PRODUCTS.filter((_, i) => i < 8)}
+          {...SPORT_PRODUCTS.filter((_, i) => i < 8)}
           subHeading="New Sports equipment"
         />
 
