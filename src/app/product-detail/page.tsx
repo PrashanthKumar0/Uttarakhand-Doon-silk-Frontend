@@ -59,7 +59,7 @@ interface Product {
 }
 
 const ProductDetailPage = () => {
-  const [product, setProduct] = useState<Product>(data);
+  const [product, setProduct] = useState<typeof data>(data);
   const [price, setPrice] = useState(0)
   const searchParams = useSearchParams();
   useEffect(() => {
