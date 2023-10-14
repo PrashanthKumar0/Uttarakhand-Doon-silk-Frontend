@@ -85,9 +85,9 @@ const ProductDetailPage = () => {
     useState(false);
 
   //
-  const notifyAddTocart = (e) => {
+  const notifyAddTocart = () => {
     const value = searchParams.get('id')
-    e.preventDefault();
+    // e.preventDefault();
     axios.post(`${baseUrl}/addToCart`, { product_id: value, quantity: qualitySelected }, {
       headers: {
         Authorization: `Bearer ${window.localStorage.getItem('token')}`
