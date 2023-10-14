@@ -15,34 +15,35 @@ import HeaderTitle from './HeaderTitle';
 
 //import SectionVideo from "./SectionVideos"
 import Crousal from "../Crousal/page";
+import { PageHome } from "../page";
 
-const PageAbout = ({}) => {
- 
+export const PageAbout = ({ }) => {
+
   return (
     <div className={`nc-PageAbout overflow-hidden relative`}>
       {/* ======== BG GLASS ======== */}
 
       <BgGlassmorphism />
-      <Crousal 
+      <Crousal
       />
-     
-      <div className="pt-2 ">
-      <HeaderTitle/>
-      </div>
-     
-       <div className="container py-16 lg:py-28 space-y-16 lg:space-y-28">
 
-       <div className="relative overflow-hidden">
-      <div className="aspect-w-16 aspect-h-9 rounded">
-        <iframe
-          className="w-full h-full absolute top-0 left-0 rounded"
-          src={'https://www.youtube.com/embed/pcZivOPnsJU'}
-          title="YouTube Video"
-          allowFullScreen
-        ></iframe>
+      <div className="pt-2 ">
+        <HeaderTitle />
       </div>
-    </div>
-       {/* <SectionVideo/> */}
+
+      <div className="container py-16 lg:py-28 space-y-16 lg:space-y-28">
+
+        <div className="relative overflow-hidden">
+          <div className="aspect-w-16 aspect-h-9 rounded">
+            <iframe
+              className="w-full h-full absolute top-0 left-0 rounded"
+              src={'https://www.youtube.com/embed/pcZivOPnsJU'}
+              title="YouTube Video"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+        {/* <SectionVideo/> */}
         <SectionHero
           rightImg={rightImg}
           heading="👋 About Us."
@@ -62,15 +63,20 @@ const PageAbout = ({}) => {
         </div>
 
         <SectionStatistic />
-        <div style={{display:'flex' , alignItems:'center', justifyContent:'center'}}>
-        <iframe loading="lazy" src="https://maps.google.com/maps?q=silk%20park%20bhawan%20premanagr%20dehradun&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
-         title="silk park bhawan premanagr dehradun" aria-label="silk park bhawan premanagr dehradun" className="w-100" style={{width:'80vw' , height:'50vh'}}></iframe>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <iframe loading="lazy" src="https://maps.google.com/maps?q=silk%20park%20bhawan%20premanagr%20dehradun&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+            title="silk park bhawan premanagr dehradun" aria-label="silk park bhawan premanagr dehradun" className="w-100" style={{ width: '80vw', height: '50vh' }}></iframe>
         </div>
-      
+
         <SectionPromo3 />
       </div>
     </div>
   );
 };
 
-export default PageAbout;
+
+const Home2Page = () => {
+  return <PageHome />
+};
+
+export  default Home2Page;

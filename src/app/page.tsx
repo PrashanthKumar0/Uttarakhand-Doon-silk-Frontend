@@ -21,10 +21,10 @@ import SectionGridFeatureItems from "@/components/SectionGridFeatureItems";
 import axios from "axios";
 import { baseUrl } from "@/Url";
 import ImageSlider from "./PdfSlider";
-import PageAbout from "./about/page";
+import { PageAbout } from "./about/page";
 //import Crousal from "./Crousal/page";
 
-function PageHome() {
+export function PageHome() {
   const [data, setData] = useState('');
 
   useEffect(() => {
@@ -82,7 +82,7 @@ function PageHome() {
 
         {/* ------------------ [NEW] ------------------  */}
 
-        <PageAbout />
+        {/* <PageAbout /> */}
 
         {/* ------------------------------------------- */}
 
@@ -119,4 +119,10 @@ function PageHome() {
   );
 }
 
-export default PageHome;
+// export default PageHome;
+function About2Page(){
+  return (
+    <PageAbout/>
+  )
+}
+export default About2Page;
