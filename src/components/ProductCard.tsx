@@ -17,6 +17,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import NcImage from "@/shared/NcImage/NcImage";
+import WishListButton from "./WishListButton";
 
 
 
@@ -24,7 +25,6 @@ const ProductCard = ({
   className = "",
   data ,
 
-  isLiked,
 }) => {
   const {
     name,
@@ -276,7 +276,7 @@ const ProductCard = ({
             />
           </Link>
           <ProductStatus status={status} />
-          <LikeButton liked={isLiked} className="absolute top-3 right-3 z-10" />
+          <WishListButton className="absolute top-3 right-3 z-10" />
           {sizes ? renderSizeList() : renderGroupButtons()}
         </div>
 
