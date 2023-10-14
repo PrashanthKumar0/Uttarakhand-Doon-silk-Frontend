@@ -15,7 +15,7 @@ import {
 } from "@heroicons/react/24/outline";
 import IconDiscount from "@/components/IconDiscount";
 import Prices from "@/components/Prices";
-import SectionSliderProductCard from "@/components/SectionSliderProductCard";
+import SectionSliderProductCard, { Product } from "@/components/SectionSliderProductCard";
 import detail1JPG from "@/images/products/detail1.jpg";
 import detail2JPG from "@/images/products/detail2.jpg";
 import detail3JPG from "@/images/products/detail3.jpg";
@@ -43,20 +43,20 @@ interface variant {
   color_hex: string;
   color: string;
 }
-interface Product {
-  image1: StaticImageData | string;
-  image2: string;
-  image3: string;
-  new_varient_S: variant[];
-  name: string;
-  color: string;
-  color_hex: string;
-  product_id: number;
-  description: string;
-  price: number;
-  discount: number;
-  category_id: number;
-}
+// interface Product {
+//   image1: StaticImageData | string;
+//   image2: string;
+//   image3: string;
+//   new_varient_S: variant[];
+//   name: string;
+//   color: string;
+//   color_hex: string;
+//   product_id: number;
+//   description: string;
+//   price: number;
+//   discount: number;
+//   category_id: number;
+// }
 
 const ProductDetailPage = () => {
   const [product, setProduct] = useState<Product>(null);

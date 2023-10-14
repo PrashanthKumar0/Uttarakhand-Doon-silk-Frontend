@@ -17,7 +17,7 @@ interface variant{
   color_hex:string;
   color:string;
 }
-interface Product {
+export interface Product {
   image1: string;
   image2: string;
   image3: string;
