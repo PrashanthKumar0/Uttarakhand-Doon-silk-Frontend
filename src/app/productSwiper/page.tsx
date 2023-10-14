@@ -16,6 +16,7 @@ import 'swiper/css/pagination';
 import ProductCard from './ProductCard';
 import axios from 'axios';
 import { baseUrl } from '@/Url';
+import { Product } from '@/components/SectionSliderProductCard';
 
 // const products = [
 //   { title: 'Product 1', imageSrc: '/product1.jpg', price: '$100' },
@@ -25,7 +26,7 @@ import { baseUrl } from '@/Url';
 // ];
 
 const Home: React.FC = () => {
-  const [images, setImages] = useState<string[]>([]);
+  const [images, setImages] = useState<Product[]>([]);
   useEffect(() => {
     axios.get(`${baseUrl}/getRandomProducts`)
       .then((response) => { setImages(response.data) })

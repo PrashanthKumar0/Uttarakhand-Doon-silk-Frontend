@@ -4,7 +4,7 @@ import React from 'react';
 interface ProductCardProps {
   title: string;
   imageSrc: string;
-  price: string;
+  price: number;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ title, imageSrc, price }) => {
