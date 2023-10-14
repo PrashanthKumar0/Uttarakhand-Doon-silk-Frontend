@@ -106,7 +106,8 @@ function RenderGroupButtons({ setShowModalQuickView, item }) {
 
 
 
-function NewProduct({ item }) {
+function NewProduct(props) {
+  const { item } = props;
   const [data, setData] = useState('')
   const [price, setPrice] = useState('')
   useEffect(() => {
