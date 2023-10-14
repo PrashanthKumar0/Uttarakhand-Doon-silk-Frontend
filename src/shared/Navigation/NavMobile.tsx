@@ -1,6 +1,6 @@
 "use client";
 
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import ButtonClose from "@/shared/ButtonClose/ButtonClose";
 import Logo from "@/shared/Logo/Logo";
 import { Disclosure } from "@/app/headlessui";
@@ -20,8 +20,8 @@ export interface NavMobileProps {
 }
 export interface MenuProps {
   category_id: string;
-  category_name:string;
-  description:string;
+  category_name: string;
+  description: string;
 }
 const NavMobile: React.FC<NavMobileProps> = ({
   data = NAVIGATION_DEMO_2,
@@ -29,21 +29,23 @@ const NavMobile: React.FC<NavMobileProps> = ({
 }) => {
 
   const router = useRouter();
-  const handleclick=(id:string)=>{
-  router.push(`/collection?id=${id}`,id)
+  const handleclick = (id: string) => {
+    router.push(`/collection?id=${id}`, id)
+    setTimeout(onClickClose, 100);
   }
   const [menuCategory, setMenuCategory] = useState<MenuProps[]>([]);
-  useEffect(()=>{
+  useEffect(() => {
     axios.get(`${baseUrl}/get_all_categories`)
-    .then((response)=>{
-      console.log(response)
-    setMenuCategory(response.data.data)})
-    .catch((error)=>{console.log(error)}) 
-  },[])
+      .then((response) => {
+        console.log(response)
+        setMenuCategory(response.data.data)
+      })
+      .catch((error) => { console.log(error) })
+  }, [])
 
 
 
-  
+
 
 
 
@@ -62,17 +64,17 @@ const NavMobile: React.FC<NavMobileProps> = ({
           href={{
             pathname: item.href || undefined,
           }}
-          onClick={onClickClose}
         >
           <span
             className={!item.children ? "block w-full" : ""}
+            onClick={() => { (item.type != 'dropdown') && onClickClose(); }}
           >
             {item.name}
           </span>
           {item.children && (
             <span
               className="block flex-grow"
-              onClick={(e) => e.preventDefault()}
+              onClick={onClickClose}
             >
               <Disclosure.Button
                 as="span"
@@ -86,28 +88,28 @@ const NavMobile: React.FC<NavMobileProps> = ({
             </span>
           )}
         </Link>
-      {item.children && (
+        {item.children && (
           <Disclosure.Panel>
 
-      <ul className="nav-mobile-sub-menu pl-6 pb-1 text-base">
-        {menuCategory?.map((i, index) => (
-          <Disclosure key={index} as="li">
-            <button
-             onClick={()=>{handleclick(i.category_id)}}
-              className={`flex text-sm rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 mt-0.5 pr-4 ${itemClass}`}
-            >
-              <span
-                className={`py-2.5`}
-                onClick={onClickClose}
-              >
-                {i.category_name}
-              </span>
-              
-            </button>
-      
-          </Disclosure>
-        ))}
-      </ul>
+            <ul className="nav-mobile-sub-menu pl-6 pb-1 text-base">
+              {menuCategory?.map((i, index) => (
+                <Disclosure key={index} as="li">
+                  <button
+                    onClick={(e) => { e.preventDefault(); handleclick(i.category_id) }}
+                    className={`flex text-sm rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 mt-0.5 pr-4 ${itemClass}`}
+                  >
+                    <span
+                      className={`py-2.5`}
+                      onClick={onClickClose}
+                    >
+                      {i.category_name}
+                    </span>
+
+                  </button>
+
+                </Disclosure>
+              ))}
+            </ul>
 
 
 
@@ -117,7 +119,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
 
 
           </Disclosure.Panel>
-        )} 
+        )}
       </Disclosure>
     );
   };

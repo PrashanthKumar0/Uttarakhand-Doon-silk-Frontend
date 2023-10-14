@@ -33,6 +33,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Home from '../productSwiper/page'
 import { baseImgUrl, baseUrl } from "@/Url";
 import WishListButton from "@/components/WishListButton";
+import { LoaderIcon } from "react-hot-toast";
 //const LIST_IMAGES_DEMO = [detail1JPG, detail2JPG, detail3JPG];
 interface variant {
   varient_id: number;
@@ -336,7 +337,7 @@ const ProductDetailPage = () => {
     );
   };
 
-  return (
+  return product !== null ? (
     <div className={`nc-ProductDetailPage `}>
       <ToastContainer />
       {/* MAIn */}
@@ -402,7 +403,7 @@ const ProductDetailPage = () => {
 
 
     </div>
-  );
+  ) : <LoaderIcon />;
 };
 
 
