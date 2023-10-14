@@ -56,7 +56,7 @@ function RenderVariants({ data }) {
   );
 }
 
-function RenderGroupButtons({ setShowModalQuickView, data, item }) {
+function RenderGroupButtons({ setShowModalQuickView, item }) {
 
 
 
