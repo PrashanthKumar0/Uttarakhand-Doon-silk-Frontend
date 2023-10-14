@@ -52,10 +52,11 @@ const SectionFounder = () => {
   return (
     <div className="nc-SectionFounder relative">
       <Heading
-        desc="We’re impartial and independent, and every day we create distinctive,
-          world-class programmes and content"
+        // desc="We’re impartial and independent, and every day we create distinctive,
+        //   world-class programmes and content"
+        desc=""
       >
-        ⛱ Message Desk
+        ⛱ Uttarakhand Cooperative Resham Foundation
       </Heading>
       <div className="grid sm:grid-cols-2 gap-x-5 gap-y-8 lg:grid-cols-3 xl:gap-x-8 justify-center">
         {FOUNDER_DEMO.map((item) => (
