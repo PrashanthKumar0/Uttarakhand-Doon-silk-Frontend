@@ -26,30 +26,31 @@ export interface NavigationItemProps {
 }
 export interface MenuProps {
   category_id: string;
-  category_name:string;
-  description:string;
+  category_name: string;
+  description: string;
 }
 
 
 const NavigationItem: FC<NavigationItemProps> = ({ menuItem }) => {
 
-const router = useRouter();
-const handleclick=(id:string)=>{
-router.push(`/collection?id=${id}`,id)
-}
+  const router = useRouter();
+  const handleclick = (id: string) => {
+    router.push(`/collection?id=${id}`, id)
+  }
   const [menuCurrentHovers, setMenuCurrentHovers] = useState<string[]>([]);
   const [menuCategory, setMenuCategory] = useState<MenuProps[]>([]);
-  useEffect(()=>{
+  useEffect(() => {
     axios.get(`${baseUrl}/get_all_categories`)
-    .then((response)=>{
-      console.log(response)
-    setMenuCategory(response.data.data)})
-    .catch((error)=>{console.log(error)}) 
-  },[])
+      .then((response) => {
+        // console.log(response)
+        setMenuCategory(response.data.data)
+      })
+      .catch((error) => { console.log(error) })
+  }, [])
 
-  
-  
- 
+
+
+
 
   const onMouseEnterMenu = (id: string) => {
     setMenuCurrentHovers((state) => [...state, id]);
@@ -63,9 +64,9 @@ router.push(`/collection?id=${id}`,id)
     });
   };
 
-  
 
-  
+
+
 
   // ===================== MENU DROPDOW =====================
   const renderDropdownMenu = (menuDropdown: NavItemType) => {
@@ -98,14 +99,14 @@ router.push(`/collection?id=${id}`,id)
               >
                 <ul className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-white dark:ring-opacity-10 text-sm relative bg-white dark:bg-neutral-900 py-4 grid space-y-1">
                   {menuDropdown.children &&
-                   
-                        <li className="px-2">
-                         {
-                          menuCategory===null?'' :
-                          menuCategory.map((info)=>{
-                           return(
-                             <button
-                               className="flex items-center 
+
+                    <li className="px-2">
+                      {
+                        menuCategory === null ? '' :
+                          menuCategory.map((info) => {
+                            return (
+                              <button
+                                className="flex items-center 
                                font-normal 
                                text-neutral-6000
                                 dark:text-neutral-400 
@@ -113,25 +114,25 @@ router.push(`/collection?id=${id}`,id)
                                 hover:text-neutral-700 
                                 hover:bg-neutral-100 dark:hover:bg-neutral-800 
                                 dark:hover:text-neutral-200"
-                            // href={{pathname:'/collection', query:{id :info.category_id}}}
-                            onClick={()=>{handleclick(info.category_id)}}
-                             >
-                               {info.category_name}
-                               {/* {item.type && (
+                                // href={{pathname:'/collection', query:{id :info.category_id}}}
+                                onClick={() => { handleclick(info.category_id) }}
+                              >
+                                {info.category_name}
+                                {/* {item.type && (
                                  <ChevronDownIcon
                                    className="ml-2 h-4 w-4 text-neutral-500"
                                    aria-hidden="true"
                                  />
                                )} */}
-                             </button> 
-                           )
-                            
-                             })
-                         }
-                        </li>
-  }
-                        
-                
+                              </button>
+                            )
+
+                          })
+                      }
+                    </li>
+                  }
+
+
                 </ul>
               </Popover.Panel>
             </Transition>
@@ -141,7 +142,7 @@ router.push(`/collection?id=${id}`,id)
     );
   };
 
-  
+
 
   // ===================== MENU MAIN MENU =====================
   const renderMainItem = (item: NavItemType) => {
@@ -168,7 +169,7 @@ router.push(`/collection?id=${id}`,id)
   switch (menuItem.type) {
     case "dropdown":
       return renderDropdownMenu(menuItem);
-   
+
     default:
       return (
         <li className="menu-item flex-shrink-0">{renderMainItem(menuItem)}</li>
