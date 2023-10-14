@@ -23,7 +23,7 @@ import WishListButton from "./WishListButton";
 
 const ProductCard = ({
   className = "",
-  data ,
+  data,
 
 }) => {
   const {
@@ -40,7 +40,7 @@ const ProductCard = ({
     numberOfReviews,
   } = data;
 
-  
+
   const [variantActive, setVariantActive] = useState(0);
   const [showModalQuickView, setShowModalQuickView] = useState(false);
   const router = useRouter();
@@ -161,11 +161,10 @@ const ProductCard = ({
             <div
               key={index}
               onClick={() => setVariantActive(index)}
-              className={`relative w-6 h-6 rounded-full overflow-hidden z-10 border cursor-pointer ${
-                variantActive === index
+              className={`relative w-6 h-6 rounded-full overflow-hidden z-10 border cursor-pointer ${variantActive === index
                   ? getBorderClass(variant.color)
                   : "border-transparent"
-              }`}
+                }`}
               title={variant.name}
             >
               <div
@@ -183,11 +182,10 @@ const ProductCard = ({
           <div
             key={index}
             onClick={() => setVariantActive(index)}
-            className={`relative w-11 h-6 rounded-full overflow-hidden z-10 border cursor-pointer ${
-              variantActive === index
+            className={`relative w-11 h-6 rounded-full overflow-hidden z-10 border cursor-pointer ${variantActive === index
                 ? "border-black dark:border-slate-300"
                 : "border-transparent"
-            }`}
+              }`}
             title={variant.name}
           >
             <div
@@ -197,11 +195,11 @@ const ProductCard = ({
                   // @ts-ignore
                   typeof variant.thumbnail?.src === "string"
                     ? // @ts-ignore
-                      variant.thumbnail?.src
+                    variant.thumbnail?.src
                     : typeof variant.thumbnail === "string"
-                    ? variant.thumbnail
-                    : ""
-                })`,
+                      ? variant.thumbnail
+                      : ""
+                  })`,
               }}
             ></div>
           </div>
@@ -259,7 +257,7 @@ const ProductCard = ({
 
   return (
     <>
-   <div
+      <div
         className={`nc-ProductCard relative flex flex-col bg-transparent ${className}`}
       >
         <Link href={"/product-detail"} className="absolute inset-0"></Link>
@@ -276,7 +274,7 @@ const ProductCard = ({
             />
           </Link>
           <ProductStatus status={status} />
-          <WishListButton className="absolute top-3 right-3 z-10" />
+          <WishListButton product_id={data.product_id} className="absolute top-3 right-3 z-10" />
           {sizes ? renderSizeList() : renderGroupButtons()}
         </div>
 
@@ -296,7 +294,7 @@ const ProductCard = ({
             <div className="flex items-center mb-0.5">
               <StarIcon className="w-5 h-5 pb-[1px] text-amber-400" />
               <span className="text-sm ml-1 text-slate-500 dark:text-slate-400">
-                {rating || ""} ({numberOfReviews || 23 } reviews)
+                {rating || ""} ({numberOfReviews || 23} reviews)
               </span>
             </div>
           </div>
@@ -307,8 +305,8 @@ const ProductCard = ({
       <ModalQuickView
         show={showModalQuickView}
         onCloseModalQuickView={() => setShowModalQuickView(false)}
-      /> 
- </>
+      />
+    </>
   );
 };
 
