@@ -67,14 +67,14 @@ const NavMobile: React.FC<NavMobileProps> = ({
         >
           <span
             className={!item.children ? "block w-full" : ""}
-            onClick={() => { (item.type != 'dropdown') && onClickClose(); }}
+            onClick={() => { if(item.type != 'dropdown') onClickClose(); }}
           >
             {item.name}
           </span>
           {item.children && (
             <span
               className="block flex-grow"
-              onClick={onClickClose}
+              // onClick={onClickClose}
             >
               <Disclosure.Button
                 as="span"
@@ -100,7 +100,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
                   >
                     <span
                       className={`py-2.5`}
-                      onClick={onClickClose}
+                      // onClick={onClickClose}
                     >
                       {i.category_name}
                     </span>
