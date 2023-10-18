@@ -110,7 +110,7 @@ function NewProduct(props) {
   const { item } = props;
   if(!item) return <></>;
   
-  const [data, setData] = useState('')
+  const [data, setData] = useState(null)
   const [price, setPrice] = useState('')
   useEffect(() => {
     axios.get(`${baseUrl}/getMainProductById/${item.product_id}`)
@@ -174,7 +174,7 @@ function NewProduct(props) {
 
 
   // console.log('item', { item })
-  return (
+  return data && (
     <div>
       <>
         <div
