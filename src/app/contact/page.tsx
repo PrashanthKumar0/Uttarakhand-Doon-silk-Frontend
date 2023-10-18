@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+"use client"
+import React, { useState } from "react";
 import SocialsList from "@/shared/SocialsList/SocialsList";
 import Label from "@/components/Label/Label";
 import Input from "@/shared/Input/Input";
@@ -6,6 +7,13 @@ import Textarea from "@/shared/Textarea/Textarea";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
 import SectionPromo1 from "@/components/SectionPromo1";
+import ncNanoId from "@/utils/ncNanoId";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
+import { baseUrl } from "@/Url";
+import { Router, useRouter } from "next/router";
+
 
 const info = [
   {
@@ -47,10 +55,55 @@ const ContactDetails = ({ className = '' }) => {
 }
 
 
+
 const ContactForm = ({ }) => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const onSubmit = () => {
+    console.log('data : ', { email, name, message });
+    console.log('name l : ',name.replace(/ /gmi, '').length < 3)
+    if (name.replace(/ /gmi, '').length < 3) {
+      toast.error('Name should not be empty');
+      return false;
+    }
+    if (!email.match(/.{1,}@.{1,}\..{1,}/)) {
+      toast.error('Email is not valid');
+      return false;
+    }
+    if (message.replace(/ /gmi, '').length < 10) {
+      toast.error('message should be a little longer');
+      return false;
+    }
+
+    axios.post(`${baseUrl}/contactForm`, { email, name, message })
+      .then((response) => {
+        if (response.status === 200) {
+
+          toast.success(response.data.message);
+
+        } else {
+          toast.error(response.data.message)
+        }
+        console.log(response)
+      })
+      .catch(() => {
+        toast.error('Server Down.\nTry Again Later.')
+        // console.log(error)
+      })
+
+
+    return false;
+  }
+
+
+
   return (
     <div>
-      <form className="grid grid-cols-1 gap-6 mb-10" action="#" method="post">
+      <ToastContainer />
+
+      <form className="grid grid-cols-1 gap-6 mb-10" action="#" method="post" onSubmit={() => onSubmit()}>
         <label className="block">
           <Label>Full name</Label>
 
@@ -58,6 +111,7 @@ const ContactForm = ({ }) => {
             placeholder="Example Doe"
             type="text"
             className="mt-1"
+            onChange={(e) => setName(e.target.value)}
           />
         </label>
         <label className="block">
@@ -67,12 +121,17 @@ const ContactForm = ({ }) => {
             type="email"
             placeholder="example@example.com"
             className="mt-1"
+            onChange={(e) => setEmail(e.target.value)}
           />
         </label>
         <label className="block">
           <Label>Message</Label>
 
-          <Textarea className="mt-1" rows={6} />
+          <Textarea
+            className="mt-1"
+            rows={6}
+            onChange={(e) => setMessage(e.target.value)}
+          />
         </label>
         <div className="mx-auto">
           <ButtonPrimary type="submit">Send Message</ButtonPrimary>
