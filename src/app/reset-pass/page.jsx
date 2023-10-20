@@ -1,22 +1,25 @@
 'use client'
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Input from "@/shared/Input/Input";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import Link from "next/link";
 import axios from "axios";
 import { baseUrl } from "@/Url";
-// import { useParams, useSearchParams } from "next/navigation";
+// import { usePathname,useParams, useSearchParams } from "next/navigation";
 import { toast } from "react-toastify";
 
 const PageForgotPass = ({ }) => {
     const [pass, setPass] = useState('');
+    const [query, setQuery] = useState(null);
+    useEffect(async () => {
+        setQuery((window.location.href.indexOf('?') != -1) && location.href.split('?').reverse()[0].split('&').map(e => {
+            let [k, v] = e.split('=');
+            return { [k]: v };
+        }));
+    }, []);
     // const [params,setParams] = useSearchParams();
-    const [query, setQuery] = useState((window.location.href.indexOf('?') != -1) && location.href.split('?').reverse()[0].split('&').map(e => {
-        let [k, v] = e.split('=');
-        return { [k]: v };
-    }));
-    // console.log(params);
 
+    // console.log(params);
     if (!query || !(('tok' in query) && ('id' in query))) {
         return (
             <div className="container mb-24 lg:mb-32">
