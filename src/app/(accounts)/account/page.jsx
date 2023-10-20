@@ -10,55 +10,60 @@ import 'react-toastify/dist/ReactToastify.css';
 import { baseUrl } from "@/Url";
 import AppContext from "@/context/withAuth";
 const AccountPage = () => {
-  const value =useContext(AppContext)
-  const [name, setName]= useState('')
-  const [pin, setPin]= useState('')
-  const [address,setAddress] =useState('')
-  const [gender , setGender] =useState('')
-  const [phone, setPhone] =useState('')
-  const [data, setData]=useState({})
+  const value = useContext(AppContext)
+  const [name, setName] = useState('')
+  const [pin, setPin] = useState('')
+  const [address, setAddress] = useState('')
+  const [gender, setGender] = useState('')
+  const [phone, setPhone] = useState('')
+  const [data, setData] = useState({})
 
-  useEffect(()=>{
-   
-    axios.get(`${baseUrl}/getUserDetails`, {headers:{Authorization: `Bearer ${value.token}`}})
-    .then((response)=>{setData(response.data.user) 
-      ,setName(response.data.user.name)
-      ,setAddress(response.data.user.address)
-      ,setGender(response.data.user.gender)
-      ,setPin(response.data.user.pincode)
-      ,setPhone(response.data.user.phone)
-      , console.log(response.data.user)}).catch((error)=>{console.log(error)})
-    console.log('data',data)
-    
-  },[])
-  const handleSubmit =()=>{
+  useEffect(() => {
+
+    axios.get(`${baseUrl}/getUserDetails`, { headers: { Authorization: `Bearer ${value.token}` } })
+      .then((response) => {
+        setData(response.data.user)
+        , setName(response.data.user.name)
+        , setAddress(response.data.user.address)
+        , setGender(response.data.user.gender)
+        , setPin(response.data.user.pincode)
+        , setPhone(response.data.user.phone)
+        , console.log(response.data.user)
+      }).catch((error) => { console.log(error) })
+    console.log('data', data)
+
+  }, [])
+  const handleSubmit = () => {
     console.log('name', name)
     console.log('pin', pin)
     console.log('address', address)
     console.log('gender', gender)
     console.log('phone', phone)
-   
-      axios.post(`${baseUrl}/addUserDetails`,
-      {name:name,phone:phone, address:address,pincode:pin,gender:gender},
-      {headers:{Authorization: `Bearer ${value.token}`}})
-      .then((response)=>{if(response.status==200){toast.success('Updated Successfully')}}).catch((error)=>{toast.error('There was some issue in updating')})
+
+    axios.post(`${baseUrl}/addUserDetails`,
+      { name: name, phone: phone, address: address, pincode: pin, gender: gender },
+      { headers: { Authorization: `Bearer ${value.token}` } })
+      .then((response) => { if (response.status == 200) { toast.success('Updated Successfully') } }).catch((error) => { toast.error('There was some issue in updating') })
   }
- 
+
   return (
     <div className={`nc-AccountPage `}>
-      <ToastContainer/>
+      <ToastContainer />
       <div className="space-y-10 sm:space-y-12">
         {/* HEADING */}
         <h2 className="text-2xl sm:text-3xl font-semibold text-center">
           Account infomation
         </h2>
         <div className="flex flex-col md:flex-row">
-         
+
           <div className="flex-grow mt-10 md:mt-0 md:pl-16 max-w-3xl space-y-6">
             <div>
               <Label>Full name</Label>
-              <Input className="mt-1.5" value={name} onChange={(e)=>{setName(e.target.value)}}
-               placeholder={name}/>
+              <Input className="mt-1.5" value={name}
+                defaultValue={data !== null && data.name}
+                onChange={(e) => { setName(e.target.value) }}
+
+                placeholder={name} />
             </div>
 
             {/* ---- */}
@@ -72,9 +77,9 @@ const AccountPage = () => {
                 </span>
                 <Input
                   className="!rounded-l-none"
-                 defaultValue={data!==null &&data.email}
+                  defaultValue={data !== null && data.email}
 
-                 disabled
+                  disabled
                 />
               </div>
             </div>
@@ -89,7 +94,8 @@ const AccountPage = () => {
                 <Input
                   className="!rounded-l-none"
                   placeholder={pin}
-                  value={pin} onChange={(e)=>{setPin(e.target.value)}}
+                  defaultValue={data !== null && data.pincode}
+                  value={pin} onChange={(e) => { setPin(e.target.value) }}
                 />
               </div>
             </div>
@@ -102,8 +108,9 @@ const AccountPage = () => {
                 </span>
                 <Input
                   className="!rounded-l-none"
-                 placeholder={address}
-                  value={address} onChange={(e)=>{setAddress(e.target.value)}}
+                  placeholder={address}
+                  defaultValue={data !== null && data.address}
+                  value={address} onChange={(e) => { setAddress(e.target.value) }}
                 />
               </div>
             </div>
@@ -111,7 +118,7 @@ const AccountPage = () => {
             {/* ---- */}
             <div>
               <Label>Gender</Label>
-              <Select className="mt-1.5" onChange={(e)=>{setGender(e.target.value)}} value={gender} placeholder={gender} defaultValue={gender}>
+              <Select className="mt-1.5" onChange={(e) => { setGender(e.target.value) }} value={gender} placeholder={gender} defaultValue={gender}>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Other">Other</option>
@@ -126,8 +133,9 @@ const AccountPage = () => {
                   <i className="text-2xl las la-phone-volume"></i>
                 </span>
                 <Input className="!rounded-l-none"
-              placeholder={phone}
-                onChange={(e)=>{setPhone(e.target.value)}} value={phone}
+                  placeholder={phone}
+                  defaultValue={data !== null && data.phone}
+                  onChange={(e) => { setPhone(e.target.value) }} value={phone}
                 />
               </div>
             </div>

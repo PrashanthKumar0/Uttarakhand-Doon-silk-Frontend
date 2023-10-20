@@ -1,9 +1,13 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import Input from "@/shared/Input/Input";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import Link from "next/link";
+import axios from "axios";
+import { baseUrl } from "@/Url";
 
-const PageForgotPass = ({}) => {
+const PageForgotPass = ({ }) => {
+  const [email, setEmail] = useState('');
   return (
     <div className="container mb-24 lg:mb-32">
       <header className="text-center max-w-2xl mx-auto - mb-14 sm:mb-16 lg:mb-20">
@@ -17,7 +21,13 @@ const PageForgotPass = ({}) => {
 
       <div className="max-w-md mx-auto space-y-6">
         {/* FORM */}
-        <form className="grid grid-cols-1 gap-6" action="#" method="post">
+        <form className="grid grid-cols-1 gap-6" action="#" method="post" onSubmit={(e) => {
+          e.preventDefault();
+          axios.post(`${baseUrl}/resetPassword`,{
+            email
+          });
+
+        }}>
           <label className="block">
             <span className="text-neutral-800 dark:text-neutral-200">
               Email address
@@ -26,6 +36,9 @@ const PageForgotPass = ({}) => {
               type="email"
               placeholder="example@example.com"
               className="mt-1"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
             />
           </label>
           <ButtonPrimary type="submit">Continue</ButtonPrimary>
