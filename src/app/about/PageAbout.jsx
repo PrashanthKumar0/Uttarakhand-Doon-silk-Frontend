@@ -64,7 +64,7 @@ const PageAbout = ({ }) => {
 
         <SectionStatistic />
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <iframe loading="lazy" src="https://maps.google.com/maps?q=silk%20park%20bhawan%20premanagr%20dehradun&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+          <iframe loading="lazy" src="https://maps.google.com/maps?q=Doon%20Sild%20Tyagi%20Market&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
             title="silk park bhawan premanagr dehradun" aria-label="silk park bhawan premanagr dehradun" className="w-100" style={{ width: '80vw', height: '50vh' }}></iframe>
         </div>
 
