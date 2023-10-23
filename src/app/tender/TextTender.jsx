@@ -9,11 +9,11 @@ export default function TextTender({txt}) {
   return (
     <div className='py-2'>
     <div style={{backgroundColor:'white', borderRadius:'10px'}} className='p-1 mx-1 text-neutral-800 '>
-   <div className='px-2'>
+   <div className='px-2 break-all'>
     {txt[0]}
       { url?
         (
-          <a className='downloadbtn text-blue-700 px-2' href={url}>
+          <a className='downloadbtn text-blue-700 px-2 break-all' href={url}>
             {url} <span>{linksvg}</span>
           </a>
         ):''

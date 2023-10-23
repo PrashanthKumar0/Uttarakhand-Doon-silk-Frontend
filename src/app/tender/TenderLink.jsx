@@ -5,7 +5,7 @@ function TenderLink({link}) {
   return (
     <div className='py-2'>
     <div style={{backgroundColor:'white', borderRadius:'10px'}} className='p-1 mx-1 text-neutral-800 '>
-   <a className='downloadbtn text-blue-700 px-2' href={link}>
+   <a className='downloadbtn text-blue-700 px-2 break-all' href={link}>
 {link} <span>{linksvg}</span>
 
    </a>
