@@ -109,9 +109,10 @@ function RenderGroupButtons({ setShowModalQuickView, item }) {
 function NewProduct(props) {
   const { item } = props;
   if(!item) return <></>;
+  console.log('i',item);
   
-  const [data, setData] = useState(null)
-  const [price, setPrice] = useState('')
+  const [data, setData] = useState(null);
+  const [price, setPrice] = useState('');
   useEffect(() => {
     axios.get(`${baseUrl}/getMainProductById/${item.product_id}`)
       .then((response) => {
@@ -174,7 +175,7 @@ function NewProduct(props) {
 
 
   // console.log('item', { item })
-  return data && (
+  return item && (
     <div>
       <>
         <div

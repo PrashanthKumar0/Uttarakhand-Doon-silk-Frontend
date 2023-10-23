@@ -23,8 +23,8 @@ const Page = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const Params = useParams()
-  const [data, setData] = useState('');
-  const [pData, setPData] = useState();
+  const [data, setData] = useState(null);
+  const [pData, setPData] = useState(null);
   const [loadStatus, setLoadStatus] = useState(LOAD_STATUS.loading);
 
   useEffect(() => {
@@ -44,27 +44,26 @@ const Page = () => {
       .then((response) => {
         console.log('products', response)
         if (response.status === 200) {
-          if ("message" in response.data.data) {
-            setPData("");
-
-            setLoadStatus(LOAD_STATUS.failed);
-          }
-          else {
+          if ("data" in response.data) {
             setPData(response.data.data);
             setLoadStatus(LOAD_STATUS.loaded);
+          } else {
+            setPData(null);
+            toast.error(response.data.message);
+            setLoadStatus(LOAD_STATUS.failed);
           }
         }
         // toast.success('products updated')
-      }
-      )
+      })
       .catch((error) => {
         console.log('product err', error);
         setLoadStatus(LOAD_STATUS.failed);
       })
-    console.log('p-data', pData)
+    // console.log('p-data', pData)
   },
 
-    [pathname, searchParams])
+    [pathname, searchParams]);
+
   return (
     <div className={`nc-PageCollection`}>
       <ToastContainer />
@@ -80,7 +79,7 @@ const Page = () => {
             ) : null
           }
 
- 
+
 
           <div className="max-w-screen-sm">
             <h2 className="block text-2xl sm:text-3xl lg:text-4xl font-semibold">
@@ -101,22 +100,22 @@ const Page = () => {
               {/* {PRODUCTS.map((item, index) => (
                 <ProductCard data={item} key={index} />
               ))} */}
-              {pData === null && pData === '' ? "" : pData?.map((item, index) => (
+              {(pData===null || pData=='') ? "" : pData.map((item, index) => (
                 <NewProduct item={item} key={index} />
               ))}
             </div>
 
             {/* PAGINATION */}
             {
-            (loadStatus == LOAD_STATUS.failed) ? 
-            (
-              <div className="flex my-10 w-full align-center justify-center opacity-50 text-2xl sm:text-3xl lg:text-4xl font-semibold">
-                {/* <div className="m-auto opacity-50 text-2xl sm:text-3xl lg:text-4xl font-semibold">  */}
-                No {data.category_name} Found. 
-                {/* </div> */}
-              </div>
-            ):null
-          }
+              (loadStatus == LOAD_STATUS.failed) ?
+                (
+                  <div className="flex my-10 w-full align-center justify-center opacity-50 text-2xl sm:text-3xl lg:text-4xl font-semibold">
+                    {/* <div className="m-auto opacity-50 text-2xl sm:text-3xl lg:text-4xl font-semibold">  */}
+                    No {data?.category_name} Found.
+                    {/* </div> */}
+                  </div>
+                ) : null
+            }
 
           </main>
         </div>
