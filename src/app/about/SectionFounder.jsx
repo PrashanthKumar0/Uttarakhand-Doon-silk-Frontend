@@ -21,7 +21,8 @@ const FOUNDER_DEMO = [
     name: `Mr. Alok Kumar Pandey`,
     job: "Registrar Co-Operatives Societies Uttarakhand",
     avatar:
-    "https://ucrf.org.in/wp-content/uploads/2022/06/Alok-Kumar-Pandey-150x150.jpg",
+    // "https://ucrf.org.in/wp-content/uploads/2022/06/Alok-Kumar-Pandey-150x150.jpg",
+    "/ALKP.jpg",
   },
  
   {

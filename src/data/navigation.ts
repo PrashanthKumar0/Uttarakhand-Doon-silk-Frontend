@@ -62,13 +62,13 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
 export const NAVIGATION_DEMO_2: NavItemType[] = [
   {
     id: ncNanoId(),
-    href: "/about",
-    name: "Shop",
+    href: "/",
+    name: "Home",
   },
   {
     id: ncNanoId(),
-    href: "/",
-    name: "Home",
+    href: "/about",
+    name: "Products Catalogue",
   },
   {
     id: ncNanoId(),
