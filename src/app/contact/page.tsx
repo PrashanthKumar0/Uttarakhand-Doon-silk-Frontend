@@ -88,7 +88,7 @@ const ContactForm = ({ }) => {
         }
         console.log(response)
       })
-      .catch(() => {
+      .catch((err) => {
         toast.error('Server Down.\nTry Again Later.')
         // console.log(error)
       })

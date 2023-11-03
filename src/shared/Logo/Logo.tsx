@@ -27,7 +27,7 @@ const Logo: React.FC<LogoProps> = ({
           className={`block w-auto ${
             imgLight ? "dark:hidden" : ""
           } `}
-        style={{height:'80px'}}
+        style={{height:'100px'}}
         src={img}
         alt="Logo"
         sizes="600px"
@@ -39,7 +39,7 @@ const Logo: React.FC<LogoProps> = ({
       {imgLight && (
         <Image
         className="hidden w-auto dark:block"
-          style={{height:'80px'}}
+          style={{height:'100px'}}
           src={imgLight}
           alt="Logo-Light"
           sizes="600px"
