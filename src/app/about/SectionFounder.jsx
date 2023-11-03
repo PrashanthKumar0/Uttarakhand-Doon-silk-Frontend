@@ -32,19 +32,19 @@ const FOUNDER_DEMO = [
     "/CAS.jpg"
   },
   {
-    id: "10",
+    id: "2",
     name: `Vikram Singh Bisht`,
     job: "vice chairman",
     avatar:
     "/vc.jpg"
   },
-  {
-    id: "2",
-    name: `Vikram Singh Bisht`,
-    job: "Vice-Chairman",
-    avatar:
-    "https://ucrf.org.in/wp-content/uploads/2022/06/testimonial-1-150x150.jpg",
-  },
+  // {
+  //   id: "2",
+  //   name: `Vikram Singh Bisht`,
+  //   job: "Vice-Chairman",
+  //   avatar:
+  //   "https://ucrf.org.in/wp-content/uploads/2022/06/testimonial-1-150x150.jpg",
+  // },
   {
     id: "3",
     name: `Anand A.D. Shukla`,
