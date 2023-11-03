@@ -21,16 +21,16 @@ const widgetMenus: WidgetFooterMenu[] = [
       { href: "/contact", label: "Contact Us" },
     ],
   },
-  {
-    id: "2",
-    title: "Resources",
-    menus: [
-      { href: "/tender", label: "Tender" },
-      { href: "/contact", label: "Support" },
-      // { href: "/", label: "Developers" },
+  // {
+  //   id: "2",
+  //   title: "Resources",
+  //   menus: [
+  //     { href: "/tender", label: "Tender" },
+  //     { href: "/contact", label: "Support" },
+  //     // { href: "/", label: "Developers" },
     
-    ],
-  },
+  //   ],
+  // },
   {
     id: "4",
     title: "Contacts",
