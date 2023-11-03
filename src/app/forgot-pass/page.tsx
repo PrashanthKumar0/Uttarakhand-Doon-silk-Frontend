@@ -5,11 +5,17 @@ import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import Link from "next/link";
 import axios from "axios";
 import { baseUrl } from "@/Url";
+import { ToastContainer, toast } from "react-toastify";
+import { useRouter } from "next/navigation";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const PageForgotPass = ({ }) => {
   const [email, setEmail] = useState('');
+  const router = useRouter();
   return (
     <div className="container mb-24 lg:mb-32">
+      <ToastContainer />
       <header className="text-center max-w-2xl mx-auto - mb-14 sm:mb-16 lg:mb-20">
         <h2 className="mt-20 flex items-center text-3xl leading-[115%] md:text-5xl md:leading-[115%] font-semibold text-neutral-900 dark:text-neutral-100 justify-center">
           Forgot password
@@ -23,9 +29,17 @@ const PageForgotPass = ({ }) => {
         {/* FORM */}
         <form className="grid grid-cols-1 gap-6" action="#" method="post" onSubmit={(e) => {
           e.preventDefault();
-          axios.post(`${baseUrl}/resetPassword`,{
-            email
-          });
+          axios.post(`${baseUrl}/forgotPassword`, {
+            email: email,
+          })
+            .then(res => {
+              toast.success(res.data.message);
+              router.push('/');
+            })
+            .catch(err => {
+              toast.error('Something went wrong.');
+              console.log(err);
+            });
 
         }}>
           <label className="block">

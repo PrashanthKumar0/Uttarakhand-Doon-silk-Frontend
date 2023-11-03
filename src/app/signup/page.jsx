@@ -31,9 +31,10 @@ function Page() {
         console.log(values);
         axios.post(`${baseUrl}/signupUsers`, { email: values.email, name: values.name })
           .then((response) => {
-            if (response.status === 201) {
+            if (response.status === 200) {
               window.localStorage.setItem('id', response.data.id)
               console.log(localStorage.getItem('id'))
+              toast.success(response.data.message);
               router.push('/otp');
             } else {
               toast.error(response.data.message)
@@ -43,6 +44,7 @@ function Page() {
           .catch((error, response) => {
             toast.error('Error sending email or creating user.')
             console.log(error)
+            console.log(response)
           })
 
       }}

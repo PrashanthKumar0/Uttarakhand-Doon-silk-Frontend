@@ -11,15 +11,17 @@ const PageForgotPass = ({ }) => {
     const [pass, setPass] = useState('');
     const [query, setQuery] = useState(null);
     useEffect(async () => {
-        setQuery((window.location.href.indexOf('?') != -1) && window.location.href.split('?').reverse()[0].split('&').map(e => {
+        const qry=(window.location.href.indexOf('?') != -1) && window.location.href.split('?').reverse()[0].split('&').map(e => {
             let [k, v] = e.split('=');
             return { [k]: v };
-        }));
+        });
+        setQuery(qry);
+        console.log(qry);
     }, []);
     // const [params,setParams] = useSearchParams();
 
     // console.log(params);
-    if (!query || !(('tok' in query) && ('id' in query))) {
+    if (!query || !query[0] || !query[1] || !query[0]?.tok || !query[1]?.id) {
         return (
             <div className="container mb-24 lg:mb-32">
                 <header className="text-center max-w-2xl mx-auto - mb-14 sm:mb-16 lg:mb-20">
@@ -30,6 +32,8 @@ const PageForgotPass = ({ }) => {
             </div>
         )
     }
+    const tok = query[0].tok;
+    const id = query[1].id;
 
     return (
         <div className="container mb-24 lg:mb-32">
@@ -47,8 +51,8 @@ const PageForgotPass = ({ }) => {
                 <form className="grid grid-cols-1 gap-6" action="#" method="post" onSubmit={(e) => {
                     e.preventDefault();
                     axios.post(`${baseUrl}/changePassword`, {
-                        id: query.id,
-                        token: query.tok
+                        id: id,
+                        token: tok
                     }).then(res => {
                         if (res.status == 200) {
                             toast.success(res.data.message);

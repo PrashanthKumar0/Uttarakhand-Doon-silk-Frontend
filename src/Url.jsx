@@ -4,4 +4,4 @@
 
 export const baseUrl = "https://api.doonsilk.com";
 export const baseUrl_frontend = "https://doonsilk.com";
-export const baseImgUrl = 'https://api.doonsilk.com/image';
+export const baseImgUrl = 'https://api.doonsilk.com/public/image';

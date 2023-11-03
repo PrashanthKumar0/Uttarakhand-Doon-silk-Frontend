@@ -58,8 +58,9 @@ const PageLogin = () => {
             }
             console.log(response)
           })
-          .catch((error, response) => {
-            toast.error('Server Down.\nTry Again Later.')
+          .catch((error) => {
+            toast.error('Wrong Email or password.\nTry Again.');
+            // toast.error('Server Down.\nTry Again Later.')
             console.log(error)
           })
 
