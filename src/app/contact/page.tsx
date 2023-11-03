@@ -62,13 +62,13 @@ const ContactForm = ({ }) => {
   const [message, setMessage] = useState('');
 
   const onSubmit = () => {
-    console.log('data : ', { email, name, message });
-    console.log('name l : ',name.replace(/ /gmi, '').length < 3)
-    if (name.replace(/ /gmi, '').length < 3) {
+    console.log('data : ', { email : email, name, message });
+    console.log('name l : ', name.replace(' ', '').length < 3)
+    if (name.replace(' ', '').length < 3) {
       toast.error('Name should not be empty');
       return false;
     }
-    if (!email.match(/.{1,}@.{1,}\..{1,}/)) {
+    if (!email.match(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/)) {
       toast.error('Email is not valid');
       return false;
     }
@@ -77,7 +77,7 @@ const ContactForm = ({ }) => {
       return false;
     }
 
-    axios.post(`${baseUrl}/contactForm`, { email, name, message })
+    axios.post(`${baseUrl}/contactForm`, { email: email, name: name, message: message })
       .then((response) => {
         if (response.status === 200) {
 
