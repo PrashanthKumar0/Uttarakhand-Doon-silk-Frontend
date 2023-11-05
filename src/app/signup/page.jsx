@@ -42,7 +42,7 @@ function Page() {
             console.log(response)
           })
           .catch((error, response) => {
-            toast.error('Error sending email or creating user.')
+            toast.error('User may already exist Try Signing In.')
             console.log(error)
             console.log(response)
           })
