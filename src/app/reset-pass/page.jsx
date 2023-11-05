@@ -5,7 +5,8 @@ import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import Link from "next/link";
 import axios from "axios";
 import { baseUrl } from "@/Url";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const PageForgotPass = ({ }) => {
     const [pass, setPass] = useState('');
@@ -37,6 +38,7 @@ const PageForgotPass = ({ }) => {
 
     return (
         <div className="container mb-24 lg:mb-32">
+            <ToastContainer />
             <header className="text-center max-w-2xl mx-auto - mb-14 sm:mb-16 lg:mb-20">
                 <h2 className="mt-20 flex items-center text-3xl leading-[115%] md:text-5xl md:leading-[115%] font-semibold text-neutral-900 dark:text-neutral-100 justify-center">
                     Forgot password
@@ -64,11 +66,19 @@ const PageForgotPass = ({ }) => {
                     </label>
                     <ButtonPrimary type="submit" onClick={(e) => {
                         e.preventDefault();
+
+                        console.log('sending', {
+                            id: id,
+                            token: tok,
+                            newPassword: pass,
+                        });
+
                         axios.post(`${baseUrl}/changePassword`, {
                             id: id,
                             token: tok,
                             newPassword: pass,
                         }).then(res => {
+                            console.log('ok');
                             if (res.status == 200) {
                                 toast.success(res.data.message);
                             } else {
@@ -78,8 +88,6 @@ const PageForgotPass = ({ }) => {
                             console.log(err);
                             toast.error('Server Down. Try Again Later.');
                         });
-
-                        return false;
                     }}>Continue</ButtonPrimary>
                 </div>
 
