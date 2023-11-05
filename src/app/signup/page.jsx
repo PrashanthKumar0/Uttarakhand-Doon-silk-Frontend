@@ -128,7 +128,7 @@ function Page() {
               <span className="block text-center text-neutral-700 dark:text-neutral-300">
                 Already have an account? {` `}
 
-                <Link className="text-green-600" href="/otp">
+                <Link className="text-green-600" href="/login">
                   Sign in
                 </Link>
               </span>
