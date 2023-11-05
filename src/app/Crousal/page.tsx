@@ -31,17 +31,14 @@ const Crousal: React.FC = () => {
           image1: response.data.data.image1,
           image2: response.data.data.image2,
           image3: response.data.data.image3,
-
-
         })
-        console.log('images', images)
-        setImages(response.data.data[0]),
-          console.log('getbannr', images)
+        console.log('images', response.data.data)
       }
       )
       .catch((error) => { console.log(error) })
 
   }, [])
+
   return (
     <div className="w-full h-full " >
       <Swiper
@@ -56,19 +53,24 @@ const Crousal: React.FC = () => {
       >
 
         <SwiperSlide>
-          <img src={`${baseImgUrl}/${images.image1}`} alt={`${baseImgUrl}/${images.image1} `} className="w-full h-full object-cover" />
+
+          {images &&
+            <img src={`${baseImgUrl}/${images.image1}`} alt={`${baseImgUrl}/${images.image1}`} className="w-full h-full object-cover" />
+          }
           {/* <img src={`${images.image1}`} alt={`${images.image1}`} className="w-full h-full object-cover" /> */}
 
         </SwiperSlide>
         <SwiperSlide>
-
-          <img src={`${baseImgUrl}/${images.image2}`} alt={`Banner `} className="w-full h-full object-cover" />
+          {images &&
+            <img src={`${baseImgUrl}/${images.image2}`} alt={`${baseImgUrl}/${images.image1}`} className="w-full h-full object-cover" />
+          }
           {/* <img src={`${images.image2}`} alt={`${images.image1}`} className="w-full h-full object-cover" /> */}
 
         </SwiperSlide>
         <SwiperSlide>
-
-          <img src={`${baseImgUrl}/${images.image3}`} alt={`Banner `} className="w-full h-full object-cover" />
+          {images &&
+            <img src={`${baseImgUrl}/${images.image3}`} alt={`${baseImgUrl}/${images.image1}`} className="w-full h-full object-cover" />
+          }
           {/* <img src={`${images.image3}`} alt={`${images.image1}`} className="w-full h-full object-cover" /> */}
         </SwiperSlide>
       </Swiper>
