@@ -11,7 +11,7 @@ const PageForgotPass = ({ }) => {
     const [pass, setPass] = useState('');
     const [query, setQuery] = useState(null);
     useEffect(async () => {
-        const qry=(window.location.href.indexOf('?') != -1) && window.location.href.split('?').reverse()[0].split('&').map(e => {
+        const qry = (window.location.href.indexOf('?') != -1) && window.location.href.split('?').reverse()[0].split('&').map(e => {
             let [k, v] = e.split('=');
             return { [k]: v };
         });
@@ -48,23 +48,7 @@ const PageForgotPass = ({ }) => {
 
             <div className="max-w-md mx-auto space-y-6">
                 {/* FORM */}
-                <form className="grid grid-cols-1 gap-6" action="#" method="post" onSubmit={(e) => {
-                    e.preventDefault();
-                    axios.post(`${baseUrl}/changePassword`, {
-                        id: id,
-                        token: tok,
-                        newPassword : pass,
-                    }).then(res => {
-                        if (res.status == 200) {
-                            toast.success(res.data.message);
-                        } else {
-                            toast.error(res.data.message);
-                        }
-                    }).catch(err => {
-                        console.log(err);
-                        toast.error('Server Down. Try Again Later.');
-                    });
-                }}>
+                <div className="grid grid-cols-1 gap-6">
                     <label className="block">
                         <span className="text-neutral-800 dark:text-neutral-200">
                             New Password
@@ -78,8 +62,26 @@ const PageForgotPass = ({ }) => {
                             }}
                         />
                     </label>
-                    <ButtonPrimary type="submit">Continue</ButtonPrimary>
-                </form>
+                    <ButtonPrimary type="submit" onClick={(e) => {
+                        e.preventDefault();
+                        axios.post(`${baseUrl}/changePassword`, {
+                            id: id,
+                            token: tok,
+                            newPassword: pass,
+                        }).then(res => {
+                            if (res.status == 200) {
+                                toast.success(res.data.message);
+                            } else {
+                                toast.error(res.data.message);
+                            }
+                        }).catch(err => {
+                            console.log(err);
+                            toast.error('Server Down. Try Again Later.');
+                        });
+
+                        return false;
+                    }}>Continue</ButtonPrimary>
+                </div>
 
                 {/* ==== */}
                 <span className="block text-center text-neutral-700 dark:text-neutral-300">
