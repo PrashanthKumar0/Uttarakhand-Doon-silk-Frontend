@@ -77,7 +77,7 @@ const Otp = () => {
             <div className="absolute left-0 w-full top-1/2 transform -translate-y-1/2 "></div>
           </div>
           {/* FORM */}
-          <form className="grid grid-cols-1 gap-6" onSubmit={() => false}>
+          <div className="grid grid-cols-1 gap-6">
             <label className="block">
               <span className="text-neutral-800 dark:text-neutral-200">
                 Check your Email
@@ -89,7 +89,7 @@ const Otp = () => {
 
             </label>
             <ButtonPrimary type="submit" onClick={handleClick}>Continue</ButtonPrimary>
-          </form>
+          </div>
 
           {/* ==== */}
           <span className="block text-center text-neutral-700 dark:text-neutral-300">
