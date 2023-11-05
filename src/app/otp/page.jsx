@@ -23,6 +23,7 @@ const Otp = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
+    let id = window.localStorage.getItem('id');
     axios.post(`${baseUrl}/verifyOTP/${id}`, { otp: OTP })
       .then((response) => {
         console.log(response)

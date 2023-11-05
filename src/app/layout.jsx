@@ -19,27 +19,32 @@ export default function RootLayout({
   children,
   params,
 }) {
-  const[token , setToken]=useState('')
-  const[id , setId]=useState('')
+  const [token, setToken] = useState('')
+  const [id, setId] = useState('')
 
-  useEffect(()=>{
+  useEffect(() => {
     const value = window.localStorage.getItem('token')
-   // console.log(value)
-    if(value!==null|| value==''){
+    // console.log(value)
+    if (value !== null || value == '') {
       setToken(value)
     }
-    console.log('token-auth', token)  
-  },[token])
+    console.log('token-auth', token)
+  }, [token])
   return (
     <html lang="en" className={poppins.className}>
+      <head>
+        <title>Doon Silk</title>
+        <meta name="description" content="Doon Silk :- A brand of uttrakhand cooperative resham foundation." />
+        <meta name="keywords" content="Silk, Doon Silk, Uttrakhand, Resham, Shawl, Muffler" />
+      </head>
       <body className="bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
-      <AppContext.Provider value={{token, setToken, id ,setId}}>
-      <SiteHeader />
-        {children}
-        <CommonClient />
-        <Footer />
-      </AppContext.Provider>
-       
+        <AppContext.Provider value={{ token, setToken, id, setId }}>
+          <SiteHeader />
+          {children}
+          <CommonClient />
+          <Footer />
+        </AppContext.Provider>
+
       </body>
     </html>
   );
