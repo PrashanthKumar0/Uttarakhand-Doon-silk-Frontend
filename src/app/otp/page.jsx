@@ -21,8 +21,8 @@ const Otp = () => {
 
 
 
-  const handleClick = () => {
-
+  const handleClick = (e) => {
+    e.preventDefault();
     axios.post(`${baseUrl}/verifyOTP/${id}`, { otp: OTP })
       .then((response) => {
         console.log(response)
@@ -77,7 +77,7 @@ const Otp = () => {
             <div className="absolute left-0 w-full top-1/2 transform -translate-y-1/2 "></div>
           </div>
           {/* FORM */}
-          <form className="grid grid-cols-1 gap-6" action="#" method="post">
+          <form className="grid grid-cols-1 gap-6" onSubmit={() => false}>
             <label className="block">
               <span className="text-neutral-800 dark:text-neutral-200">
                 Check your Email
