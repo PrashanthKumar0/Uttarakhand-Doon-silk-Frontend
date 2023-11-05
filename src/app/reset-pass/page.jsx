@@ -52,7 +52,8 @@ const PageForgotPass = ({ }) => {
                     e.preventDefault();
                     axios.post(`${baseUrl}/changePassword`, {
                         id: id,
-                        token: tok
+                        token: tok,
+                        newPassword : pass,
                     }).then(res => {
                         if (res.status == 200) {
                             toast.success(res.data.message);
