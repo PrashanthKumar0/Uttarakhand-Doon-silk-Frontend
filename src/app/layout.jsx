@@ -34,8 +34,8 @@ export default function RootLayout({
     <html lang="en" className={poppins.className}>
       <head>
         <title>Doon Silk</title>
-        <meta name="description" content="Doon Silk :- A brand of uttrakhand cooperative resham foundation." />
-        <meta name="keywords" content="Silk, Doon Silk, Uttrakhand, Resham, Shawl, Muffler" />
+        <meta name="description" content="Doon Silk :- A brand of Uttarakhand cooperative resham foundation." />
+        <meta name="keywords" content="Silk, Doon Silk, Uttarakhand, Resham, Shawl, Muffler" />
       </head>
       <body className="bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
         <AppContext.Provider value={{ token, setToken, id, setId }}>
