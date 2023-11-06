@@ -17,6 +17,8 @@ import HeaderTitle from './HeaderTitle';
 import Crousal from "../Crousal/page";
 import { PageHome } from "../page";
 
+
+
 const PageAbout = ({ }) => {
 
   return (
@@ -63,8 +65,13 @@ const PageAbout = ({ }) => {
         </div>
 
         <SectionStatistic />
+
+        <div className="flex">
+          <iframe class="m-auto w-[300px] md:w-[600px] h-[600px] instagram-media instagram-media-rendered" id="instagram-embed-1" src="https://www.instagram.com/doon.silk/embed/?cr=1&amp;v=12&amp;wp=540&amp;rd=https%3A%2F%2Fwww.instaembedcode.com&amp;rp=%2F#%7B%22ci%22%3A1%2C%22os%22%3A18995.20000000298%2C%22ls%22%3A8454.89999999106%2C%22le%22%3A8923.5%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" data-instgrm-payload-id="instagram-media-payload-1" scrolling="no" />
+        </div>
+
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.527405645236!2d77.96277967556495!3d30.33595767477822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092b5ca23b57c3%3A0x22913355728bbfce!2sDOON%20SILK!5e0!3m2!1sen!2sin!4v1699033595448!5m2!1sen!2sin" width="600" height="450" style={{border:'0px'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.527405645236!2d77.96277967556495!3d30.33595767477822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092b5ca23b57c3%3A0x22913355728bbfce!2sDOON%20SILK!5e0!3m2!1sen!2sin!4v1699033595448!5m2!1sen!2sin" width="600" height="450" style={{ border: '0px' }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         {/* <SectionPromo3 /> */}

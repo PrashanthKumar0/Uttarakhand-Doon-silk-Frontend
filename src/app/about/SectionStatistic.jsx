@@ -37,93 +37,93 @@ const SectionStatistic = ({ className = "" }) => {
         🚀 Updates
       </Heading>
       <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-3 xl:gap-8">
-     
-<div className="text-center">
-    <h3 className="text-2xl font-semibold leading-none p-3 text-neutral-900 md:text-3xl dark:text-neutral-200">
-           Latest News
-            </h3>
-    <div className="marquee-wrapper">
-	  <div className="container">
-		<div className="marquee-block">
-			<div className="marquee-inner to-left">
-				<span>
-        {FOUNDER_DEMO.map((item) => (
-          <div
-            key={item.id}
-            className="marquee-item"
-          >
-            <span className="block text-sm text-neutral-500 mt-3 sm:text-base dark:text-neutral-400">
-              <Link to={'/tender'} href={'/tender'}> {item.subHeading}</Link>  
-            </span>
+
+        <div className="text-center">
+          <h3 className="text-2xl font-semibold leading-none p-3 text-neutral-900 md:text-3xl dark:text-neutral-200">
+            Latest News
+          </h3>
+          <div className="marquee-wrapper">
+            <div className="container">
+              <div className="marquee-block">
+                <div className="marquee-inner to-left">
+                  <span>
+                    {FOUNDER_DEMO.map((item) => (
+                      <div
+                        key={item.id}
+                        className="marquee-item"
+                      >
+                        <span className="block text-sm text-neutral-500 mt-3 sm:text-base dark:text-neutral-400">
+                          <Link to={'/tender'} href={'/tender'}> {item.subHeading}</Link>
+                        </span>
+                      </div>
+                    ))}
+
+
+                  </span>
+                </div>
+              </div>
+
+            </div>
           </div>
-        ))} 
+        </div>
 
-					
-				</span>
-			</div>
-		</div>
+        <div className="text-center">
+          <h3 className="text-2xl font-semibold leading-none p-3 text-neutral-900 md:text-3xl dark:text-neutral-200">
+            <a href="Facebook" className="cursor-pointer">Facebook</a>
+          </h3>
+          <div className="marquee-wrapper">
+            <div className="container">
+              <div className="marquee-block">
+                <div className="marquee-inner to-left">
+                  <span>
+                    {FOUNDER_DEMO.map((item) => (
+                      <div
+                        key={item.id}
+                        className="marquee-item"
+                      >
+                        <span className="block text-sm text-neutral-500 mt-3 sm:text-base dark:text-neutral-400">
+                          <Link to={'/tender'} href={'/tender'}> {item.subHeading}</Link>
+                        </span>
+                      </div>
+                    ))}
 
-	</div>
-</div>
-</div>
 
-<div className="text-center">
-    <h3 className="text-2xl font-semibold leading-none p-3 text-neutral-900 md:text-3xl dark:text-neutral-200">
-         Facebook
-            </h3>
-    <div className="marquee-wrapper">
-	  <div className="container">
-		<div className="marquee-block">
-			<div className="marquee-inner to-left">
-				<span>
-        {FOUNDER_DEMO.map((item) => (
-          <div
-            key={item.id}
-            className="marquee-item"
-          >
-            <span className="block text-sm text-neutral-500 mt-3 sm:text-base dark:text-neutral-400">
-            <Link to={'/tender'} href={'/tender'}> {item.subHeading}</Link>  
-            </span>
+                  </span>
+                </div>
+              </div>
+
+            </div>
           </div>
-        ))} 
+        </div>
 
-					
-				</span>
-			</div>
-		</div>
+        <div className="text-center">
+          <h3 className="text-2xl font-semibold leading-none p-3 text-neutral-900 md:text-3xl dark:text-neutral-200">
+            <a href="https://instagram.com/doon.silk?igshid=b3Q2MTFyM2ExZ2tk" className="cursor-pointer">Instagram</a>
+          </h3>
+          <div className="marquee-wrapper">
+            <div className="container">
+              <div className="marquee-block">
+                <div className="marquee-inner to-left">
+                  <span>
+                    {FOUNDER_DEMO.map((item) => (
+                      <div
+                        key={item.id}
+                        className="marquee-item"
+                      >
+                        <span className="block text-sm text-neutral-500 mt-3 sm:text-base dark:text-neutral-400">
+                          <Link to={'/tender'} href={'/tender'}> {item.subHeading}</Link>
+                        </span>
+                      </div>
+                    ))}
 
-	</div>
-</div>
-</div>
 
-<div className="text-center">
-    <h3 className="text-2xl font-semibold leading-none p-3 text-neutral-900 md:text-3xl dark:text-neutral-200">
-         Tender/EOI
-            </h3>
-    <div className="marquee-wrapper">
-	  <div className="container">
-		<div className="marquee-block">
-			<div className="marquee-inner to-left">
-				<span>
-        {FOUNDER_DEMO.map((item) => (
-          <div
-            key={item.id}
-            className="marquee-item"
-          >
-            <span className="block text-sm text-neutral-500 mt-3 sm:text-base dark:text-neutral-400">
-            <Link to={'/tender'} href={'/tender'}> {item.subHeading}</Link>  
-            </span>
+                  </span>
+                </div>
+              </div>
+
+            </div>
           </div>
-        ))} 
-
-					
-				</span>
-			</div>
-		</div>
-
-	</div>
-</div>
-</div>
+        </div>
       </div>
     </div>
   );
